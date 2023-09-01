@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articulo</title>
+    <link rel="stylesheet" href="style/articulo.css">
+</head>
+
+<body>
+    <!-- ENCABEZADO Y NAVEGACION-->
+    <header>
+        <div id="title_movil">
+            <h1>LIBRERIA ONLINE</h1>
+        </div>
+    </header>
+    <header>
+        <div id="logo">
+            <p style="color:aliceblue">LOGO</p>
+            <h1>LIBRERIA ONLINE</h1>
+        </div>
+        <div id="menus">
+            <nav>
+                <a href="#"><img src="#" alt="categorias"></a>
+            </nav>
+            <div>
+                <a href=""><img src="#" alt="carrito"></a>
+            </div>
+        </div>        
+    </header>
+    <nav>
+        <div id="categorias">
+            <ul>
+                <a href="#"><li>Terror</li></a>
+                <a href="#"><li>Ciencia Ficción</li></a>
+                <a href="#"><li>Aventura</li></a>
+                <a href="#"><li>Policial</li></a>
+                <a href="#"><li>Fantasía</li></a>
+                <a href="#"><li>ETC</li></a>
+            </ul>
+        </div>
+    </nav>
+    <!--CUERPO PRINCIPAL: CONTIENE NOMBRE DEL ARTICULO, FOTO, PRECIO, BOTON DE COMPRA, DESCRIPCION-->
+    <main>
+        <section id="articulo">
+            <div>
+                <div id="articulo_id">
+                    <h1>Nombre del libro</h1>
+                <img src="#" alt="foto_del_articulo">
+                </div>
+                
+                <div id="precio_articulo">
+                    <label for="precio">$</label><input type="text" id="precio" name="precio" value="X" readonly>
+                </div>
+<!-- NOTA: EL STOCK LO DEJAMOS A LA VISTA DEL USUARIO O NO? SI NO HAY ESTOY, PODEMOS DESHABILITAR EL BOTON DE COMPRA Y CAMBIARLE EL TEXTO A 'NO HAY STOCK'-->
+                <div id="inventario">
+                    <h3>Stock:</h3>
+                    <input type="text" id="stock" name="stock" value="X" readonly><label for="stock">unidades disponibles</label>
+                </div>
+            </div>
+            <nav>
+                <input type="button" value="Agregar al carrito" id="add_carrito">
+            </nav>
+        </section>
+        <section>
+            <h2>Información del producto</h2>
+            <div id="info">
+                <div>
+                    <table>
+                        <tr>
+                            <td>Título</td>
+                            <td>xxxx</td>
+                        </tr>
+                        <tr>
+                            <td>Autor</td>
+                            <td>xxxx</td>
+                        </tr>
+                        <tr>
+                            <td>Idioma</td>
+                            <td>xxxx</td>
+                        </tr>
+                        <tr>
+                            <td>Etc</td>
+                            <td>xxxx</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="description">
+                    <h2>Descripción</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, nulla blanditiis optio inventore
+                        facere itaque maiores molestiae dolor voluptatibus reiciendis fugit incidunt possimus, soluta ipsa?
+                        Ipsam expedita a dignissimos sed?</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- PIE DE PAGINA CON LA INFORMACION DE CONTACTO, INFORMACION DE LA LIBRERIA, ETC-->
+    <footer id="contact">
+            <h2>Contactanos</h2>
+            <nav>
+                <a href="#"><img src="#" alt="red_social"></a>
+                <a href="#"><img src="#" alt="red_social"></a>
+                <a href="#"><img src="#" alt="red_social"></a>
+            </nav>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </footer>
+</body>
+
+</html>
