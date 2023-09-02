@@ -6,8 +6,12 @@
 
 body {
   margin: 0;
+  background-color: #F7C77B;
 }
 
+i{
+  color: #755117;
+}
   /*HEADER*/
 
   #title_movil{
@@ -24,7 +28,7 @@ body {
   header{
     position: sticky;
     top: 0;
-    background-color: grey;
+    background-color: #F5A931;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -34,12 +38,9 @@ body {
     z-index: 1;
   }
 
-  #logo p{
-    width: 4rem;
-    background-color: blue;
-    color: white;
-    margin-top: 10px;
-    padding: 16px;
+  #logo img{
+    width: 5rem;
+    border-radius: 50%;
   }
 
   #logo h1{
@@ -62,7 +63,7 @@ body {
     z-index: 0;
     padding-top: 100px;
     width: 100%;
-    background-color: grey;
+    background-color: #F5A931;
   }
 
   #categorias ul{
@@ -85,7 +86,7 @@ body {
 
   #categorias a:hover{
     color: white;
-    background-color: rgba(218, 165, 32, 0.5);
+    background-color: #C28627;
 
   }
 
@@ -108,6 +109,11 @@ body {
     border: none;
   }
 
+  #articulo_id img{
+    width: 10rem;
+
+  }
+
   #articulo input[type="text"] {
     background-color: transparent;
   }
@@ -117,16 +123,16 @@ body {
     border-radius: 5px;
     border: 2px solid black;
     font-size: 1rem;
+    background-color: #755F3B;
   }
 
   #articulo nav input:hover{
-    color: blue;
-    background-color: aquamarine;
-    border: 2px solid green;
+    color: #F5A931;
+    background-color: #755F3B;
   }
 
   #articulo nav input:active{
-    color: red;
+    color: #C28627;
   }
 
   #articulo,
@@ -162,7 +168,7 @@ body {
   }
 
   table td {
-    border: 1px solid black;
+    border: 2px solid black;
   }
 
   table tr td:nth-child(2n-1) {
@@ -189,7 +195,7 @@ body {
 
   #contact {
     border-top: 2px solid black;
-    background-color: grey;
+    background-color: #F5A931;
     border-radius: 10px 10px 0 0;
     width: 100%;
     padding: 2rem 1rem 0rem;
@@ -201,6 +207,10 @@ body {
 
   #contact nav{
     padding-bottom: 10px;
+  }
+
+  #contact nav i{
+    margin: 1rem 2rem;
   }
 
 
@@ -251,7 +261,7 @@ body {
       position: fixed;
       width: 100%;
       padding-top: 100px;
-      background-color: grey;
+      background-color: #F5A931;
       border-bottom: 2px solid black;
       border-radius: 0 0 5px 5px;
       z-index: 0;
@@ -279,7 +289,7 @@ body {
 
     #categorias a:hover{
       color: white;
-      background-color: rgba(218, 165, 32, 0.5);
+      background-color: #C28627;
 
     }
 
@@ -360,7 +370,7 @@ body {
       position: fixed;
       width: 100%;
       padding-top: 100px;
-      background-color: grey;
+      background-color: #F5A931;
       border-bottom: 2px solid black;
       border-radius: 0 0 5px 5px;
       z-index: 0;
