@@ -1,3 +1,11 @@
+:root{
+  --background: #DED2C1;
+  --nav-bar: #91887A;
+  --nav-footer: #C4B7A5;
+  --icons: #45403A;
+  --button: #473D2F;
+}
+
 * { 
   margin: 0;
   padding: 0;
@@ -6,8 +14,14 @@
 
 body {
   margin: 0;
+  background-color: var(--background);
 }
 
+i{
+  color: var(--icons);
+}
+
+  /*CELULAR*/
   /*HEADER*/
 
   #title_movil{
@@ -24,22 +38,18 @@ body {
   header{
     position: sticky;
     top: 0;
-    background-color: grey;
+    background-color: var(--nav-bar);
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 5px 20px;
-    border-bottom: 2px solid black;
     border-radius: 0 0 5px 5px;
     z-index: 1;
   }
 
-  #logo p{
-    width: 4rem;
-    background-color: blue;
-    color: white;
-    margin-top: 10px;
-    padding: 16px;
+  #logo img{
+    width: 5rem;
+    border-radius: 50%;
   }
 
   #logo h1{
@@ -62,7 +72,7 @@ body {
     z-index: 0;
     padding-top: 100px;
     width: 100%;
-    background-color: grey;
+    background-color: var(--nav-bar);
   }
 
   #categorias ul{
@@ -71,7 +81,6 @@ body {
   }
 
   #categorias li{
-    border: 1px solid black;
     padding: 2rem;
     font-size: 2rem;
     font-weight: 600;
@@ -85,7 +94,11 @@ body {
 
   #categorias a:hover{
     color: white;
-    background-color: rgba(218, 165, 32, 0.5);
+    background-color: var(--button);
+    border-radius: 10px;
+    padding: 8px;
+    margin: -8px;
+    transition: all 0.5s linear;
 
   }
 
@@ -96,7 +109,7 @@ body {
   }
 
   #info h2, #articulo img, #articulo input:nth-child(2n-1), footer{
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 
   /* ARTICULO */
@@ -108,25 +121,34 @@ body {
     border: none;
   }
 
+  #articulo_id img{
+    width: 10rem;
+
+  }
+
   #articulo input[type="text"] {
     background-color: transparent;
   }
 
-  #articulo nav input{
+  #articulo nav #add_carrito{
     padding: 1.5rem;
     border-radius: 5px;
-    border: 2px solid black;
+    border: 1px solid black;
     font-size: 1rem;
+    color: white;
+    background-color: var(--icons);
   }
 
-  #articulo nav input:hover{
-    color: blue;
-    background-color: aquamarine;
-    border: 2px solid green;
+  #articulo nav #add_carrito:hover{
+    background-color: var(--button);
+    animation: dance-button 0.5s linear 1;
   }
 
-  #articulo nav input:active{
-    color: red;
+  #articulo nav #add_carrito:active{
+    animation: dance-button 0.5s linear 1;
+    border-color: #95DE28;
+    color: #95DE28;
+    box-shadow: 0px 0px 10px 5px #52D42680;
   }
 
   #articulo,
@@ -139,15 +161,13 @@ body {
     padding-top: 2rem;
   }
 
-  #precio, #precio_articulo label{
+  #articulo_id, #precio, #precio_articulo label{
     font-size: 2rem;
     font-weight: 600;
   }
 
   #inventario {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none;
   }
 
   /* INFORMACION DEL PRODUCTO */
@@ -162,7 +182,7 @@ body {
   }
 
   table td {
-    border: 1px solid black;
+    border: 2px solid var(--icons);
   }
 
   table tr td:nth-child(2n-1) {
@@ -188,8 +208,7 @@ body {
   }
 
   #contact {
-    border-top: 2px solid black;
-    background-color: grey;
+    background-color: var(--nav-footer);
     border-radius: 10px 10px 0 0;
     width: 100%;
     padding: 2rem 1rem 0rem;
@@ -203,6 +222,30 @@ body {
     padding-bottom: 10px;
   }
 
+  #contact nav i{
+    margin: 1rem 2rem;
+  }
+
+  /*ANIMACION*/
+  @keyframes dance-button {
+    0%{
+      transform: rotateZ(0deg);
+    }
+    25%{
+      transform: rotateZ(2deg);
+    }
+    50%{
+      transform: rotateZ(0deg);
+    }
+    75%{
+      transform: rotateZ(2deg);
+    }
+    100%{
+      transform: rotateZ(0deg);
+    }    
+  }
+
+/*TABLET*/
 
   @media only screen and (min-width: 769px) and (max-width: 1199px){
 
@@ -237,7 +280,7 @@ body {
 
     #logo h1{
       display: inline-block;
-      font-size: 2rem;
+      font-size: 1.5rem;
       width: 50%;
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
@@ -251,8 +294,7 @@ body {
       position: fixed;
       width: 100%;
       padding-top: 100px;
-      background-color: grey;
-      border-bottom: 2px solid black;
+      background-color: var(--nav-bar);
       border-radius: 0 0 5px 5px;
       z-index: 0;
     }
@@ -279,21 +321,24 @@ body {
 
     #categorias a:hover{
       color: white;
-      background-color: rgba(218, 165, 32, 0.5);
-
+      background-color: var(--button);
+      border-radius: 10px;
+      padding: 5px;
+      margin: -5px;
+      transition: all 1s linear;
     }
 
     /*CUERPO PRINCIPAL*/
 
     main{
-      padding-top: 200px;
+      padding-top: 110px;
     }
 
     #articulo{
       padding: 1rem 0.5rem 0rem 0.5rem;
     }
 
-    #articulo div:not(#articulo_id){
+    #articulo div:not(#articulo_id, #inventario){
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -311,7 +356,26 @@ body {
       padding: 2rem 0;
     }
 
+    #inventario {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    #articulo #inventario, #inventario input{
+      font-size: 1.5rem;
+      padding: 0.5rem;
+    }
+
+    #articulo nav #add_carrito{
+      padding: 1.5rem;
+      font-size: 1.2rem;
+      margin-top: 0px;
+    }
+
   }
+
+  /*PC*/
 
   @media only screen and (min-width: 1200px){
 
@@ -360,8 +424,7 @@ body {
       position: fixed;
       width: 100%;
       padding-top: 100px;
-      background-color: grey;
-      border-bottom: 2px solid black;
+      background-color: var(--nav-bar);
       border-radius: 0 0 5px 5px;
       z-index: 0;
     }
@@ -388,21 +451,25 @@ body {
 
     #categorias a:hover{
       color: white;
-      background-color: rgba(218, 165, 32, 0.5);
+      background-color: var(--button);
+      border-radius: 10px;
+      padding: 8px;
+      margin: -8px;
+      transition: all 1s linear;
 
     }
 
     /*CUERPO PRINCIPAL*/
 
     main{
-      padding-top: 200px;
+      padding-top: 160px;
     }
 
     #articulo{
       padding: 1rem 0.5rem 0rem 0.5rem;
     }
 
-    #articulo div:not(#articulo_id){
+    #articulo div:not(#articulo_id, #inventario){
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -418,6 +485,23 @@ body {
 
     #articulo nav{
       padding: 2rem 0;
+    }
+
+    #inventario {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #articulo #inventario, #inventario input{
+      font-size: 1.5rem;
+      padding: 0.5rem;
+    }
+
+    #articulo nav #add_carrito{
+      padding: 1.5rem;
+      font-size: 1.2rem;
+      margin-top: 0px;
     }
 
     #info{

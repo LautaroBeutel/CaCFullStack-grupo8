@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articulo</title>
     <link rel="stylesheet" href="./assets/style/articulo.css">
+    <script src="https://kit.fontawesome.com/1fcc785506.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,15 +18,15 @@
     </header>
     <header>
         <div id="logo">
-            <p style="color:aliceblue">LOGO</p>
+            <a href="#"><img src="./assets/images/logo-prueba.jpg" alt="logo"></a>
             <h1>LIBRERIA ONLINE</h1>
         </div>
         <div id="menus">
             <nav>
-                <a href="#"><img src="#" alt="categorias"></a>
+                <a href="#"><i class="fa-solid fa-bars fa-2xl"></i></a>
             </nav>
             <div>
-                <a href=""><img src="#" alt="carrito"></a>
+                <a href=""><i class="fa-solid fa-cart-shopping fa-2xl"></i></a>
             </div>
         </div>        
     </header>
@@ -47,17 +48,18 @@
             <div>
                 <div id="articulo_id">
                     <h1>Nombre del libro</h1>
-                <img src="#" alt="foto_del_articulo">
+                <img src="./assets/images/foto-prueba.jpg" alt="foto_del_articulo">
                 </div>
                 
                 <div id="precio_articulo">
                     <label for="precio">$</label><input type="text" id="precio" name="precio" value="X" readonly>
                 </div>
 <!-- NOTA: EL STOCK LO DEJAMOS A LA VISTA DEL USUARIO O NO? SI NO HAY ESTOY, PODEMOS DESHABILITAR EL BOTON DE COMPRA Y CAMBIARLE EL TEXTO A 'NO HAY STOCK'-->
-                <div id="inventario">
-                    <h3>Stock:</h3>
-                    <input type="text" id="stock" name="stock" value="X" readonly><label for="stock">unidades disponibles</label>
-                </div>
+                
+            </div>
+            <div id="inventario">
+                <h3>Stock:</h3>
+                <input type="text" id="stock" name="stock" value="X" readonly><label for="stock">unidades disponibles</label>
             </div>
             <nav>
                 <input type="button" value="Agregar al carrito" id="add_carrito">
@@ -97,11 +99,11 @@
     </main>
     <!-- PIE DE PAGINA CON LA INFORMACION DE CONTACTO, INFORMACION DE LA LIBRERIA, ETC-->
     <footer id="contact">
-            <h2>Contactanos</h2>
+            <h2>Visita nuestras redes sociales</h2>
             <nav>
-                <a href="#"><img src="#" alt="red_social"></a>
-                <a href="#"><img src="#" alt="red_social"></a>
-                <a href="#"><img src="#" alt="red_social"></a>
+                <a href="#"><i class="fa-brands fa-facebook fa-xl"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
             </nav>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
     </footer>
