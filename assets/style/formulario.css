@@ -1,0 +1,526 @@
+:root{
+    --background: #DED2C1;
+    --nav-bar: #91887A;
+    --nav-footer: #C4B7A5;
+    --icons: #45403A;
+    --button: #473D2F;
+  }
+  
+  * { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--background);
+  }
+  
+  i{
+    color: var(--icons);
+  }
+  
+    /*CELULAR*/
+    /*HEADER*/
+  
+    #title_movil{
+      display: block;
+      margin: 0 auto;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+  
+    header:first-child{
+      border: none;
+      border-radius: 0;
+    }
+  
+    header{
+      position: sticky;
+      top: 0;
+      background-color: var(--nav-bar);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 20px;
+      border-radius: 0 0 5px 5px;
+      z-index: 2;
+    }
+  
+    #logo img{
+      width: 5rem;
+      border-radius: 50%;
+    }
+  
+    #logo h1{
+      display: none;
+    }
+  
+    #menus {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 50%;
+      max-width: 300px;
+    }
+  
+    /*MENU OCULTO CON CATEGORIAS
+    NOTA: CUANDO SE DESPLIEGA, EL DISPLAY DEL RESTO DEL MAIN DE LA PAGINA PODRIA PASAR A NONE*/
+  
+    #categorias{
+      display: none;
+      z-index: 1;
+      padding-top: 100px;
+      width: 100%;
+      background-color: var(--nav-bar);
+    }
+  
+    #categorias ul{
+      list-style: none;
+      padding: 5px 20px 20px 20px;
+    }
+  
+    #categorias li{
+      padding: 2rem;
+      font-size: 2rem;
+      font-weight: 600;
+      text-align: center;
+      border: 1px solid black;
+    }
+  
+    #categorias a{
+      text-decoration: none;
+      color: black;
+    }
+  
+    #categorias a:hover{
+      color: white;
+      background-color: var(--button);
+      border-radius: 10px;
+      padding: 8px;
+      margin: -8px;
+      transition: all 0.5s linear;
+  
+    }
+  
+    /*CUERPO PRINCIPAL*/
+  
+    main{
+      padding-top: 40px;
+    }
+
+    main > div{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    main > div h2{
+      text-align: center;
+      padding-bottom: 10px;
+    }
+
+    form, form > div{
+      display: flex;
+      flex-direction: column;
+    }
+
+    form label, form fieldset{
+      margin: 5px 0 5px 0px;
+      padding: 5px;
+    }
+
+    form input{
+      padding: 5px 0px;
+    }
+
+    .sexo-radio{
+      display:none;
+    }
+
+    .sexo-movil select{
+      width: 100%;
+      padding: 5px 0px;
+    }
+
+    .check-box{
+      display: grid;
+      grid-template-columns: auto 1fr auto 1fr;
+    }
+
+    textarea{
+      width: 100%;
+      resize: none;
+    }
+
+    input[type="submit"]{
+      width: 80%;
+      margin: 10px auto;
+      border-radius: 5px;
+    }
+
+    input[type="text"]:focus, input[type="date"]:focus, input[type="email"]:focus, textarea:focus{
+      border-color: #95DE28;
+      background-color: #fff;
+      box-shadow: 0px 0px 5px 2px #52D42680;
+    }
+
+    input[type="submit"]:hover{
+      background-color: var(--button);
+       animation: dance-button 0.5s linear 1;
+       z-index: 0;
+  }
+
+  input[type="submit"]:active{
+    border-color: #95DE28;
+    color: #95DE28;
+    box-shadow: 0px 0px 10px 5px #52D42680;
+  }
+
+    /*PIE DE PAGUINA*/
+  
+    p {
+      width: 80%;
+      margin: 0 auto;
+      padding-bottom: 1rem;
+    }
+  
+    #contact {
+      background-color: var(--nav-footer);
+      border-radius: 10px 10px 0 0;
+      width: 100%;
+      padding: 2rem 1rem 0rem;
+    }
+  
+    #contact h2{
+      padding: 10px;
+    }
+  
+    #contact nav{
+      padding-bottom: 10px;
+    }
+  
+    #contact nav i{
+      margin: 1rem 2rem;
+    }
+
+    footer{
+      text-align: center;
+    }
+  
+    /*ANIMACION*/
+    @keyframes dance-button {
+      0%{
+        transform: rotateZ(0deg);
+      }
+      25%{
+        transform: rotateZ(2deg);
+      }
+      50%{
+        transform: rotateZ(0deg);
+      }
+      75%{
+        transform: rotateZ(2deg);
+      }
+      100%{
+        transform: rotateZ(0deg);
+      }    
+    }
+  
+  /*TABLET*/
+  
+    @media only screen and (min-width: 769px) and (max-width: 1199px){
+  
+      /*HEADER*/
+  
+      #title_movil{
+        display: none;
+      }
+  
+      #menus{
+        justify-content: flex-end;
+      }
+      
+      #menus nav{
+        display: none;
+      }
+  
+      header{
+        border: none;
+        position: fixed;
+        padding-left: 5%;
+        padding-right: 5rem;
+      }
+  
+      #logo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 80%;
+      }
+  
+      #logo h1{
+        display: inline-block;
+        font-size: 1.5rem;
+        width: 50%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+  
+      #menus{
+        width: 20%;
+      }
+  
+      #categorias{
+        display: block;
+        position: fixed;
+        width: 100%;
+        padding-top: 100px;
+        background-color: var(--nav-bar);
+        border-radius: 0 0 5px 5px;
+        z-index: 0;
+      }
+  
+      #categorias ul{
+        list-style: none;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 5px 20px 20px 20px;
+      }
+  
+      #categorias a{
+        text-decoration: none;
+        color: black;
+      }
+  
+      #categorias li{
+        border: none;
+        padding: 0;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+  
+      #categorias a:hover{
+        color: white;
+        background-color: var(--button);
+        border-radius: 10px;
+        padding: 5px;
+        margin: -5px;
+        transition: all 1s linear;
+      }
+
+      /*CUERPO PRINCIPAL*/
+
+      main{
+        padding: 160px 0px 20px 0px;
+      }
+      .sexo-tabla{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .sexo-movil{
+        display:none;
+      }
+      .sexo-radio{
+        display: block;
+      }
+  
+      form{
+        width: 80%;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        grid-template-areas: "nombre apellido"
+                              "fecha mail"
+                              "sexo sexo"
+                              "categoria categoria"
+                              "comentario comentario"
+                              "submit submit";
+      }
+
+      .nombre-tabla{
+        grid-area: nombre;
+      }
+      .apellido-tabla{
+        grid-area: apellido;
+      }
+      .fecha-tabla{
+        grid-area: fecha;
+      }
+      .sexo-tabla{
+        grid-area: sexo;
+        width: 50%;
+        margin: 0 auto;
+      }
+      .mail-tabla{
+        grid-area: mail;
+      }
+      .categoria-tabla{
+        grid-area: categoria;
+        width: 60%;
+        margin: 0 auto;
+      }
+      .comentario-tabla{
+        grid-area: comentario;
+        width: 60%;
+        margin: 0 auto;
+      }
+      .submit-tabla{
+        grid-area: submit;
+      }
+      input[type="submit"]{
+        width: 25%;
+      }
+    }
+  
+    /*PC*/
+  
+    @media only screen and (min-width: 1200px){
+  
+      /*HEADER*/
+  
+      #title_movil{
+        display: none;
+      }
+  
+      #menus{
+        justify-content: flex-end;
+      }
+      
+      #menus nav{
+        display: none;
+      }
+  
+      header{
+        border: none;
+        position: fixed;
+        padding-left: 5%;
+        padding-right: 5rem;
+      }
+  
+      #logo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 80%;
+      }
+  
+      #logo h1{
+        display: inline-block;
+        font-size: 2rem;
+        width: 50%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+  
+      #menus{
+        width: 20%;
+      }
+  
+      #categorias{
+        display: block;
+        position: fixed;
+        width: 100%;
+        padding-top: 100px;
+        background-color: var(--nav-bar);
+        border-radius: 0 0 5px 5px;
+        z-index: 0;
+      }
+  
+      #categorias ul{
+        list-style: none;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 5px 20px 20px 20px;
+      }
+  
+      #categorias a{
+        text-decoration: none;
+        color: black;
+      }
+  
+      #categorias li{
+        border: none;
+        padding: 0;
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+  
+      #categorias a:hover{
+        color: white;
+        background-color: var(--button);
+        border-radius: 10px;
+        padding: 8px;
+        margin: -8px;
+        transition: all 1s linear;
+  
+      }
+       /*CUERPO PRINCIPAL*/
+
+       main{
+        padding: 180px 0px 20px 0px;
+      }
+      .sexo-tabla{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+      .sexo-movil{
+        display:none;
+      }
+      .sexo-radio{
+        display:block;
+      }
+  
+      form{
+        width: 80%;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 10px;
+        justify-items: center;
+        grid-template-areas: "nombre . apellido"
+                              "fecha  . mail"
+                              ". sexo ."
+                              "categoria categoria categoria"
+                              "comentario comentario comentario"
+                              ". submit .";
+      }
+
+      .nombre-tabla{
+        grid-area: nombre;
+        width: 100%;
+      }
+      .apellido-tabla{
+        grid-area: apellido;
+        width: 100%;
+      }
+      .fecha-tabla{
+        grid-area: fecha;
+        width: 100%;
+      }
+      .sexo-tabla{
+        grid-area: sexo;
+      }
+      .mail-tabla{
+        grid-area: mail;        
+        width: 100%;
+      }
+      .categoria-tabla{
+        grid-area: categoria;
+        width: 50%;
+      }
+      .comentario-tabla{
+        grid-area: comentario;
+        width: 50%;
+      }
+      .submit-tabla{
+        grid-area: submit;
+        width: 25%;
+      }
+    }

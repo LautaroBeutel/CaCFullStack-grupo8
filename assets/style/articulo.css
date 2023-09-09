@@ -85,6 +85,7 @@ i{
     font-size: 2rem;
     font-weight: 600;
     text-align: center;
+    border: 1px solid black;
   }
 
   #categorias a{
@@ -145,7 +146,6 @@ i{
   }
 
   #articulo nav #add_carrito:active{
-    animation: dance-button 0.5s linear 1;
     border-color: #95DE28;
     color: #95DE28;
     box-shadow: 0px 0px 10px 5px #52D42680;
