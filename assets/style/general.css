@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+:root{
+    --persian-orange: #D08C60ff;
+    --sunglow: #FFCB68ff;
+    --moss-green: #9B9B7Aff;
+    --peach-yellow: #F1DCA7ff;
+    --beaver: #997B66ff;
+    --reseda-green: #797D62ff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
