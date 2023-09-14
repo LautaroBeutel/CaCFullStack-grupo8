@@ -1,9 +1,11 @@
 :root{
-  --background: #DED2C1;
-  --nav-bar: #91887A;
-  --nav-footer: #C4B7A5;
-  --icons: #45403A;
-  --button: #473D2F;
+  --marron-claro: #D08C60;
+  --amarillo: #FFCB69;
+  --verde-claro: #9B9B7A;
+  --hueso: #F1DCA7;
+  --marron-oscuro: #997B66;
+  --verde-oscuro: #797D62;
+  --rosa: #DE695B;
 }
 
 * { 
@@ -14,11 +16,21 @@
 
 body {
   margin: 0;
-  background-color: var(--background);
+  background-color: var(--hueso);
+  color: var(--verde-oscuro);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header, footer{
+  color: #000;
 }
 
 i{
-  color: var(--icons);
+  color: #FFF;
+}
+
+i:hover{
+  color: var(--amarillo);
 }
 
   /*CELULAR*/
@@ -27,7 +39,7 @@ i{
   #title_movil{
     display: block;
     margin: 0 auto;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   header:first-child{
@@ -38,7 +50,7 @@ i{
   header{
     position: sticky;
     top: 0;
-    background-color: var(--nav-bar);
+    background-color: var(--marron-claro);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -65,14 +77,13 @@ i{
   }
 
   /*MENU OCULTO CON CATEGORIAS
-  NOTA: CUANDO SE DESPLIEGA, EL DISPLAY DEL RESTO DEL MAIN DE LA PAGINA PODRIA PASAR A NONE*/
+  NOTA: Para desplejar cambiar display a block*/
 
   #categorias{
     display: none;
     z-index: 0;
-    padding-top: 100px;
     width: 100%;
-    background-color: var(--nav-bar);
+    background-color: var(--marron-claro);
   }
 
   #categorias ul{
@@ -85,28 +96,31 @@ i{
     font-size: 2rem;
     font-weight: 600;
     text-align: center;
-    border: 1px solid black;
   }
 
   #categorias a{
     text-decoration: none;
-    color: black;
+    color: #000;
   }
 
   #categorias a:hover{
-    color: white;
-    background-color: var(--button);
-    border-radius: 10px;
-    padding: 8px;
-    margin: -8px;
-    transition: all 0.5s linear;
+    color: var(--amarillo);
+    transition: all 0.2s linear;
+  }
 
+  #categorias li:hover{
+    box-shadow: 0px 0px 10px 5px var(--amarillo);
+    border-radius: 10px;
   }
 
   /*CUERPO PRINCIPAL*/
 
   main {
     padding-top: 60px;
+  }
+
+  #articulo_id{
+    color: var(--rosa);
   }
 
   #info h2, #articulo img, #articulo input:nth-child(2n-1), footer{
@@ -134,21 +148,23 @@ i{
   #articulo nav #add_carrito{
     padding: 1.5rem;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid var(--verde-claro);
     font-size: 1rem;
-    color: white;
-    background-color: var(--icons);
+    color: var(--hueso);
+    background-color: var(--rosa);
   }
 
   #articulo nav #add_carrito:hover{
-    background-color: var(--button);
+    background-color: var(--amarillo);
+    border-color: var(--amarillo);
+    color: var(--rosa);
     animation: dance-button 0.5s linear 1;
   }
 
   #articulo nav #add_carrito:active{
-    border-color: #95DE28;
-    color: #95DE28;
-    box-shadow: 0px 0px 10px 5px #52D42680;
+    border-color: #fff;
+    color: var(--rosa);
+    box-shadow: 0px 0px 10px 5px var(--rosa);
   }
 
   #articulo,
@@ -172,6 +188,10 @@ i{
 
   /* INFORMACION DEL PRODUCTO */
 
+  section h2{
+    color: var(--rosa);
+  }
+
   #info {
     text-align: center;
   }
@@ -182,7 +202,7 @@ i{
   }
 
   table td {
-    border: 2px solid var(--icons);
+    border: 2px solid var(--verde-oscuro);
   }
 
   table tr td:nth-child(2n-1) {
@@ -208,7 +228,7 @@ i{
   }
 
   #contact {
-    background-color: var(--nav-footer);
+    background-color: var(--marron-claro);
     border-radius: 10px 10px 0 0;
     width: 100%;
     padding: 2rem 1rem 0rem;
@@ -294,7 +314,7 @@ i{
       position: fixed;
       width: 100%;
       padding-top: 100px;
-      background-color: var(--nav-bar);
+      background-color: var(--marron-claro);
       border-radius: 0 0 5px 5px;
       z-index: 0;
     }
@@ -314,18 +334,18 @@ i{
 
     #categorias li{
       border: none;
-      padding: 0;
+      padding: 2px;
       font-size: 1rem;
       font-weight: 400;
     }
 
     #categorias a:hover{
-      color: white;
-      background-color: var(--button);
+      color: var(--amarillo);
+      transition: all 0.2s linear;
+    }
+    #categorias li:hover{
+      box-shadow: 0px 0px 10px 5px var(--amarillo);
       border-radius: 10px;
-      padding: 5px;
-      margin: -5px;
-      transition: all 1s linear;
     }
 
     /*CUERPO PRINCIPAL*/
@@ -424,7 +444,7 @@ i{
       position: fixed;
       width: 100%;
       padding-top: 100px;
-      background-color: var(--nav-bar);
+      background-color: var(--marron-claro);
       border-radius: 0 0 5px 5px;
       z-index: 0;
     }
@@ -444,19 +464,19 @@ i{
 
     #categorias li{
       border: none;
-      padding: 0;
+      padding: 4px;
       font-size: 1.5rem;
       font-weight: 400;
     }
 
     #categorias a:hover{
-      color: white;
-      background-color: var(--button);
-      border-radius: 10px;
-      padding: 8px;
-      margin: -8px;
-      transition: all 1s linear;
+      color: var(--amarillo);
+      transition: all 0.2s linear;
+    }
 
+    #categorias li:hover{
+      box-shadow: 0px 0px 10px 5px var(--amarillo);
+      border-radius: 10px;
     }
 
     /*CUERPO PRINCIPAL*/
