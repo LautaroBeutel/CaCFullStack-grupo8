@@ -1,0 +1,398 @@
+:root {
+    --marron-claro: #D08C60;
+    --amarillo: #FFCB69;
+    --verde-claro: #9B9B7A;
+    --hueso: #F1DCA7;
+    --marron-oscuro: #997B66;
+    --verde-oscuro: #797D62;
+    --rosa: #DE695B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--hueso);
+    color: var(--verde-oscuro);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header,
+footer {
+    color: #000;
+}
+
+i {
+    color: #FFF;
+}
+
+i:hover {
+    color: var(--amarillo);
+}
+
+/*CELULAR*/
+/*HEADER*/
+
+#title_movil {
+    display: block;
+    margin: 0 auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header:first-child {
+    border: none;
+    border-radius: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--marron-claro);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    border-radius: 0 0 5px 5px;
+    z-index: 1;
+}
+
+#logo img {
+    width: 5rem;
+    border-radius: 50%;
+}
+
+#logo h1 {
+    display: none;
+}
+
+#menus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    max-width: 300px;
+}
+
+/*MENU OCULTO CON CATEGORIAS
+    NOTA: Para desplejar cambiar display a block*/
+
+#categorias {
+    display: none;
+    z-index: 0;
+    width: 100%;
+    background-color: var(--marron-claro);
+}
+
+#categorias ul {
+    list-style: none;
+    padding: 5px 20px 20px 20px;
+}
+
+#categorias li {
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#categorias a {
+    text-decoration: none;
+    color: #000;
+}
+
+#categorias a:hover {
+    color: var(--amarillo);
+    transition: all 0.2s linear;
+}
+
+#categorias li:hover {
+    box-shadow: 0px 0px 10px 5px var(--amarillo);
+    border-radius: 10px;
+}
+
+/*CUERPO PRINCIPAL*/
+
+main {
+    padding-top: 60px;
+}
+
+img {
+    width: 10rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-areas: "categoria"
+        "articulos";
+}
+
+.prod_title {
+    grid-area: categoria;
+    font-size: 1.5rem;
+}
+
+.all_articles {
+    grid-area: articulos;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 9%;
+}
+
+.all_articles article {
+    text-align: center;
+    padding: 1rem;
+}
+
+.more {
+    text-align: right;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+
+/*PIE DE PAGUINA*/
+
+p {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+}
+
+#contact {
+    text-align: center;
+    background-color: var(--marron-claro);
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    padding: 2rem 1rem 0rem;
+}
+
+#contact h2 {
+    padding: 10px;
+}
+
+#contact nav {
+    padding-bottom: 10px;
+}
+
+#contact nav i {
+    margin: 1rem 2rem;
+}
+
+
+/*TABLET*/
+
+@media only screen and (min-width: 769px) and (max-width: 1199px) {
+
+    /*HEADER*/
+
+    
+
+    #title_movil {
+        display: none;
+    }
+
+    #menus {
+        justify-content: flex-end;
+    }
+
+    #menus nav {
+        display: none;
+    }
+
+    header {
+        border: none;
+        position: fixed;
+        padding-left: 5%;
+        padding-right: 5rem;
+    }
+
+    #logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    #logo h1 {
+        display: inline-block;
+        font-size: 1.5rem;
+        width: 50%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #menus {
+        width: 20%;
+    }
+
+    #categorias {
+        display: block;
+        position: fixed;
+        width: 100%;
+        padding-top: 100px;
+        background-color: var(--marron-claro);
+        border-radius: 0 0 5px 5px;
+        z-index: 0;
+    }
+
+    #categorias ul {
+        list-style: none;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 5px 20px 20px 20px;
+    }
+
+    #categorias a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #categorias li {
+        border: none;
+        padding: 2px;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    #categorias a:hover {
+        color: var(--amarillo);
+        transition: all 0.2s linear;
+    }
+
+    #categorias li:hover {
+        box-shadow: 0px 0px 10px 5px var(--amarillo);
+        border-radius: 10px;
+    }
+
+    /*CUERPO PRINCIPAL*/
+
+    main {
+        padding-top: 110px;
+    }
+
+    section {
+        margin: 2rem;
+    }
+
+    .prod_title {
+        padding-top: 2rem;
+    }
+
+    .all_articles {
+        margin: 0 18%;
+
+    }
+
+
+}
+
+/*PC*/
+
+@media only screen and (min-width: 1200px) {
+
+    /*HEADER*/
+
+    #title_movil {
+        display: none;
+    }
+
+    #menus {
+        justify-content: flex-end;
+    }
+
+    #menus nav {
+        display: none;
+    }
+
+    header {
+        border: none;
+        position: fixed;
+        padding-left: 5%;
+        padding-right: 5rem;
+    }
+
+    #logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    #logo h1 {
+        display: inline-block;
+        font-size: 2rem;
+        width: 50%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #menus {
+        width: 20%;
+    }
+
+    #categorias {
+        display: block;
+        position: fixed;
+        width: 100%;
+        padding-top: 100px;
+        background-color: var(--marron-claro);
+        border-radius: 0 0 5px 5px;
+        z-index: 0;
+    }
+
+    #categorias ul {
+        list-style: none;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 5px 20px 20px 20px;
+    }
+
+    #categorias a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #categorias li {
+        border: none;
+        padding: 4px;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    #categorias a:hover {
+        color: var(--amarillo);
+        transition: all 0.2s linear;
+    }
+
+    #categorias li:hover {
+        box-shadow: 0px 0px 10px 5px var(--amarillo);
+        border-radius: 10px;
+    }
+
+    /*CUERPO PRINCIPAL*/
+
+    main {
+        padding-top: 200px;
+    }
+
+    .all_articles {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0;
+    }
+
+
+
+}
