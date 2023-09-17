@@ -85,6 +85,7 @@ header {
     z-index: 0;
     width: 100%;
     background-color: var(--marron-claro);
+    border-radius: 5px;
 }
 
 #categorias ul {
@@ -150,15 +151,49 @@ section {
 
 .all_articles article {
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
+    margin: 10px;
+    background-color: var(--verde-claro);
+    border: 2px solid var(--hueso);
 }
 
-.more {
-    text-align: right;
+.all_articles article:hover{
+    border: 2px solid var(--rosa);
+}
+
+main a{
+    text-decoration: none;
+    color: #000;
+}
+
+.prod_price::before{
+    content: "$";
+}
+
+.prod_price{
+    color: var(--amarillo);
+    font-weight: 800;
     font-size: 1.2rem;
-    width: 100%;
+    padding-top: 5px;
 }
 
+.more input{
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 1rem 0 2rem 0;
+}
+
+.more input:hover{
+    background-color: var(--amarillo);
+    animation: translate-button 0.2s linear 1;
+}
+
+.more input:active{
+    border-color: #fff;
+    color: var(--rosa);
+    box-shadow: 0px 0px 10px 5px var(--rosa);
+  }
 
 /*PIE DE PAGUINA*/
 
@@ -188,14 +223,31 @@ p {
     margin: 1rem 2rem;
 }
 
+/*ANIMACION*/
+@keyframes translate-button {
+    0%{
+      transform: translateX(0px);
+    }
+    25%{
+      transform: translateX(5px);
+    }
+    50%{
+      transform: translateX(0px);
+    }
+    75%{
+      transform: translateX(-5px);
+    }
+    100%{
+      transform: translateX(0px);
+    }    
+  }
+
 
 /*TABLET*/
 
 @media only screen and (min-width: 769px) and (max-width: 1199px) {
 
     /*HEADER*/
-
-    
 
     #title_movil {
         display: none;
@@ -260,7 +312,7 @@ p {
 
     #categorias li {
         border: none;
-        padding: 2px;
+        padding: 10px;
         font-size: 1rem;
         font-weight: 400;
     }
@@ -290,8 +342,7 @@ p {
     }
 
     .all_articles {
-        margin: 0 18%;
-
+        margin: 0 16%;
     }
 
 
@@ -387,10 +438,12 @@ p {
         padding-top: 200px;
     }
 
+    section{
+        margin: 0 10%;
+    }
+
     .all_articles {
         display: flex;
-        flex-wrap: nowrap;
-        margin: 0;
     }
 
 

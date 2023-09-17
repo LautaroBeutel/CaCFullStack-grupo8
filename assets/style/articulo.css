@@ -137,12 +137,15 @@ i:hover{
   }
 
   #articulo_id img{
-    width: 10rem;
+    width: 12rem;
+    background-color: var(--verde-claro);
+    padding: 10px;
 
   }
 
   #articulo input[type="text"] {
     background-color: transparent;
+    color: var(--verde-oscuro)
   }
 
   #articulo nav #add_carrito{
@@ -351,7 +354,7 @@ i:hover{
     /*CUERPO PRINCIPAL*/
 
     main{
-      padding-top: 110px;
+      padding-top: 130px;
     }
 
     #articulo{
