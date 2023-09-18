@@ -1,11 +1,11 @@
 :root{
-  --marron-claro: #D08C60;
-  --amarillo: #FFCB69;
-  --verde-claro: #9B9B7A;
-  --hueso: #F1DCA7;
-  --marron-oscuro: #997B66;
-  --verde-oscuro: #797D62;
-  --rosa: #DE695B;
+    --marron-claro: #D08C60;
+    --amarillo: #FFCB69;
+    --verde-claro: #9B9B7A;
+    --hueso: #F1DCA7;
+    --marron-oscuro: #997B66;
+    --verde-oscuro: #797D62;
+    --rosa: #DE695B;
   }
   
   * { 
@@ -26,9 +26,9 @@
   }
   
   i{
-    color: #fff;
+    color: #FFF;
   }
-
+  
   i:hover{
     color: var(--amarillo);
   }
@@ -56,7 +56,7 @@
       justify-content: space-between;
       padding: 5px 20px;
       border-radius: 0 0 5px 5px;
-      z-index: 2;
+      z-index: 1;
     }
   
     #logo img{
@@ -77,14 +77,14 @@
     }
   
     /*MENU OCULTO CON CATEGORIAS
-  NOTA: Para desplejar cambiar display a block*/
-
-  #categorias{
-    display: none;
-    z-index: 0;
-    width: 100%;
-    background-color: var(--marron-claro);
-  }
+    NOTA: Para desplejar cambiar display a block*/
+  
+    #categorias{
+      display: none;
+      z-index: 0;
+      width: 100%;
+      background-color: var(--marron-claro);
+    }
   
     #categorias ul{
       list-style: none;
@@ -110,88 +110,129 @@
   
     #categorias li:hover{
       box-shadow: 0px 0px 10px 5px var(--amarillo);
-      border-radius: 10px;  
+      border-radius: 10px;
     }
   
     /*CUERPO PRINCIPAL*/
   
-    main{
-      padding-top: 40px;
+    main {
+      padding-top: 60px;
     }
 
-    main > div{
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 20px;
+    /* Articulo, precio y boton de compra */
+
+  
+    main img{
+        width: 12rem;
+        padding: 15px;
+        margin: 1rem;
+        background-color: var(--verde-claro);
     }
 
-    main > div h2{
-      text-align: center;
-      padding-bottom: 10px;
-      color: var(--rosa);
+    #articulo {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "articulo"
+                             "boton";
+        justify-items: center;
+        gap: 30px;
+        color: var(--rosa);
     }
 
-    form, form > div{
-      display: flex;
-      flex-direction: column;
+    #articulo > div{
+        grid-area: articulo;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    form label, form fieldset{
-      margin: 5px 0 5px 0px;
-      padding: 5px;
+    #articulo_id{
+        text-align: center;
     }
 
-    form input{
-      padding: 5px 0px;
+    #precio::before{
+        content: "$ ";
     }
 
-    .sexo-radio{
-      display:none;
+    #articulo > nav {
+        grid-area: boton;
     }
 
-    .sexo-movil select{
-      width: 100%;
-      padding: 5px 0px;
+    #articulo > nav input[type="button"]{
+        font-size: 1.5rem;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 1rem 0 2rem 0;
+    }
+    
+    #articulo > nav input[type="button"]:hover{
+        background-color: var(--amarillo);
+        animation: dance-button 0.5s linear 1;
+    }
+    
+    #articulo > nav input[type="button"]:active{
+        border-color: #fff;
+        color: var(--rosa);
+        box-shadow: 0px 0px 10px 5px var(--rosa);
     }
 
-    .check-box{
-      display: grid;
-      grid-template-columns: auto 1fr auto 1fr;
+    /* Información del producto */
+
+    #informacion{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "tabla"
+                             "texto";
     }
 
-    textarea{
-      width: 100%;
-      resize: none;
+    #informacion h2{
+        color: var(--rosa);
     }
 
-    input[type="submit"]{
-      width: 80%;
-      margin: 10px auto;
-      border-radius: 5px;
+    #tabla{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-area: tabla;
     }
 
-    input[type="text"]:focus, input[type="date"]:focus, input[type="email"]:focus, textarea:focus{
-      border-color: #fff;
-      background-color: #fff;
-      box-shadow: 0px 0px 5px 2px var(--rosa);
+    table{
+        border-collapse: collapse;
+        margin: 1rem;
     }
 
-    input[type="submit"]:hover{
-      background-color: var(--amarillo);
-       animation: translate-button 0.2s linear 1;
-       z-index: 0;
-  }
+    table td {
+        border: 2px solid var(--verde-oscuro);
+      }
+    
+      table tr td:nth-child(2n-1) {
+        padding: 1rem;
+      }
 
-  input[type="submit"]:active{
-    border-color: #fff;
-    color: var(--rosa);
-    box-shadow: 0px 0px 10px 5px var(--rosa);
-  }
+      table tr td:nth-child(2n) {
+        padding: 1.2rem;
+      }
 
+    #description{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-area: texto;
+        margin: 1rem auto;
+    }
+    
+    #description_text{
+        margin: 1rem 0;
+        width: 80%;
+    }
+  
     /*PIE DE PAGUINA*/
   
-    p {
+    footer p {
       width: 80%;
       margin: 0 auto;
       padding-bottom: 1rem;
@@ -202,6 +243,7 @@
       border-radius: 10px 10px 0 0;
       width: 100%;
       padding: 2rem 1rem 0rem;
+      text-align: center;
     }
   
     #contact h2{
@@ -215,27 +257,23 @@
     #contact nav i{
       margin: 1rem 2rem;
     }
-
-    footer{
-      text-align: center;
-    }
   
     /*ANIMACION*/
-    @keyframes translate-button {
+    @keyframes dance-button {
       0%{
-        transform: translateX(0px);
+        transform: rotateZ(0deg);
       }
       25%{
-        transform: translateX(5px);
+        transform: rotateZ(2deg);
       }
       50%{
-        transform: translateX(0px);
+        transform: rotateZ(0deg);
       }
       75%{
-        transform: translateX(-5px);
+        transform: rotateZ(2deg);
       }
       100%{
-        transform: translateX(0px);
+        transform: rotateZ(0deg);
       }    
     }
   
@@ -308,7 +346,7 @@
   
       #categorias li{
         border: none;
-        padding: 0;
+        padding: 2px;
         font-size: 1rem;
         font-weight: 400;
       }
@@ -321,71 +359,23 @@
         box-shadow: 0px 0px 10px 5px var(--amarillo);
         border-radius: 10px;
       }
-
+  
       /*CUERPO PRINCIPAL*/
-
+  
       main{
-        padding: 160px 0px 20px 0px;
+        padding-top: 200px;
       }
-      .sexo-tabla{
+
+      #articulo > div{
         display: flex;
-        justify-content: space-around;
-        align-items: center;
+        flex-direction: row;
+        gap: 8rem;
       }
-      .sexo-movil{
-        display:none;
-      }
-      .sexo-radio{
-        display: block;
+
+      #precio{
+        font-size: 3rem;
       }
   
-      form{
-        width: 80%;
-        padding: 20px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        grid-template-areas: "nombre apellido"
-                              "fecha mail"
-                              "sexo sexo"
-                              "categoria categoria"
-                              "comentario comentario"
-                              "submit submit";
-      }
-
-      .nombre-tabla{
-        grid-area: nombre;
-      }
-      .apellido-tabla{
-        grid-area: apellido;
-      }
-      .fecha-tabla{
-        grid-area: fecha;
-      }
-      .sexo-tabla{
-        grid-area: sexo;
-        width: 50%;
-        margin: 0 auto;
-      }
-      .mail-tabla{
-        grid-area: mail;
-      }
-      .categoria-tabla{
-        grid-area: categoria;
-        width: 60%;
-        margin: 0 auto;
-      }
-      .comentario-tabla{
-        grid-area: comentario;
-        width: 60%;
-        margin: 0 auto;
-      }
-      .submit-tabla{
-        grid-area: submit;
-      }
-      input[type="submit"]{
-        width: 25%;
-      }
     }
   
     /*PC*/
@@ -471,68 +461,26 @@
         box-shadow: 0px 0px 10px 5px var(--amarillo);
         border-radius: 10px;
       }
-
-       /*CUERPO PRINCIPAL*/
-
-       main{
-        padding: 180px 0px 20px 0px;
-      }
-      .sexo-tabla{
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-      .sexo-movil{
-        display:none;
-      }
-      .sexo-radio{
-        display:block;
-      }
   
-      form{
-        width: 80%;
-        padding: 20px;
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        gap: 10px;
-        justify-items: center;
-        grid-template-areas: "nombre . apellido"
-                              "fecha  . mail"
-                              ". sexo ."
-                              "categoria categoria categoria"
-                              "comentario comentario comentario"
-                              ". submit .";
+      /*CUERPO PRINCIPAL*/
+  
+      main{
+        padding-top: 210px;
+      }
+      
+      #articulo > div{
+        display: flex;
+        flex-direction: row;
+        gap: 8rem;
       }
 
-      .nombre-tabla{
-        grid-area: nombre;
-        width: 100%;
+      #precio{
+        font-size: 3rem;
       }
-      .apellido-tabla{
-        grid-area: apellido;
-        width: 100%;
-      }
-      .fecha-tabla{
-        grid-area: fecha;
-        width: 100%;
-      }
-      .sexo-tabla{
-        grid-area: sexo;
-      }
-      .mail-tabla{
-        grid-area: mail;        
-        width: 100%;
-      }
-      .categoria-tabla{
-        grid-area: categoria;
-        width: 50%;
-      }
-      .comentario-tabla{
-        grid-area: comentario;
-        width: 50%;
-      }
-      .submit-tabla{
-        grid-area: submit;
-        width: 25%;
-      }
+
+      #informacion{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "tabla texto";
+    }
+  
     }
