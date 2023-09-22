@@ -105,14 +105,11 @@ header {
     color: #000;
 }
 
-#categorias a:hover {
-    color: var(--amarillo);
-    transition: all 0.2s linear;
-}
 
 #categorias li:hover {
     box-shadow: 0px 0px 10px 5px var(--amarillo);
     border-radius: 10px;
+    transition: all 0.2s linear;
 }
 
 /*CUERPO PRINCIPAL*/
@@ -317,20 +314,18 @@ p {
         font-weight: 400;
     }
 
-    #categorias a:hover {
-        color: var(--amarillo);
+    #categorias li:hover {
+        font-weight: 800;
+        box-shadow: none;
         transition: all 0.2s linear;
     }
 
-    #categorias li:hover {
-        box-shadow: 0px 0px 10px 5px var(--amarillo);
-        border-radius: 10px;
-    }
+    
 
     /*CUERPO PRINCIPAL*/
 
     main {
-        padding-top: 110px;
+        padding-top: 160px;
     }
 
     section {
@@ -417,25 +412,22 @@ p {
 
     #categorias li {
         border: none;
-        padding: 4px;
+        padding: 10px;
         font-size: 1.5rem;
         font-weight: 400;
     }
 
-    #categorias a:hover {
-        color: var(--amarillo);
-        transition: all 0.2s linear;
-    }
-
+    
     #categorias li:hover {
-        box-shadow: 0px 0px 10px 5px var(--amarillo);
-        border-radius: 10px;
+        font-weight: 800;
+        box-shadow: none;
+        transition: all 0.2s linear;
     }
 
     /*CUERPO PRINCIPAL*/
 
     main {
-        padding-top: 200px;
+        padding-top: 210px;
     }
 
     section{

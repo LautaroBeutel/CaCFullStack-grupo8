@@ -103,20 +103,16 @@
       color: #000;
     }
   
-    #categorias a:hover{
-      color: var(--amarillo);
-      transition: all 0.2s linear;
-    }
-  
-    #categorias li:hover{
+    #categorias li:hover {
       box-shadow: 0px 0px 10px 5px var(--amarillo);
-      border-radius: 10px;  
-    }
+      border-radius: 10px;
+      transition: all 0.2s linear;
+  }
   
     /*CUERPO PRINCIPAL*/
   
     main{
-      padding-top: 40px;
+      padding-top: 60px;
     }
 
     main > div{
@@ -313,19 +309,16 @@
         font-weight: 400;
       }
   
-      #categorias a:hover{
-        color: var(--amarillo);
+      #categorias li:hover {
+        font-weight: 800;
+        box-shadow: none;
         transition: all 0.2s linear;
-      }
-      #categorias li:hover{
-        box-shadow: 0px 0px 10px 5px var(--amarillo);
-        border-radius: 10px;
-      }
+    }
 
       /*CUERPO PRINCIPAL*/
 
       main{
-        padding: 160px 0px 20px 0px;
+        padding: 200px 0px 20px 0px;
       }
       .sexo-tabla{
         display: flex;
@@ -462,20 +455,16 @@
         font-weight: 400;
       }
   
-      #categorias a:hover{
-        color: var(--amarillo);
+      #categorias li:hover {
+        font-weight: 800;
+        box-shadow: none;
         transition: all 0.2s linear;
-      }
-  
-      #categorias li:hover{
-        box-shadow: 0px 0px 10px 5px var(--amarillo);
-        border-radius: 10px;
-      }
+    }
 
        /*CUERPO PRINCIPAL*/
 
        main{
-        padding: 180px 0px 20px 0px;
+        padding: 200px 0px 20px 0px;
       }
       .sexo-tabla{
       display: flex;
@@ -493,46 +482,48 @@
         width: 80%;
         padding: 20px;
         display: grid;
-        grid-template-columns: 1fr auto 1fr;
+        grid-template-columns: 30% 20% 20% 30%;
         gap: 10px;
         justify-items: center;
-        grid-template-areas: "nombre . apellido"
-                              "fecha  . mail"
-                              ". sexo ."
-                              "categoria categoria categoria"
-                              "comentario comentario comentario"
-                              ". submit .";
+        grid-template-areas: "nombre nombre apellido apellido"
+                              "fecha fecha mail mail"
+                              ". sexo sexo ."
+                              "categoria categoria comentario comentario"
+                              ". submit submit .";
       }
 
       .nombre-tabla{
         grid-area: nombre;
-        width: 100%;
+        width: 90%;
+
       }
       .apellido-tabla{
         grid-area: apellido;
-        width: 100%;
+        width: 90%;
       }
       .fecha-tabla{
         grid-area: fecha;
-        width: 100%;
+        width: 90%;
       }
       .sexo-tabla{
         grid-area: sexo;
+        padding: 1rem;
       }
       .mail-tabla{
         grid-area: mail;        
-        width: 100%;
+        width: 90%;
       }
       .categoria-tabla{
         grid-area: categoria;
-        width: 50%;
+        width: 100%;
       }
+
       .comentario-tabla{
         grid-area: comentario;
-        width: 50%;
+        width: 100%;
       }
       .submit-tabla{
         grid-area: submit;
-        width: 25%;
+        padding: 0.5rem;
       }
     }
