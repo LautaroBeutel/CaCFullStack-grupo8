@@ -8,6 +8,7 @@
   --rosa: #DE695B;
 }
 
+
 * { 
   margin: 0;
   padding: 0;
@@ -32,6 +33,7 @@ i{
 i:hover{
   color: var(--amarillo);
 }
+
 
   /*CELULAR*/
   /*HEADER*/
@@ -112,6 +114,7 @@ i:hover{
     box-shadow: 0px 0px 10px 5px var(--amarillo);
     border-radius: 10px;
   }
+
 
   /*CUERPO PRINCIPAL*/
 
@@ -272,6 +275,7 @@ i:hover{
 
   @media only screen and (min-width: 769px) and (max-width: 1199px){
 
+
     /*HEADER*/
 
     #title_movil{
@@ -353,6 +357,7 @@ i:hover{
 
     /*CUERPO PRINCIPAL*/
 
+
     main{
       padding-top: 130px;
     }
@@ -401,6 +406,7 @@ i:hover{
   /*PC*/
 
   @media only screen and (min-width: 1200px){
+
 
     /*HEADER*/
 
@@ -481,6 +487,7 @@ i:hover{
       box-shadow: 0px 0px 10px 5px var(--amarillo);
       border-radius: 10px;
     }
+
 
     /*CUERPO PRINCIPAL*/
 
