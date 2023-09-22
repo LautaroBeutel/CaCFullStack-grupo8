@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articulo</title>
+    <link rel="stylesheet" href="./assets/style/general.css">
     <link rel="stylesheet" href="./assets/style/articulo.css">
-    <script src="https://kit.fontawesome.com/1fcc785506.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/style/header.css">
 </head>
-
 <body>
+
+    <header class="navbar__header">
+        
+        <nav class="menu__header" id="menu__header">
+            <ul id="ul__header">
+                <li><a class="ancla__header" href="#">Inicio</a></li>
+                <li><a class="ancla__header" href="#">Categorías</a></li>
+                <li><a class="ancla__header" href="#">Más vendidos</a></li>
+                <li><a class="ancla__header" href="#">Ofertas</a></li>
+                <li><a class="ancla__header" href="#">Acerca de</a></li>
+                <li><a class="ancla__header" href="#">Servicios</a></li>
+                <li><a class="ancla__header" href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <div class="logo__header">
+            LOGO
+        </div>
+
+        <nav class="menu-desktop__header">
+            <ul id="ul__header-desktop">
+                <li><a class="ancla__header__desktop" href="#">Inicio</a></li>
+                <li><a class="ancla__header__desktop" href="#">Categorías</a></li>
+                <li><a class="ancla__header__desktop" href="#">Más vendidos</a></li>
+                <li><a class="ancla__header__desktop" href="#">Ofertas</a></li>
+                <li><a class="ancla__header__desktop" href="#">Acerca de</a></li>
+                <li><a class="ancla__header__desktop" href="#">Servicios</a></li>
+                <li><a class="ancla__header__desktop" href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-list">
+            <i class="fas fa-user"></i>
+            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-bars menu-toggle" id="menu-toggle"></i>
+        </div>
+    </header>
     <!-- ENCABEZADO Y NAVEGACION-->
-    <header>
+    <!-- <header>
         <div id="title_movil">
             <h1>LIBRERIA ONLINE</h1>
         </div>
@@ -31,7 +67,7 @@
         </div>        
     </header>
     <nav>
-<div id="categorias">
+        <div id="categorias">
             <ul>
                 <a href="#"><li>Terror</li></a>
                 <a href="#"><li>Ciencia Ficción</li></a>
@@ -41,7 +77,7 @@
                 <a href="#"><li>Otros</li></a>
             </ul>
         </div>
-    </nav>
+    </nav> -->
     <!--CUERPO PRINCIPAL: CONTIENE NOMBRE DEL ARTICULO, FOTO, PRECIO, BOTON DE COMPRA, DESCRIPCION-->
     <main>
         <section id="articulo">
@@ -108,6 +144,8 @@
             </nav>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
     </footer>
-</body>
 
+    <script src="https://kit.fontawesome.com/1fcc785506.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/menuDesplegable.js"></script>
+</body>
 </html>
