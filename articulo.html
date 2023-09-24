@@ -1,151 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articulo</title>
-    <link rel="stylesheet" href="./assets/style/general.css">
     <link rel="stylesheet" href="./assets/style/articulo.css">
-    <link rel="stylesheet" href="./assets/style/header.css">
+    <link rel="stylesheet" href="./assets/style/encabezado.css">
+    <link rel="stylesheet" href="./assets/style/footer.css">
+    <script src="https://kit.fontawesome.com/1fcc785506.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-
-    <header class="navbar__header">
-        
-        <nav class="menu__header" id="menu__header">
-            <ul id="ul__header">
-                <li><a class="ancla__header" href="#">Inicio</a></li>
-                <li><a class="ancla__header" href="#">Categorías</a></li>
-                <li><a class="ancla__header" href="#">Más vendidos</a></li>
-                <li><a class="ancla__header" href="#">Ofertas</a></li>
-                <li><a class="ancla__header" href="#">Acerca de</a></li>
-                <li><a class="ancla__header" href="#">Servicios</a></li>
-                <li><a class="ancla__header" href="#">Contacto</a></li>
-            </ul>
-        </nav>
-        
-        <div class="logo__header">
-            LOGO
-        </div>
-
-        <nav class="menu-desktop__header">
-            <ul id="ul__header-desktop">
-                <li><a class="ancla__header__desktop" href="#">Inicio</a></li>
-                <li><a class="ancla__header__desktop" href="#">Categorías</a></li>
-                <li><a class="ancla__header__desktop" href="#">Más vendidos</a></li>
-                <li><a class="ancla__header__desktop" href="#">Ofertas</a></li>
-                <li><a class="ancla__header__desktop" href="#">Acerca de</a></li>
-                <li><a class="ancla__header__desktop" href="#">Servicios</a></li>
-                <li><a class="ancla__header__desktop" href="#">Contacto</a></li>
-            </ul>
-        </nav>
-
-        <div class="nav-list">
-            <i class="fas fa-user"></i>
-            <i class="fas fa-shopping-cart"></i>
-            <i class="fas fa-bars menu-toggle" id="menu-toggle"></i>
-        </div>
-    </header>
     <!-- ENCABEZADO Y NAVEGACION-->
-    <!-- <header>
+    <header>
         <div id="title_movil">
-            <h1>LIBRERIA ONLINE</h1>
+            <h1>TAPA DURA</h1>
         </div>
     </header>
     <header>
         <div id="logo">
             <a href="#"><img src="./assets/images/logo-prueba.jpg" alt="logo"></a>
-            <h1>LIBRERIA ONLINE</h1>
+            <h1>TAPA DURA</h1>
         </div>
         <div id="menus">
             <nav>
-                <a href="#"><i class="fa-solid fa-bars fa-2xl"></i></a>
+                <i class="fa-solid fa-bars fa-2xl"></i>
             </nav>
             <div>
-                <a href=""><i class="fa-solid fa-cart-shopping fa-2xl"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping fa-2xl"></i></a>
             </div>
-        </div>        
+        </div>
     </header>
     <nav>
         <div id="categorias">
             <ul>
-                <a href="#"><li>Terror</li></a>
-                <a href="#"><li>Ciencia Ficción</li></a>
-                <a href="#"><li>Aventura</li></a>
-                <a href="#"><li>Policial</li></a>
-                <a href="#"><li>Fantasía</li></a>
-                <a href="#"><li>Otros</li></a>
+                <a href="./productos.html">
+                    <li>Terror</li>
+                </a>
+                <a href="./productos.html">
+                    <li>Ciencia Ficción</li>
+                </a>
+                <a href="./productos.html">
+                    <li>Aventura</li>
+                </a>
+                <a href="./productos.html">
+                    <li>Policial</li>
+                </a>
+                <a href="./productos.html">
+                    <li>Fantasía</li>
+                </a>
+                <a href="./productos.html">
+                    <li>Otros</li>
+                </a>
             </ul>
         </div>
-    </nav> -->
+    </nav>
     <!--CUERPO PRINCIPAL: CONTIENE NOMBRE DEL ARTICULO, FOTO, PRECIO, BOTON DE COMPRA, DESCRIPCION-->
     <main>
         <section id="articulo">
-            <div id="articulo_y_precio">
+            <div>
                 <div id="articulo_id">
-                    <h1>Nombre del libro</h1>
+                    <h1 id="titulo">Aca va el titulo del libro</h1>
                     <img src="./assets/images/foto-prueba.jpg" alt="foto_del_articulo">
                 </div>
-                
                 <div id="precio_articulo">
-                    <label for="precio">$</label><input type="text" id="precio" name="precio" value="X" readonly>
+                    <p id="precio">XXXX</p>
                 </div>
-<!-- NOTA: EL STOCK LO DEJAMOS A LA VISTA DEL USUARIO O NO? SI NO HAY ESTOY, PODEMOS DESHABILITAR EL BOTON DE COMPRA Y CAMBIARLE EL TEXTO A 'NO HAY STOCK'-->
-                
-            </div>
-            <div id="inventario">
-                <h3>Stock:</h3>
-                <input type="text" id="stock" name="stock" value="X" readonly><label for="stock">unidades disponibles</label>
+                <!-- NOTA: EL STOCK LO DEJAMOS A LA VISTA DEL USUARIO O NO? SI NO HAY ESTOY, PODEMOS DESHABILITAR EL BOTON DE COMPRA Y CAMBIARLE EL TEXTO A 'NO HAY STOCK'-->
+
             </div>
             <nav>
                 <input type="button" value="Agregar al carrito" id="add_carrito">
             </nav>
         </section>
-        <section>
-            <h2>Información del producto</h2>
-            <div id="info">
-                <div>
+        <section id="informacion">
+            <div id="tabla">
+                <h2>Información del producto</h2>
+                <div id="info">
                     <table>
                         <tr>
                             <td>Título</td>
-                            <td>xxxx</td>
+                            <td>TITULO DEL LIBRO</td>
                         </tr>
                         <tr>
                             <td>Autor</td>
-                            <td>xxxx</td>
+                            <td>AUTOR DEL LIBRO</td>
                         </tr>
                         <tr>
                             <td>Idioma</td>
-                            <td>xxxx</td>
+                            <td>IDIOMA DEL LIBRO</td>
                         </tr>
                         <tr>
-                            <td>Etc</td>
-                            <td>xxxx</td>
+                            <td>Año de publicación</td>
+                            <td>AÑO DE PUBLICACION</td>
                         </tr>
                     </table>
                 </div>
-                <div id="description">
-                    <h2>Descripción</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, nulla blanditiis optio inventore
-                        facere itaque maiores molestiae dolor voluptatibus reiciendis fugit incidunt possimus, soluta ipsa?
-                        Ipsam expedita a dignissimos sed?</p>
-                </div>
+            </div>
+            <div id="description">
+                <h2>Descripción</h2>
+                <p id="description_text">Aca va una descripcion del producto, o si prefieren podemos escribir otra cosa, como por ejemplo un instructivo de como comprar, las ventajas de leer, una invitacion a suscribirse al nwsletter o lo que se les ocurra. La idea es que vaya texto.</p>
             </div>
         </section>
+
+        <aside>
+            <h3>¿Quieres enterarte de las últimas publicaciones?</h3>
+            <p>Suscríbete a nuestro Newsletter haciendo <a href="./formulario.html"><b>click aquí</b></a></p>
+        </aside>
+
     </main>
     <!-- PIE DE PAGINA CON LA INFORMACION DE CONTACTO, INFORMACION DE LA LIBRERIA, ETC-->
     <footer id="contact">
-            <h2>Visita nuestras redes sociales</h2>
-            <nav>
-                <a href="#" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a>
-                <a href="mailto:#@#?subject=Consulta"><i class="fa-regular fa-envelope fa-xl"></i></a>
-            </nav>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <h2>Visita nuestras redes sociales</h2>
+        <nav>
+            <a href="#" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a>
+            <a href="mailto:#@#?subject=Consulta"><i class="fa-regular fa-envelope fa-xl"></i></a>
+        </nav>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
     </footer>
-
-    <script src="https://kit.fontawesome.com/1fcc785506.js" crossorigin="anonymous"></script>
-    <script src="./assets/js/menuDesplegable.js"></script>
 </body>
+
 </html>
