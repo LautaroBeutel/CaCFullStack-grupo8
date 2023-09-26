@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
+*{
+    font-family: 'Mooli';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.h2_carrito{
+    text-align: center;
+}
+.separador_carrito{
+    width: 90%;
+    height: 1px;
+    background-color: rgb(231, 231, 231);
+}
+.contenedor_carrito{
+    border: 1px solid rgb(231, 231, 231);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 2rem 0;
+    width: 90%;
+    margin: 2rem auto;
+    border-radius: 6px;
+}
+.contenedor_carrito img{
+    width: 30%;
+}
+.total_cantidad_libro_carrito{
+    color: red;
+    font-weight: bold;
+}
+.btn_cantidad_carrito{
+    border: 2px solid rgb(194, 194, 194);
+    display: flex;
+    border-radius: 5px;
+}
+.btn_cantidad_carrito button{
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(231, 231, 231);
+}
+.btn_cantidad_carrito span{
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor_cupon_carrito, .total_carrito{
+    border: 1px solid rgb(231, 231, 231);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2rem 0;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 2rem 2rem;
+    border-radius: 6px;
+}
+.contenedor_cupon_carrito input{
+    height: 3rem;
+    padding-left: 1rem;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 6px;
+
+}
+.contenedor_cupon_carrito button, .btn_finalizar_compra_carrito{
+    width: 9rem;
+    height: 3rem;
+    border: none;
+    background-color: rgb(235 45 45);
+    font-weight: bold;
+    color: white;
+    border-radius: 6px;
+    display: inline-block;
+    margin-left: auto;
+}
+.info_total_carrito{
+    display: flex;
+    justify-content: space-between;
+}
+.info_total_carrito span{
+    width: 4rem;
+}
