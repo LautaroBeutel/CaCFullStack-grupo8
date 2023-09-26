@@ -1,444 +1,240 @@
-* { 
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --marron-claro: #D08C60;
+  --amarillo: #FFCB69;
+  --verde-claro: #9B9B7A;
+  --hueso: #F1DCA7;
+  --marron-oscuro: #997B66;
+  --verde-oscuro: #797D62;
+  --rosa: #DE695B;
 }
 
-body {
-  margin: 0;
+/*CELULAR*/
+/*CUERPO PRINCIPAL*/
+
+main {
+  padding-top: 60px;
 }
 
-  /*HEADER*/
+/* Articulo, precio y boton de compra */
 
-  #title_movil{
-    display: block;
-    margin: 0 auto;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+main img {
+  width: 12rem;
+  padding: 15px;
+  margin: 1rem;
+  background-color: var(--verde-claro);
+}
+
+#articulo {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "articulo"
+    "boton";
+  justify-items: center;
+  gap: 30px;
+  color: var(--rosa);
+}
+
+#articulo>div {
+  grid-area: articulo;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#articulo_id {
+  text-align: center;
+}
+
+#precio::before {
+  content: "$ ";
+}
+
+#articulo>nav {
+  grid-area: boton;
+}
+
+#articulo>nav input[type="button"] {
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 1rem 0 2rem 0;
+}
+
+#articulo>nav input[type="button"]:hover {
+  background-color: var(--amarillo);
+  animation: dance-button 0.5s linear 1;
+}
+
+#articulo>nav input[type="button"]:active {
+  border-color: #fff;
+  color: var(--rosa);
+  box-shadow: 0px 0px 10px 5px var(--rosa);
+}
+
+/* Información del producto */
+
+#informacion {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "tabla"
+    "texto";
+}
+
+#informacion h2 {
+  color: var(--rosa);
+}
+
+#tabla {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: tabla;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1rem;
+}
+
+table td {
+  border: 2px solid var(--verde-oscuro);
+}
+
+table tr td:nth-child(2n-1) {
+  padding: 1rem;
+}
+
+table tr td:nth-child(2n) {
+  padding: 1.2rem;
+}
+
+#description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: texto;
+  margin: 1rem auto;
+}
+
+#description_text {
+  margin: 1rem 0;
+  width: 80%;
+}
+
+/*Newletter*/
+
+aside{
+  text-align: center;
+  background-color: #ffffff80;
+  box-shadow: 0px 0px 20px 10px #ffffff80;
+  width: 80%;
+  margin: 1rem auto;
+  border-radius: 10px;
+}
+
+aside a{
+  text-decoration: none;
+  color: var(--rosa);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+/*ANIMACION*/
+@keyframes dance-button {
+  0% {
+    transform: rotateZ(0deg);
   }
 
-  header:first-child{
-    border: none;
-    border-radius: 0;
+  25% {
+    transform: rotateZ(2deg);
   }
 
-  header{
-    position: sticky;
-    top: 0;
-    background-color: grey;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 20px;
-    border-bottom: 2px solid black;
-    border-radius: 0 0 5px 5px;
-    z-index: 1;
+  50% {
+    transform: rotateZ(0deg);
   }
 
-  #logo p{
-    width: 4rem;
-    background-color: blue;
-    color: white;
-    margin-top: 10px;
-    padding: 16px;
+  75% {
+    transform: rotateZ(2deg);
   }
 
-  #logo h1{
-    display: none;
+  100% {
+    transform: rotateZ(0deg);
   }
+}
 
-  #menus {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 50%;
-    max-width: 300px;
-  }
+/*TABLET*/
 
-  /*MENU OCULTO CON CATEGORIAS
-  NOTA: CUANDO SE DESPLIEGA, EL DISPLAY DEL RESTO DEL MAIN DE LA PAGINA PODRIA PASAR A NONE*/
-
-  #categorias{
-    display: none;
-    z-index: 0;
-    padding-top: 100px;
-    width: 100%;
-    background-color: grey;
-  }
-
-  #categorias ul{
-    list-style: none;
-    padding: 5px 20px 20px 20px;
-  }
-
-  #categorias li{
-    border: 1px solid black;
-    padding: 2rem;
-    font-size: 2rem;
-    font-weight: 600;
-    text-align: center;
-  }
-
-  #categorias a{
-    text-decoration: none;
-    color: black;
-  }
-
-  #categorias a:hover{
-    color: white;
-    background-color: rgba(218, 165, 32, 0.5);
-
-  }
+@media only screen and (min-width: 769px) and (max-width: 1199px) {
 
   /*CUERPO PRINCIPAL*/
 
   main {
-    padding-top: 60px;
+    padding-top: 200px;
   }
 
-  #info h2, #articulo img, #articulo input:nth-child(2n-1), footer{
-    margin-top: 2rem;
+  #articulo>div {
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
   }
 
-  /* ARTICULO */
-
-  #stock,
   #precio {
-    width: 2em;
-    text-align: center;
-    border: none;
+    font-size: 3rem;
   }
 
-  #articulo input[type="text"] {
-    background-color: transparent;
+  #description_text {
+    width: 60%;
   }
 
-  #articulo nav input{
-    padding: 1.5rem;
-    border-radius: 5px;
-    border: 2px solid black;
-    font-size: 1rem;
+  /*Newletter*/
+
+aside{
+  width: 50%;
+}
+
+}
+
+/*PC*/
+
+@media only screen and (min-width: 1200px) {
+
+  /*CUERPO PRINCIPAL*/
+
+  main {
+    padding-top: 210px;
   }
 
-  #articulo nav input:hover{
-    color: blue;
-    background-color: aquamarine;
-    border: 2px solid green;
-  }
-
-  #articulo nav input:active{
-    color: red;
-  }
-
-  #articulo,
-  section nav,
-  #contact {
-    text-align: center;
+  #articulo>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
   }
 
   #precio_articulo {
-    padding-top: 2rem;
-  }
-
-  #precio, #precio_articulo label{
-    font-size: 2rem;
-    font-weight: 600;
-  }
-
-  #inventario {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* INFORMACION DEL PRODUCTO */
-
-  #info {
-    text-align: center;
-  }
-
-  table {
-    margin: 0 auto;
-    border-collapse: collapse;
-  }
-
-  table td {
-    border: 1px solid black;
-  }
-
-  table tr td:nth-child(2n-1) {
-    width: 30%;
-    padding: 1rem;
-  }
-
-  section > h2{
-    text-align: center;
-    padding: 1rem;
-  }
-
-  #description p{
-    padding: 0.5rem;
-  }
-
-  /*PIE DE PAGUINA*/
-
-  p {
-    width: 80%;
-    margin: 0 auto;
-    padding-bottom: 1rem;
-  }
-
-  #contact {
-    border-top: 2px solid black;
-    background-color: grey;
-    border-radius: 10px 10px 0 0;
-    width: 100%;
-    padding: 2rem 1rem 0rem;
-  }
-
-  #contact h2{
-    padding: 10px;
-  }
-
-  #contact nav{
-    padding-bottom: 10px;
+    margin-right: 3rem;
   }
 
 
-  @media only screen and (min-width: 769px) and (max-width: 1199px){
-
-    /*HEADER*/
-
-    #title_movil{
-      display: none;
-    }
-
-    #menus{
-      justify-content: flex-end;
-    }
-    
-    #menus nav{
-      display: none;
-    }
-
-    header{
-      border: none;
-      position: fixed;
-      padding-left: 5%;
-      padding-right: 5rem;
-    }
-
-    #logo{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 0 auto;
-      width: 80%;
-    }
-
-    #logo h1{
-      display: inline-block;
-      font-size: 2rem;
-      width: 50%;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-
-    #menus{
-      width: 20%;
-    }
-
-    #categorias{
-      display: block;
-      position: fixed;
-      width: 100%;
-      padding-top: 100px;
-      background-color: grey;
-      border-bottom: 2px solid black;
-      border-radius: 0 0 5px 5px;
-      z-index: 0;
-    }
-
-    #categorias ul{
-      list-style: none;
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      padding: 5px 20px 20px 20px;
-    }
-
-    #categorias a{
-      text-decoration: none;
-      color: black;
-    }
-
-    #categorias li{
-      border: none;
-      padding: 0;
-      font-size: 1rem;
-      font-weight: 400;
-    }
-
-    #categorias a:hover{
-      color: white;
-      background-color: rgba(218, 165, 32, 0.5);
-
-    }
-
-    /*CUERPO PRINCIPAL*/
-
-    main{
-      padding-top: 200px;
-    }
-
-    #articulo{
-      padding: 1rem 0.5rem 0rem 0.5rem;
-    }
-
-    #articulo div:not(#articulo_id){
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-
-    #articulo_id{
-      padding: 2rem;
-    }
-
-    #articulo_id h1, #precio, #precio_articulo label{
-      font-size: 3rem;
-    }
-
-    #articulo nav{
-      padding: 2rem 0;
-    }
-
+  #precio {
+    font-size: 3rem;
   }
 
-  @media only screen and (min-width: 1200px){
-
-    /*HEADER*/
-
-    #title_movil{
-      display: none;
-    }
-
-    #menus{
-      justify-content: flex-end;
-    }
-    
-    #menus nav{
-      display: none;
-    }
-
-    header{
-      border: none;
-      position: fixed;
-      padding-left: 5%;
-      padding-right: 5rem;
-    }
-
-    #logo{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 0 auto;
-      width: 80%;
-    }
-
-    #logo h1{
-      display: inline-block;
-      font-size: 2rem;
-      width: 50%;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-
-    #menus{
-      width: 20%;
-    }
-
-    #categorias{
-      display: block;
-      position: fixed;
-      width: 100%;
-      padding-top: 100px;
-      background-color: grey;
-      border-bottom: 2px solid black;
-      border-radius: 0 0 5px 5px;
-      z-index: 0;
-    }
-
-    #categorias ul{
-      list-style: none;
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      padding: 5px 20px 20px 20px;
-    }
-
-    #categorias a{
-      text-decoration: none;
-      color: black;
-    }
-
-    #categorias li{
-      border: none;
-      padding: 0;
-      font-size: 1.5rem;
-      font-weight: 400;
-    }
-
-    #categorias a:hover{
-      color: white;
-      background-color: rgba(218, 165, 32, 0.5);
-
-    }
-
-    /*CUERPO PRINCIPAL*/
-
-    main{
-      padding-top: 200px;
-    }
-
-    #articulo{
-      padding: 1rem 0.5rem 0rem 0.5rem;
-    }
-
-    #articulo div:not(#articulo_id){
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-
-    #articulo_id{
-      padding: 2rem;
-    }
-
-    #articulo_id h1, #precio, #precio_articulo label{
-      font-size: 3rem;
-    }
-
-    #articulo nav{
-      padding: 2rem 0;
-    }
-
-    #info{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 2rem;
-    }
-
-    section > h2 {
-      font-size: 2rem;
-    }
-
-    #info div:first-child{
-      width: 50%;
-      font-size: 1.5rem;
-    }
-
-    #description{
-      width: 40%;
-      font-size: 1.5rem;
-    }
-
+  #informacion {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "tabla texto";
   }
+
+    /*Newletter*/
+
+aside{
+  width: 35%;
+}
+
+}
