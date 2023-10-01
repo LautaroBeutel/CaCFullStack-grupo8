@@ -1,0 +1,159 @@
+:root {
+    --marron-claro: #D08C60;
+    --amarillo: #FFCB69;
+    --verde-claro: #9B9B7A;
+    --hueso: #F1DCA7;
+    --marron-oscuro: #997B66;
+    --verde-oscuro: #797D62;
+    --rosa: #DE695B;
+}
+
+/*CELULAR*/
+
+
+/*CUERPO PRINCIPAL*/
+
+main {
+    padding-top: 60px;
+}
+
+img {
+    width: 10rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-areas: "categoria"
+        "articulos";
+}
+
+.prod_title {
+    grid-area: categoria;
+    font-size: 1.5rem;
+}
+
+.all_articles {
+    grid-area: articulos;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 9%;
+}
+
+.all_articles article {
+    text-align: center;
+    padding: 1rem 1rem 0 1rem;
+    margin: 10px;
+    background-color: var(--verde-claro);
+    border: 2px solid var(--hueso);
+}
+
+.all_articles article:hover {
+    border: 2px solid var(--rosa);
+}
+
+main a {
+    text-decoration: none;
+    color: #000;
+}
+
+.prod_price::before {
+    content: "$";
+}
+
+.prod_price {
+    color: var(--amarillo);
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding-top: 5px;
+}
+
+.more input {
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 1rem 0 2rem 0;
+}
+
+.more input:hover {
+    background-color: var(--amarillo);
+    animation: translate-button 0.2s linear 1;
+}
+
+.more input:active {
+    border-color: #fff;
+    color: var(--rosa);
+    box-shadow: 0px 0px 10px 5px var(--rosa);
+}
+
+/*ANIMACION*/
+@keyframes translate-button {
+    0% {
+        transform: translateX(0px);
+    }
+
+    25% {
+        transform: translateX(5px);
+    }
+
+    50% {
+        transform: translateX(0px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+/*TABLET*/
+
+@media only screen and (min-width: 769px) and (max-width: 1199px) {
+    /*CUERPO PRINCIPAL*/
+
+    main {
+        padding-top: 160px;
+    }
+
+    section {
+        margin: 2rem;
+    }
+
+    .prod_title {
+        padding-top: 2rem;
+    }
+
+    .all_articles {
+        margin: 0 16%;
+    }
+}
+
+/*PC*/
+
+@media only screen and (min-width: 1200px) {
+    /*CUERPO PRINCIPAL*/
+
+    main {
+        padding-top: 210px;
+    }
+
+    section {
+        margin: 0 10%;
+    }
+
+    .all_articles {
+        display: flex;
+    }
+
+
+
+}
