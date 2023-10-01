@@ -28,6 +28,7 @@
   
   i{
     color: #FFF;
+    size: 10px;
   }
   
   i:hover{
@@ -85,10 +86,10 @@
 
 /* Menu Estilos */
 
-.navbar {
-  background-color: #DE695B;
-  size: 12rem;  
-  text-align: center;
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: start;
 }
 
 .navbar ul{
@@ -116,7 +117,43 @@
   background-color: #9B9B7A;  
 }
 
-/* .nav-menu li a:hover{
-  background-color: #997B66;
-  animation: 0.5s infinite;
-} */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo para el contenedor de búsqueda */
+.search-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 300px; 
+  margin: 20px; 
+}
+
+/* Estilo para el campo de entrada */
+#search-input {
+  flex: 1; 
+  padding: 10px;
+  border: 1px solid #e6d2d2;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Estilo para el botón de búsqueda */
+#search-button {
+  background-color: #007bff;
+  color: white; 
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px; 
+}
+
+/* Estilo para el botón de búsqueda al pasar el mouse */
+#search-button:hover {
+  background-color: #0056b3;
+}
