@@ -26,7 +26,7 @@
     background-color: rgb(231, 231, 231);
 }
 .contenedor_carrito{
-    border: 1px solid rgb(231, 231, 231);
+    border: 1px solid rgb(216, 216, 216);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,7 +44,7 @@
     font-weight: bold;
 }
 .btn_cantidad_carrito{
-    border: 2px solid rgb(194, 194, 194);
+    border: 1px solid rgb(216, 216, 216);
     display: flex;
     border-radius: 5px;
 }
@@ -61,7 +61,7 @@
     align-items: center;
 }
 .contenedor_cupon_carrito, .total_carrito{
-    border: 1px solid rgb(231, 231, 231);
+    border: 1px solid rgb(216, 216, 216);
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -145,4 +145,3 @@
         gap: 1.5rem;
     }
 }
-
