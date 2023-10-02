@@ -13,7 +13,7 @@ body {
     color: white;
   }
   
-  li {
+  a {
     font-size: 1.5;
     color: #FFCB69;
     color: var(--color-white);
@@ -21,7 +21,7 @@ body {
     position: relative;
   }
 
-  li::after{
+  a::after{
     content: '';
     opacity: 0;
     transition: all 0.2s;
@@ -33,7 +33,7 @@ body {
     left: 0;
   }
 
-  li:hover::after{        
+  a:hover::after{        
     opacity: 1;
 }
 
