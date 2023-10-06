@@ -60,7 +60,7 @@
     <main>
         <div>
             <h2>¡Completa el formulario y recibe todas las novedades de tus libros favoritos!</h2>
-            <form action="">
+            <form action="" id="formulario">
                 <div class="nombre-tabla"><label for="nombre">Nombres</label><input type="text" name="nombre"
                         id="nombre" required></div>
                 <div class="apellido-tabla"><label for="apellido">Apellido</label><input type="text" name="apellido"
@@ -73,14 +73,7 @@
                         <input type="radio" name="sexo" id="masculino" checked><label for="masculino">Masculino</label>
                         <input type="radio" name="sexo" id="femenino"><label for="femenino">Femenino</label>
                         <input type="radio" name="sexo" id="sexo-otros"><label for="sexo-otros">Otro</label>
-                    </div>
-                    <div class="sexo-movil">
-                        <select name="sexo" id="sexo-select">
-                            <option value="masculino">Masculino</option>
-                            <option value="femenino">Femenino</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
+                    </div>                    
                 </fieldset>
                 <div class="mail-tabla"><label for="mail">Correo electrónico</label><input type="email" name="mail"
                         id="mail" required></div>
@@ -121,5 +114,7 @@
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
     </footer>
 </body>
+
+<script src="./assets/js/formulario.js"></script>
 
 </html>
