@@ -27,7 +27,7 @@ body {
     transition: all 0.2s;
     height: 2px;
     width: 100%;
-    background-color: #788143;
+    background-color: var(--marron-claro);
     position: absolute;
     bottom: 0;
     left: 0;
