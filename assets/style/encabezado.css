@@ -137,14 +137,6 @@ li a.active, li a:hover {
   display: none;
 }
 
-main{
-  background-size: cover;
-  background-position: center center;
-  height: calc(100vh - 80px);
-}
-
-
-
 
 /* Estilo para el contenedor de búsqueda */
 .search-container {
