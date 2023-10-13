@@ -7,51 +7,57 @@
     <title>Articulo</title>
     
     <link rel="stylesheet" href="./assets/style/articulo.css">
-    <link rel="stylesheet" href="./assets/style/encabezado.css">
+    <link rel="stylesheet" href="./assets/style/encabezado2.css">
     <link rel="stylesheet" href="./assets/style/footer.css">
     <!-- <link rel="stylesheet" href="./assets/style/headerv2.css"> -->
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    
 </head>
 
 <body>
-    <div class="container">
-    <header class="header">
-        <a href="#">
-            <img class="Logo" src="./assets/images/logo2.png" alt="Logo Libreria">
-          </a>
-      <div class="header-texto">
-        <div class="encabezado-mid">
-            <h1> Libreria GRUPO 8</h1>
-          <form action="">
-              <input type="search" placeholder="Buscar libros, autores y más..." name="q" autocomplete="off">
-              <button type="submit">Buscar</button>
-          </form>          
-        </div>            
-        <div class="encabezado-der">
-            <ul>            
-                <li><a href="perfil.html"><i class="fa-solid fa-user"></i>Perfil</a></li>
-                <li><a href="signup.html">Creá tu cuenta</a></li>
-                <li><a href="login.html">Ingresá</a></li>    
-                <li><a href="compras.html">Mis compras <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>               
-              </ul>                     
-        </div>              
-      </header>  
-        <nav class="navbar">
-            <input type="checkbox" id="check">
+    <header>
+        <div class="nav-main">
+            <div class="info-basica">
+                <div class="logo">
+                    <a href="#">
+                        <img class="Logo" src="./assets/images/logo2.png" alt="Logo Libreria">
+                      </a>
+                </div>               
+            </div>
+            <div class="nav-form">
+                <form action="">
+                    <input type="search" placeholder="Buscar libros, autores y más..." name="q" autocomplete="off">
+                    <button type="submit">Buscar</button>
+                </form>
+                <nav class="navbar">
+                    <a href="">Categorias</a>
+                    <a href="">Historial</a>
+                    <a href="">Tiendas Oficiales</a>
+                    <a href="">Ofertas de la semana</a>
+                    <a href="">Ayuda / PQR</a>     
+                </nav>
+            </div>
+            <div class="data-acount">
+                <div class="signin">
+                    <a href="">Ingresar</a>
+                    <a href="">Crea tu cuenta</a>
+                    <a href="">Salir</a>
+                </div>
+                <input type="checkbox" id="check">
                 <label for="check" class="checkbtn">
                     <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
                 </label>
-                <ul>
-                    <li><a class="active" href="inicio.html">Inicio</a></li>
-                    <li><a href="articulo.html">Categorias</a></li>
-                    <li><a href="productos.html">Ofertas</a></li>    
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>                    
-                  </ul>                 
-            </div>
-        </nav>
-    </div>
+                <div class="basic-acount">
+                    <a href="">Alejandro</a>                
+                    <a href="">Mis compras</a>
+                    <a href="">Favoritos</a>
+                    <a href=""><i class="fas fa-bell" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                </div>
+            </div>     
+        </div>
+    </header>    
+</body>
+</html>
     <!-- ENCABEZADO Y NAVEGACION-->
     
     <!--CUERPO PRINCIPAL: CONTIENE NOMBRE DEL ARTICULO, FOTO, PRECIO, BOTON DE COMPRA, DESCRIPCION-->
