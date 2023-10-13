@@ -2,7 +2,7 @@ let form = document.getElementById("formulario")
 let inputs = document.getElementsByTagName("input");
 let fecha = document.querySelector("#fecha");
 let mail = document.querySelector("#mail");
-let categorias = document.getElementsByName("categoria");
+let categoria = document.getElementsByName("categoria");
 
 function nombreCompletoCheck(e){
   for(let i = 0; i <= 1; i++){
@@ -38,8 +38,8 @@ function mailCheck(e){
 
 function boxCheck(e){
   let contador = 0;
-  for(let i in categorias){
-    if(categorias[i].checked){
+  for(let i in categoria){
+    if(categoria[i].checked){
       contador += 1
     }  
   }
