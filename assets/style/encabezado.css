@@ -44,69 +44,95 @@
 
 .header {
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--marron-claro);
   grid-area: encabezado;
 }
 
-.header img {
-  width: 180px;
+.header a {
+  width: 100px;
+  justify-content: center;
+  align-items: center;
 }
 .header-texto {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.data-cuenta ul {
-  float: right;
-  margin-right: 20px;  
-  padding: 0px auto;
-  margin: 0 auto;
-}
-
-
-.data-cuenta ul li {
-  display: flexbox;
-  justify-content: center;
-  align-items: center;
-  line-height: 80px;
-  margin: 0 5px;
-}
-
-.data-cuenta li a{
-  color: #fff;
-  font-size: 18px;
-  padding: 7px 13px;
-  border-radius: 3px; 
+  justify-content: space-between;
 }
 
 h1{
   color: var(--rosa);
+  padding-left: 67px;
 }
 
 .Logo{
-  width: 15vw;
+  width: 10vw;
   position: relative;
+
+}
+
+.encabezado-der form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+form {
+  width: 100%;
+  line-height: 20px;
+  height: 63px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center; 
+}
+
+
+input[type="text"] {
+  width: 420px;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+
+button[type="submit"] {
+  background-color: #e6ad42;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+
+button[type="submit"]:hover {
+  background-color: #a1b300;
 }
 
 .navbar {
-  background-color: var(--marron-claro);    
-  margin: 0px;
+  background-color: var(--marron-claro);  
   text-align: center;
-  grid-area: menu-bar;
-  
+  grid-area: menu-bar;  
 }
 
-.navbar ul{
+.navbar ul{  
+   
   list-style: none;
-  margin: 0px;
+  height: 50px;  
   padding: 0px;
-  color: #FFF;   
+  color: #FFF;  
+  
 }
 
 .navbar ul li {
   display: inline-block;
+  line-height: 50px;
 }
 
 .navbar ul li a{
@@ -123,17 +149,6 @@ h1{
                         "menu-bar menu-bar menu-bar";
 }
 
-@media (max-wid: 1024px) {
-  .container {
-    display: grid;
-    grid-template: auto auto / 20% auto 20%;
-    grid-template-areas: "encabezado encabezado-mid"
-                          "menu-bar menu-bar menu-bar";
-  }
-}
-
-
-
 
 .encabezado{
   display: grid;  
@@ -143,20 +158,23 @@ h1{
 
 .encabezado-mid {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  left: auto;
 }
 
 
 .encabezado-der {  
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 50%;
   grid-area: encabezado-der;
 }
 
 .encabezado-der ul{ 
   float: right;
-  margin-right: 20px;
+  margin-right: 20px;  
+  
 }
 
 .encabezado-der ul li {
@@ -168,38 +186,15 @@ h1{
 .encabezado-der li a{
   color: #fff;
   font-size: 18px;
-  padding: 7px 13px;
-  border-radius: 3px;  
-}
-
-
-
-.nav-menu{
-  background-color: var(--marron-claro);
-}
-
-
-
-
-.navbar ul {
-  float: right;
-  margin-right: 20px;  
-  padding: 0px auto;
-  margin: 0 auto;
-}
-
-
-.navbar ul li {
-  display: inline-table;
-  line-height: 80px;
-  margin: 0 5px;
+  padding: 0px 13px;
+  border-radius: 7px;  
 }
 
 .navbar li a{
   color: #fff;
   font-size: 18px;
-  padding: 7px 13px;
-  border-radius: 3px; 
+  padding: 0px 10px;
+  border-radius: 7px; 
 }
 
 li a.active, li a:hover {
@@ -225,6 +220,15 @@ li a.active, li a:hover {
 
 /* MEDIA QUERY */
 
+@media (max-wid: 1024px) {
+  .container {
+    display: grid;
+    grid-template: auto auto / 20% auto 20%;
+    grid-template-areas: "encabezado encabezado"
+                          "menu-bar menu-bar menu-bar";
+  }
+}
+
 @media (max-width: 952px) { 
   .navbar ul li a {
     font-size: 16px;
@@ -232,20 +236,26 @@ li a.active, li a:hover {
 }
 
 
-@media (max-width: 855px) {
+@media (max-width: 788px) {
   .checkbtn{
     display: block;
   }
   ul {
     position: fixed;
     width: 100%;
-    height: 100vh;
+    height: auto;    
     background: #997B66;
-    top: 80px;
+    top: 180px;
     left: -100%;
     text-align: center;
     transition: all .5s;
   } 
+  .navbar ul {
+    list-style: none;
+    height: 433px;
+    padding: 0px;
+    color: #FFF;
+}
   .navbar ul li{
     display: block;
     margin: 50px 0;
@@ -253,7 +263,7 @@ li a.active, li a:hover {
   }
 
   .navbar ul li a {
-    font-size: 20px;
+    font-size: 18px;
   }
   li a:hover, li a.active{
     background: none;
