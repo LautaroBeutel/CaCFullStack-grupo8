@@ -73,12 +73,6 @@ h1{
 
 }
 
-.encabezado-der form{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 
 form {
   width: 100%;
@@ -115,6 +109,8 @@ button[type="submit"]:hover {
   background-color: #a1b300;
 }
 
+/*NAVBAR*/
+
 .navbar {
   background-color: var(--marron-claro);  
   text-align: center;
@@ -149,7 +145,7 @@ button[type="submit"]:hover {
                         "menu-bar menu-bar menu-bar";
 }
 
-
+/*LISTA USUARIO*/
 .encabezado{
   display: grid;  
   width: 100%;
