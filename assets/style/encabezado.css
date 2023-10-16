@@ -50,11 +50,7 @@
   grid-area: encabezado;
 }
 
-.header a {
-  width: 100px;
-  justify-content: center;
-  align-items: center;
-}
+
 .header-texto {
   width: 100%;
   display: flex;
@@ -68,8 +64,9 @@ h1{
 }
 
 .Logo{
-  width: 10vw;
+  width: 100%;
   position: relative;
+  aspect-ratio: 200/133;
 
 }
 
@@ -163,7 +160,7 @@ button[type="submit"]:hover {
 .encabezado-der {  
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 39%;
   grid-area: encabezado-der;
 }
 

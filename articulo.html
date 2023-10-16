@@ -4,26 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Articulo</title>
+    <meta name="descripcion" content="Proyecto final del curso codo a codo Full Stack Python de libreria online comision 23512 grupo 8">
+    <title>Libreria G8</title>
     
     <link rel="stylesheet" href="./assets/style/articulo.css">
     <link rel="stylesheet" href="./assets/style/encabezado.css">
     <link rel="stylesheet" href="./assets/style/footer.css">
     <!-- <link rel="stylesheet" href="./assets/style/headerv2.css"> -->
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="icon" type="images/png" href="assets/images/logo2.png">
+
+    <!---OPEN GRAPH-->
+    <meta property="og:title" content="Libreria online comision 23512 grupo 8">
+    <meta property="og:descripcion" content="Proyecto final del curso codo a codo Full Stack Python de libreria online comision 23512 grupo 8">
+    <meta property="og:image" content="./assets/images/logo2.png">
+    <meta property="og:image:alt" content="Foto del logo">
     
 </head>
 
 <body>
+    <!-- ENCABEZADO Y NAVEGACION-->
     <div class="container">
-    <header class="header">
+    <header class="header" id="header">
         <a href="#">
             <img class="Logo" src="./assets/images/logo2.png" alt="Logo Libreria">
           </a>
       <div class="header-texto">
         <div class="encabezado-mid">
-            <h1> Libreria GRUPO 8</h1>
-          <form action="">
+            <h1><strong>Libreria</strong>
+                <em>Grupo 8</em></h1>
+          <form method="get" action="/">
               <input type="search" placeholder="Buscar libros, autores y más..." name="q" autocomplete="off">
               <button type="submit">Buscar</button>
           </form>          
@@ -43,16 +53,16 @@
                     <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
                 </label>
                 <ul>
-                    <li><a class="active" href="inicio.html">Inicio</a></li>
+                    <li><a class="active" href="#header">Inicio</a></li>
                     <li><a href="articulo.html">Categorias</a></li>
                     <li><a href="productos.html">Ofertas</a></li>    
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="#contact">Contacto</a></li>
                     <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>                    
                   </ul>                 
             </div>
         </nav>
     </div>
-    <!-- ENCABEZADO Y NAVEGACION-->
+    
     
     <!--CUERPO PRINCIPAL: CONTIENE NOMBRE DEL ARTICULO, FOTO, PRECIO, BOTON DE COMPRA, DESCRIPCION-->
     <main>
