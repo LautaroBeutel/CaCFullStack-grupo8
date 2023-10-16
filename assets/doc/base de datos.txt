@@ -2,8 +2,16 @@
 
 {"result":[{},{}]}
 
+---------------------------
 
-{"titulo": "", "precio": "", "portada": "", "categoria": "", "autor": "", "paginas": "", "idioma": "", "year": "", "about": "", "stock": ""}
+Basde de datos de prueba:
+
+https://mocki.io/v1/8502b3c3-2507-4503-a836-9d131647b6f7
+
+Base de datos actualizada:
+
+https://mocki.io/v1/e2958d9a-1195-4c72-bed9-59d37ec85f9e
+
 
 --------------------------
 TERROR
@@ -91,3 +99,9 @@ OTROS
 {"titulo": "ERASE UNA VEZ UN CORAZON ROTO", "precio": "9650.00", "portada": "https://www.tematika.com/media/catalog/Ilhsa/Imagenes/693811.jpg", "categoria": "otros", "autor": "Garber, Stephanie", "paginas": "416", "idioma": "español", "year": "04/2022", "about": "Stephanie Garber; la aclamada autora de la trilogía Caraval; nos vuelve a sorprender con un fantasy apasionante; que ya se ha convertido en un éxito en todo el mundo. Recuerda¿ nunca hagas un trato con un Destino. Evangeline Fox se crio en la tienda de curiosidades de su amado padre; donde creció con leyendas sobre seres inmortales; como el trágico Príncipe de Corazones. Sabe que sus poderes son míticos; que vale la pena morir por su beso y que los tratos con él rara vez terminan bien. Pero cuando Evangeline se entera de que el amor de su vida está a punto de casarse con otra; se desespera lo suficiente como para ofrecerle al Príncipe de Corazones lo que quiera; a cambio de su ayuda para detener la boda. El príncipe solo pide tres besos. Pero el Príncipe de Corazones quiere mucho más de ella de lo que ha prometido. Y tiene planes para Evangeline que terminarán en la mayor felicidad para siempre; o en la tragedia más exquisita¿ ¿Hasta dónde serías capaz de llegar con tal de tener un final feliz?", "stock": "2"}
 
 
+----------------
+AUTOAYUDA
+
+{"titulo": "ROMPER EL CICLO", "precio": "9580.00", "portada": "https://www.tematika.com/media/catalog/Ilhsa/Imagenes/702716.jpg", "categoria": "autoayuda", "autor": "GOMEZ BADIA, MARIANA", "paginas": "256", "idioma": "español", "year": "12/2022", "about": "Siempre tropiezas con la misma piedra en las relaciones de pareja; en el manejo del dinero; con ese miedo que te controla; con esa adicción; con el vacío existencial que te sobrepasa... lo que necesitas es romper el ciclo. Mariana Gómez Badía; coach sistémica y consteladora familiar; con más de 160.000 seguidores su Instagram @ecosdelalmaok; te guiará a través de las constelaciones familiares para que desates los nudos invisibles que boicotean tu vida. Darte permiso para soltar aquello que no te pertenece. Prólogo de Gabriela Arias Uriburu", "stock": "2"}
+
+{"titulo": "ESTAS PARA MAS", "precio": "9940.00", "portada": "https://www.tematika.com/media/catalog/Ilhsa/Imagenes/691781.jpg", "categoria": "autoayuda", "autor": "De Lucia, Daniela", "paginas": "376", "idioma": "español", "year": "02/2022", "about": "Te conformas con poco tiempo y dinero; con una amistad que no va más; con un trabajo que no te apasiona; con una pareja sin amor¿ ¿Por qué seguir viviendo a media máquina? ¡ESTÁS PARA MÁS! Daniela De Lucía; coach certificada con Tony Robbins y Cloé Madanes; con más de 120.000 seguidores en Instagram; te desafía a salir del piloto automático y a encontrar el poder para crear la vida que mereces. SI NO ES AHORA; ¿CUÁNDO?", "stock": "2"}

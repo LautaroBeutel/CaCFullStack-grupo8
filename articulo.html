@@ -40,22 +40,22 @@
         <div id="categorias">
             <ul>
                 <a href="./productos.html">
-                    <li>Terror</li>
+                    <li class="tipo_categoria">Terror</li>
                 </a>
                 <a href="./productos.html">
-                    <li>Ciencia Ficción</li>
+                    <li class="tipo_categoria">Ciencia Ficción</li>
                 </a>
                 <a href="./productos.html">
-                    <li>Aventura</li>
+                    <li class="tipo_categoria">Aventura</li>
                 </a>
                 <a href="./productos.html">
-                    <li>Policial</li>
+                    <li class="tipo_categoria">Policial</li>
                 </a>
                 <a href="./productos.html">
-                    <li>Fantasía</li>
+                    <li class="tipo_categoria">Autoayuda</li>
                 </a>
                 <a href="./productos.html">
-                    <li>Otros</li>
+                    <li class="tipo_categoria">Otros</li>
                 </a>
             </ul>
         </div>
@@ -66,7 +66,7 @@
             <div>
                 <div id="articulo_id">
                     <h1 id="titulo">Aca va el titulo del libro</h1>
-                    <img src="./assets/images/foto-prueba.jpg" alt="foto_del_articulo">
+                    <img src="./assets/images/foto-prueba.jpg" alt="portada del libro" id="portada_libro">
                 </div>
                 <div id="precio_articulo">
                     <p id="precio">XXXX</p>
@@ -84,19 +84,23 @@
                     <table>
                         <tr>
                             <td>Título</td>
-                            <td>TITULO DEL LIBRO</td>
+                            <td class="celda_articulo">TITULO DEL LIBRO</td>
                         </tr>
                         <tr>
                             <td>Autor</td>
-                            <td>AUTOR DEL LIBRO</td>
+                            <td class="celda_articulo">AUTOR DEL LIBRO</td>
                         </tr>
                         <tr>
                             <td>Idioma</td>
-                            <td>IDIOMA DEL LIBRO</td>
+                            <td class="celda_articulo">IDIOMA DEL LIBRO</td>
                         </tr>
                         <tr>
-                            <td>Año de publicación</td>
-                            <td>AÑO DE PUBLICACION</td>
+                            <td>Número de páginas</td>
+                            <td class="celda_articulo">NUMERO DE PAGINAS</td>
+                        </tr>
+                        <tr>
+                            <td>Fecha de publicación</td>
+                            <td class="celda_articulo">AÑO DE PUBLICACION</td>
                         </tr>
                     </table>
                 </div>
@@ -126,6 +130,7 @@
     </footer>
 
     <script src="./assets/js/menuCelular.js"></script>
+    <script src="./assets/js/articulo.js"></script>
 </body>
 
 </html>
