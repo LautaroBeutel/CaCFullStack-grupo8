@@ -31,6 +31,8 @@ main {
 
 img {
     width: 10rem;
+    max-width: 100%;
+    margin-top: 10px;
 }
 
 section {
@@ -61,6 +63,7 @@ section {
     text-align: center;
     padding: 1rem 1rem 0 1rem;
     margin: 10px;
+    max-width: 100%;
     background-color: var(--verde-claro);
     border: 2px solid var(--hueso);
 }
@@ -74,6 +77,13 @@ main a {
     color: #000;
 }
 
+.prod_name{
+    display: flex;
+    width: 15rem;
+    justify-content: center;
+    
+  }
+
 .prod_price::before {
     content: "$";
 }
@@ -82,7 +92,7 @@ main a {
     color: var(--amarillo);
     font-weight: 800;
     font-size: 1.2rem;
-    padding-top: 5px;
+    padding: 10px 0;
 }
 
 .more input {
