@@ -81,13 +81,17 @@ form {
 }
 
 
-input[type="text"] {
-  width: 420px;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline: none;
+#input {
+  border-radius: 9999px;
+  border: 1px solid #eee;  
+  flex: 1;
+  margin: 3px;
+  width: 265px;
+  padding: 5px 15px;
+}
+
+#input:focus {
+  outline: 0;
 }
 
 
@@ -95,15 +99,20 @@ button[type="submit"] {
   background-color: #e6ad42;
   color: white;
   border: none;
-  border-radius: 5px;
-  padding: 7px 6px;
+  border-radius: 9px;
+  padding: 5px 15px;
   cursor: pointer;
   font-size: 15px;
+  margin: 3px;
+  border: 1px;
 }
 
 
 button[type="submit"]:hover {
   background-color: #a1b300;
+  border-radius: 99px;
+  margin: 3px;
+  border: 1px;
 }
 
 /*NAVBAR*/
@@ -114,8 +123,7 @@ button[type="submit"]:hover {
   grid-area: menu-bar;  
 }
 
-.navbar ul{  
-   
+.navbar ul{     
   list-style: none;
   height: 50px;  
   padding: 0px;
@@ -229,7 +237,7 @@ li a.active, li a:hover {
 }
 
 
-@media (max-width: 788px) {
+@media (max-width: 820px) {
   .checkbtn{
     display: block;
   }
@@ -264,5 +272,14 @@ li a.active, li a:hover {
   }
   #check:checked ~ ul{
     left: 0;
+  }
+
+  #input {
+    border-radius: 9999px;
+    border: 1px solid #eee;  
+    flex: 1;
+    margin: 0px;
+    width: 205px;
+    padding: 5px 15px;
   }
 }
