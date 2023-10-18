@@ -72,12 +72,14 @@ h1{
 
 
 form {
+  display: flex;
+  justify-content: center;
+  text-align: center; 
   width: 100%;
   line-height: 20px;
   height: 63px;
   padding: 15px;
   border-radius: 10px;
-  text-align: center; 
 }
 
 
@@ -221,23 +223,23 @@ li a.active, li a:hover {
 
 /* MEDIA QUERY */
 
-@media (max-wid: 1024px) {
+/* @media (max-width: 1024px) {
   .container {
     display: grid;
     grid-template: auto auto / 20% auto 20%;
     grid-template-areas: "encabezado encabezado"
                           "menu-bar menu-bar menu-bar";
   }
-}
+} */
 
-@media (max-width: 952px) { 
+@media (max-width: 992px) { 
   .navbar ul li a {
     font-size: 16px;
   }  
 }
 
 
-@media (max-width: 820px) {
+@media (max-width: 992px) {
   .checkbtn{
     display: block;
   }
