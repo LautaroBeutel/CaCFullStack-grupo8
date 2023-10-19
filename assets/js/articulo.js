@@ -5,10 +5,12 @@ let tabla = document.querySelectorAll(".celda_articulo");
 let about = document.querySelector("#description_text");
 let addCarrito = document.querySelector("#add_carrito");
 
-let articuloElegido = localStorage.getItem("articuloElegido");
+let articuloElegido = sessionStorage.getItem("articuloElegido");
 
+articulo()
 
-fetch("https://mocki.io/v1/8502b3c3-2507-4503-a836-9d131647b6f7")
+async function articulo(){
+fetch("https://mocki.io/v1/e2958d9a-1195-4c72-bed9-59d37ec85f9e")
   .then(data => data.json())
   .then(function (datos){  
   for(let i = 0; i < datos.result.length; i++){
@@ -22,5 +24,10 @@ fetch("https://mocki.io/v1/8502b3c3-2507-4503-a836-9d131647b6f7")
      tabla[3].textContent = datos.result[i].paginas;
      tabla[4].textContent = datos.result[i].year;
      about.textContent = datos.result[i].about;
+     if(datos.result[i].stock == 0){
+      addCarrito.value = "No hay stock";
+    };
     }
 }})
+  .catch(error => console.error(error))
+}
