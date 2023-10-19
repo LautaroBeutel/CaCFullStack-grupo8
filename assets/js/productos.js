@@ -35,27 +35,29 @@ function cFiccion(){
           sessionStorage.setItem("eleccion_user", "otros");
         }
 
-function eleccion(){
+async function eleccion(){
     let eleccion_usuario = sessionStorage.getItem("eleccion_user");
 tituloCategoria.textContent = sessionStorage.getItem("eleccion_cat")
 
-fetch("https://mocki.io/v1/8502b3c3-2507-4503-a836-9d131647b6f7")
+fetch("https://mocki.io/v1/e2958d9a-1195-4c72-bed9-59d37ec85f9e")
   .then(data => data.json())
   .then(function (datos){  
   for(let i = 0; i < datos.result.length; i++){
     if(datos.result[i].categoria == eleccion_usuario){
-     productos.insertAdjacentHTML("beforeend",`<a href="./articulo.html" target="_blank" class="articulo" onclick="eleccionArticulo(${i})"><article><img src="${datos.result[i].portada}" alt="foto_producto"><h3 class="prod_name">${datos.result[i].titulo}</h3><p class="prod_price">${datos.result[i].precio}</p></article></a>`);}
+     productos.insertAdjacentHTML("beforeend",`<a href="./articulo.html" class="articulo" onclick="eleccionArticulo(${i})"><article><img src="${datos.result[i].portada}" alt="foto_producto"><h3 class="prod_name">${datos.result[i].titulo}</h3><p class="prod_price">${datos.result[i].precio}</p></article></a>`);}
     }
 })
+  .catch(error => console.error(error))
 }
 
-function eleccionArticulo(index){
-  fetch("https://mocki.io/v1/8502b3c3-2507-4503-a836-9d131647b6f7")
+async function eleccionArticulo(index){
+ fetch("https://mocki.io/v1/e2958d9a-1195-4c72-bed9-59d37ec85f9e")
   .then(data => data.json())
   .then(function (datos){  
   for(let i = 0; i < datos.result.length; i++){
     if(i == index){
-     localStorage.setItem("articuloElegido", `${(datos.result[i].titulo)}`)}
+     sessionStorage.setItem("articuloElegido", `${(datos.result[i].titulo)}`)}
     }
 })
+  .catch(error => console.error(error))
 }
