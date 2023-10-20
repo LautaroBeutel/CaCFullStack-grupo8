@@ -67,7 +67,6 @@ a:hover{color: aqua;}
 .grid-container-ofertas{
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: 50vh;
     background-color: #2196F3;
     padding: 10px;
 }
@@ -75,12 +74,12 @@ a:hover{color: aqua;}
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
-    font-size: 30px;
     text-align: center;
-    background-image:url(img/ofertas.png);
+    height: 24rem;
 }
 /*   <!--Fin sección Ofertas-->*/
 
+/*
 .grid-container-lanzamientos{
     display: grid;
     grid-template-columns: repeat(5,1fr);
@@ -97,6 +96,7 @@ a:hover{color: aqua;}
     background-image:url(img/ofertas.png);
 }
 /*   <!--Fin sección Lanzamientos-->*/
+
 .Membresia{
     display: grid;
     grid-template-columns: 60% 40%;
@@ -124,15 +124,8 @@ a:hover{color: aqua;}
 .clear{clear: both;}
 
 img{
-    width: 2rem;
+    width: 10rem;
   }
 
-  a{
-    text-decoration: none;
-  }
 
-  #contenedorOfertas{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  
