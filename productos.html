@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="./assets/style/productos.css">
+    <link rel="stylesheet" href="./assets/style/encabezado.css">
+    <link rel="stylesheet" href="./assets/style/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1fcc785506.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- ENCABEZADO Y NAVEGACION-->
+    <header>
+        <div id="title_movil">
+            <h1>TAPA DURA</h1>
+        </div>
+    </header>
+    <header>
+        <div id="logo">
+            <a href="./index.html"><img src="./assets/images/logo-prueba.jpg" alt="logo"></a>
+            <h1>TAPA DURA</h1>
+        </div>
+        <div id="menus">
+            <nav>
+                <i class="fa-solid fa-bars fa-2xl" id="menuCel" onclick="showMenu()"></i>
+            </nav>
+            <div>
+                <a href="./carrito.html"><i class="fa-solid fa-cart-shopping fa-2xl"></i></a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div id="categorias" style="position:fixed;">
+            <ul>
+                <a href="./productos.html" onclick="terror()">
+                    <li class="boton_cat">Terror</li>
+                </a>
+                <a href="./productos.html" onclick="cFiccion()">
+                    <li class="boton_cat">Ciencia Ficción</li>
+                </a>
+                <a href="./productos.html" onclick="aventura()">
+                    <li class="boton_cat">Aventura</li>
+                </a>
+                <a href="./productos.html" onclick="policial()">
+                    <li class="boton_cat">Policial</li>
+                </a>
+                <a href="./productos.html" onclick="autoayuda()">
+                    <li class="boton_cat">Autoayuda</li>
+                </a>
+                <a href="./productos.html" onclick="otros()">
+                    <li class="boton_cat">Otros</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <!--CUERPO PRINCIPAL: CONTIENE GRUPO DE PRODUCTOS DE INTERES PARA EL USUARIO Y OTRO/S GRUPO/S DE INTERES-->
+    <main>
+
+        <section>
+            <div class="prod_title">
+                <h2 id="prod_group">Elige una categoría</h2>
+            </div>
+            <div id="articles" class="all_articles">
+
+            </div>
+                
+        </section>
+    </main>
+    <!-- PIE DE PAGINA CON LA INFORMACION DE CONTACTO, INFORMACION DE LA LIBRERIA, ETC-->
+    <footer id="contact">
+        <h2>Visita nuestras redes sociales</h2>
+        <nav>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a>
+            <a href="mailto:#@#?subject=Consulta"><i class="fa-regular fa-envelope fa-xl"></i></a>
+        </nav>
+        <p>Codo a Codo - Grupo 8</p>
+    </footer>
+
+    <script src="./assets/js/menuCelular.js"></script>
+    <script src="./assets/js/productos.js"></script>
+</body>
+
+</html>

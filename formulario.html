@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./assets/style/formulario.css">
+    <link rel="stylesheet" href="./assets/style/encabezado.css">
+    <link rel="stylesheet" href="./assets/style/footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1fcc785506.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- ENCABEZADO Y NAVEGACION-->
+    <header>
+        <div id="title_movil">
+            <h1>TAPA DURA</h1>
+        </div>
+    </header>
+    <header>
+        <div id="logo">
+            <a href="./index.html"><img src="./assets/images/logo-prueba.jpg" alt="logo"></a>
+            <h1>TAPA DURA</h1>
+        </div>
+        <div id="menus">
+            <nav>
+                <i class="fa-solid fa-bars fa-2xl" id="menuCel" onclick="showMenu()"></i>
+            </nav>
+            <div>
+                <a href="./carrito.html"><i class="fa-solid fa-cart-shopping fa-2xl"></i></a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div id="categorias">
+            <ul>
+                <a href="./productos.html" onclick="terror()">
+                    <li class="boton_cat">Terror</li>
+                </a>
+                <a href="./productos.html" onclick="cFiccion()">
+                    <li class="boton_cat">Ciencia Ficción</li>
+                </a>
+                <a href="./productos.html" onclick="aventura()">
+                    <li class="boton_cat">Aventura</li>
+                </a>
+                <a href="./productos.html" onclick="policial()">
+                    <li class="boton_cat">Policial</li>
+                </a>
+                <a href="./productos.html" onclick="autoayuda()">
+                    <li class="boton_cat">Autoayuda</li>
+                </a>
+                <a href="./productos.html" onclick="otros()">
+                    <li class="boton_cat">Otros</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <!--CUERPO PRINCIPAL: CONTIENE FORMULARIO-->
+    <main>
+        <div>
+            <h2>¡Completa el formulario y recibe todas las novedades de tus libros favoritos!</h2>
+            <form action="" id="formulario">
+                <div class="nombre-tabla"><label for="nombre">Nombres</label><input type="text" name="nombre"
+                        id="nombre" required></div>
+                <div class="apellido-tabla"><label for="apellido">Apellido</label><input type="text" name="apellido"
+                        id="apellido" required></div>
+                <div class="fecha-tabla"><label for="fecha">Fecha de nacimiento</label><input type="date" name="fecha"
+                        id="fecha" required></div>
+                <fieldset class="sexo-tabla">
+                    <legend>Sexo</legend>
+                    <div class="sexo-radio">
+                        <input type="radio" name="sexo" id="masculino" checked><label for="masculino">Masculino</label>
+                        <input type="radio" name="sexo" id="femenino"><label for="femenino">Femenino</label>
+                        <input type="radio" name="sexo" id="sexo-otros"><label for="sexo-otros">Otro</label>
+                    </div>
+                </fieldset>
+                <div class="mail-tabla"><label for="mail">Correo electrónico</label><input type="email" name="mail"
+                        id="mail" required></div>
+                <fieldset class="categoria-tabla">
+                    <legend>Categorías favoritas</legend>
+                    <div class="check-box">
+                        <input type="checkbox" name="categoria" id="cat-terror"><label for="cat-terror">Terror</label>
+                        <input type="checkbox" name="categoria" id="cat-ficcion"><label for="cat-ficcion">Ciencia
+                            Ficción</label>
+                        <input type="checkbox" name="categoria" id="cat-aventura"><label
+                            for="cat-aventura">Aventura</label>
+                        <input type="checkbox" name="categoria" id="cat-policial"><label
+                            for="cat-policial">Policial</label>
+                        <input type="checkbox" name="categoria" id="cat-fantasia"><label
+                            for="cat-fantasia">Fantasía</label>
+                        <input type="checkbox" name="categoria" id="cat-otros"><label for="cat-otros">Otros</label>
+                    </div>
+                </fieldset>
+                <fieldset class="comentario-tabla">
+                    <legend>¿Tienes dudas o sugerencias?</legend>
+                    <textarea name="comentario" id="comentario" cols="30" rows="10"
+                        placeholder="Escribe aquí tu comentario (máximo: 140 caracteres)" maxlength="140"></textarea>
+                </fieldset>
+                <input type="submit" value="Enviar formulario" class="submit-tabla">
+            </form>
+        </div>
+
+    </main>
+    <!-- PIE DE PAGINA CON LA INFORMACION DE CONTACTO, INFORMACION DE LA LIBRERIA, ETC-->
+    <footer id="contact">
+        <h2>Visita nuestras redes sociales</h2>
+        <nav>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a>
+            <a href="mailto:#@#?subject=Consulta"><i class="fa-regular fa-envelope fa-xl"></i></a>
+        </nav>
+        <p>Codo a Codo - Grupo 8</p>
+    </footer>
+
+    <script src="./assets/js/formulario.js"></script>
+    <script src="./assets/js/menuCelular.js"></script>
+    <script src="./assets/js/productos.js"></script>
+
+</body>
+
+</html>
