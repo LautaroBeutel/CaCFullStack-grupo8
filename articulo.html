@@ -7,13 +7,16 @@
     <title>Articulo</title>
     <link rel="stylesheet" href="./assets/style/articulo.css">
     <link rel="stylesheet" href="./assets/style/encabezado.css">
-    <link rel="stylesheet" href="./assets/style/footer.css">
+    <link rel="stylesheet" href="./assets/style/footer.css"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1fcc785506.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- ENCABEZADO Y NAVEGACION-->
-    <!-- <header>
     <header>
         <div id="title_movil">
             <h1>TAPA DURA</h1>
@@ -26,7 +29,7 @@
         </div>
         <div id="menus">
             <nav>
-                <i class="fa-solid fa-bars fa-2xl"></i>
+                <i class="fa-solid fa-bars fa-2xl" id="menuCel" onclick="showMenu()"></i>
             </nav>
             <div>
                 <a href="#"><i class="fa-solid fa-cart-shopping fa-2xl"></i></a>
@@ -36,23 +39,23 @@
     <nav>
         <div id="categorias">
             <ul>
-                <a href="./productos.html">
-                    <li>Terror</li>
+                <a href="./productos.html" onclick="terror()">
+                    <li class="boton_cat">Terror</li>
                 </a>
-                <a href="./productos.html">
-                    <li>Ciencia Ficción</li>
+                <a href="./productos.html" onclick="cFiccion()">
+                    <li class="boton_cat">Ciencia Ficción</li>
                 </a>
-                <a href="./productos.html">
-                    <li>Aventura</li>
+                <a href="./productos.html" onclick="aventura()">
+                    <li class="boton_cat">Aventura</li>
                 </a>
-                <a href="./productos.html">
-                    <li>Policial</li>
+                <a href="./productos.html" onclick="policial()">
+                    <li class="boton_cat">Policial</li>
                 </a>
-                <a href="./productos.html">
-                    <li>Fantasía</li>
+                <a href="./productos.html" onclick="autoayuda()">
+                    <li class="boton_cat">Autoayuda</li>
                 </a>
-                <a href="./productos.html">
-                    <li>Otros</li>
+                <a href="./productos.html" onclick="otros()">
+                    <li class="boton_cat">Otros</li>
                 </a>
             </ul>
         </div>
@@ -63,12 +66,11 @@
             <div>
                 <div id="articulo_id">
                     <h1 id="titulo">Aca va el titulo del libro</h1>
-                    <img src="./assets/images/foto-prueba.jpg" alt="foto_del_articulo">
+                    <img src="./assets/images/foto-prueba.jpg" alt="portada del libro" id="portada_libro">
                 </div>
                 <div id="precio_articulo">
                     <p id="precio">XXXX</p>
                 </div>
-                <!-- NOTA: EL STOCK LO DEJAMOS A LA VISTA DEL USUARIO O NO? SI NO HAY ESTOY, PODEMOS DESHABILITAR EL BOTON DE COMPRA Y CAMBIARLE EL TEXTO A 'NO HAY STOCK'-->
 
             </div>
             <nav>
@@ -82,26 +84,30 @@
                     <table>
                         <tr>
                             <td>Título</td>
-                            <td>TITULO DEL LIBRO</td>
+                            <td class="celda_articulo">TITULO DEL LIBRO</td>
                         </tr>
                         <tr>
                             <td>Autor</td>
-                            <td>AUTOR DEL LIBRO</td>
+                            <td class="celda_articulo">AUTOR DEL LIBRO</td>
                         </tr>
                         <tr>
                             <td>Idioma</td>
-                            <td>IDIOMA DEL LIBRO</td>
+                            <td class="celda_articulo">IDIOMA DEL LIBRO</td>
                         </tr>
                         <tr>
-                            <td>Año de publicación</td>
-                            <td>AÑO DE PUBLICACION</td>
+                            <td>Número de páginas</td>
+                            <td class="celda_articulo">NUMERO DE PAGINAS</td>
+                        </tr>
+                        <tr>
+                            <td>Fecha de publicación</td>
+                            <td class="celda_articulo">AÑO DE PUBLICACION</td>
                         </tr>
                     </table>
                 </div>
             </div>
             <div id="description">
                 <h2>Descripción</h2>
-                <p id="description_text">Aca va una descripcion del producto, o si prefieren podemos escribir otra cosa, como por ejemplo un instructivo de como comprar, las ventajas de leer, una invitacion a suscribirse al nwsletter o lo que se les ocurra. La idea es que vaya texto.</p>
+                <p id="description_text">Aca va una descripcion del producto.</p>
             </div>
         </section>
 
@@ -120,8 +126,12 @@
             <a href="#" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a>
             <a href="mailto:#@#?subject=Consulta"><i class="fa-regular fa-envelope fa-xl"></i></a>
         </nav>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Codo a Codo - Grupo 8</p>
     </footer>
+
+    <script src="./assets/js/menuCelular.js"></script>
+    <script src="./assets/js/articulo.js"></script>
+    <script src="./assets/js/productos.js"></script>
 </body>
 
 </html>

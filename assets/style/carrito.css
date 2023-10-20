@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .h2_carrito_desktop{
     display: none;
 }
@@ -20,6 +21,7 @@
 .titulo_info_carrito h5{
     display: none;
 }
+
 .separador_carrito{
     width: 90%;
     height: 1px;

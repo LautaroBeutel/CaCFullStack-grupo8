@@ -1,279 +1,288 @@
 :root {
-  --marron-claro: #D08C60;
-  --amarillo: #FFCB69;
-  --verde-claro: #9B9B7A;
-  --hueso: #F1DCA7;
-  --marron-oscuro: #997B66;
-  --verde-oscuro: #797D62;
-  --rosa: #DE695B;
-}
-
-/*CELULAR*/
-
-
-/*CUERPO PRINCIPAL*/
-
-main {
-  padding-top: 60px;
-}
-
-main>div {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
-main>div h2 {
-  text-align: center;
-  padding-bottom: 10px;
-  color: var(--rosa);
-}
-
-form,
-form>div {
-  display: flex;
-  flex-direction: column;
-}
-
-form label,
-form fieldset {
-  margin: 5px 0 5px 0px;
-  padding: 5px;
-}
-
-form input {
-  padding: 5px 0px;
-}
-
-.sexo-radio {
-  display: none;
-}
-
-.sexo-movil select {
-  width: 100%;
-  padding: 5px 0px;
-}
-
-.check-box {
-  display: grid;
-  grid-template-columns: auto 1fr auto 1fr;
-}
-
-textarea {
-  width: 100%;
-  resize: none;
-}
-
-input[type="submit"] {
-  width: 80%;
-  margin: 10px auto;
-  border-radius: 5px;
-}
-
-input[type="text"]:focus,
-input[type="date"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  border-color: #fff;
-  background-color: #fff;
-  box-shadow: 0px 0px 5px 2px var(--rosa);
-}
-
-input[type="submit"]:hover {
-  background-color: var(--amarillo);
-  animation: translate-button 0.2s linear 1;
-  z-index: 0;
-}
-
-input[type="submit"]:active {
-  border-color: #fff;
-  color: var(--rosa);
-  box-shadow: 0px 0px 10px 5px var(--rosa);
-}
-
-
-
-/*ANIMACION*/
-@keyframes translate-button {
-  0% {
-    transform: translateX(0px);
+    --marron-claro: #D08C60;
+    --amarillo: #FFCB69;
+    --verde-claro: #9B9B7A;
+    --hueso: #F1DCA7;
+    --marron-oscuro: #997B66;
+    --verde-oscuro: #797D62;
+    --rosa: #DE695B;
   }
+  
+  /*CELULAR*/
 
-  25% {
-    transform: translateX(5px);
+   * { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-
-  50% {
-    transform: translateX(0px);
-  }
-
-  75% {
-    transform: translateX(-5px);
-  }
-
-  100% {
-    transform: translateX(0px);
-  }
-}
-
-/*TABLET*/
-
-@media only screen and (min-width: 769px) and (max-width: 1199px) {
-
+  
+  body {
+    margin: 0;
+    background-color: var(--hueso);
+    color: var(--verde-oscuro);
+    font-family: 'Tilt Neon', sans-serif;  }
+  
+  
   /*CUERPO PRINCIPAL*/
-
+  
   main {
-    padding: 200px 0px 20px 0px;
+    padding-top: 60px;
   }
-
-  .sexo-tabla {
+  
+  main>div {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .sexo-movil {
-    display: none;
-  }
-
-  .sexo-radio {
-    display: block;
-  }
-
-  form {
-    width: 80%;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    grid-template-areas: "nombre apellido"
-      "fecha mail"
-      "sexo sexo"
-      "categoria categoria"
-      "comentario comentario"
-      "submit submit";
   }
-
-  .nombre-tabla {
-    grid-area: nombre;
+  
+  main>div h2 {
+    text-align: center;
+    padding-bottom: 10px;
+    color: var(--rosa);
   }
-
-  .apellido-tabla {
-    grid-area: apellido;
-  }
-
-  .fecha-tabla {
-    grid-area: fecha;
-  }
-
-  .sexo-tabla {
-    grid-area: sexo;
-    width: 50%;
-    margin: 0 auto;
-  }
-
-  .mail-tabla {
-    grid-area: mail;
-  }
-
-  .categoria-tabla {
-    grid-area: categoria;
-    width: 60%;
-    margin: 0 auto;
-  }
-
-  .comentario-tabla {
-    grid-area: comentario;
-    width: 60%;
-    margin: 0 auto;
-  }
-
-  .submit-tabla {
-    grid-area: submit;
-  }
-
-  input[type="submit"] {
-    width: 25%;
-  }
-}
-
-/*PC*/
-
-@media only screen and (min-width: 1200px) {
-
-  /*CUERPO PRINCIPAL*/
-
-  main {
-    padding: 200px 0px 20px 0px;
-  }
-
-  .sexo-tabla {
+  
+  form,
+  form>div {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
   }
-
-  .sexo-movil {
-    display: none;
+  
+  form label,
+  form fieldset {
+    margin: 5px 0 5px 0px;
+    padding: 5px;
   }
-
+  
+  form input {
+    padding: 5px 0px;
+  }
+  
+  .error{
+    border-color: #ff0000;
+    background-color: #ff000040;
+  }
+  
   .sexo-radio {
-    display: block;
-  }
-
-  form {
-    width: 80%;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 30% 20% 20% 30%;
-    gap: 10px;
-    justify-items: center;
-    grid-template-areas: "nombre nombre apellido apellido"
-      "fecha fecha mail mail"
-      ". sexo sexo ."
-      "categoria categoria comentario comentario"
-      ". submit submit .";
-  }
-
-  .nombre-tabla {
-    grid-area: nombre;
-    width: 90%;
-
-  }
-
-  .apellido-tabla {
-    grid-area: apellido;
-    width: 90%;
-  }
-
-  .fecha-tabla {
-    grid-area: fecha;
-    width: 90%;
-  }
-
-  .sexo-tabla {
-    grid-area: sexo;
-    padding: 1rem;
-  }
-
-  .mail-tabla {
-    grid-area: mail;
-    width: 90%;
-  }
-
-  .categoria-tabla {
-    grid-area: categoria;
-    width: 100%;
-  }
-
-  .comentario-tabla {
-    grid-area: comentario;
-    width: 100%;
-  }
-
-  .submit-tabla {
-    grid-area: submit;
     padding: 0.5rem;
+    text-align: center;
   }
-}
+  
+  
+  .check-box {
+    display: grid;
+    grid-template-columns: auto 1fr auto 1fr;
+  }
+  
+  textarea {
+    width: 100%;
+    resize: none;
+    padding: 10px;
+  }
+  
+  input[type="submit"] {
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-family: 'Tilt Neon', sans-serif;
+    font-size: 1rem;
+  }
+  
+  input[type="text"]:focus,
+  input[type="date"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: #fff;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 2px var(--rosa);
+  }
+  
+  input[type="submit"]:hover {
+    background-color: var(--amarillo);
+    animation: translate-button 0.2s linear 1;
+    z-index: 0;
+  }
+  
+  input[type="submit"]:active {
+    border-color: #fff;
+    color: var(--rosa);
+    box-shadow: 0px 0px 10px 5px var(--rosa);
+  }
+  
+  
+  
+  /*ANIMACION*/
+  @keyframes translate-button {
+    0% {
+      transform: translateX(0px);
+    }
+  
+    25% {
+      transform: translateX(5px);
+    }
+  
+    50% {
+      transform: translateX(0px);
+    }
+  
+    75% {
+      transform: translateX(-5px);
+    }
+  
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  
+  /*TABLET*/
+  
+  @media only screen and (min-width: 769px) and (max-width: 1199px) {
+  
+    /*CUERPO PRINCIPAL*/
+  
+    main {
+      padding: 200px 0px 20px 0px;
+    }
+  
+    .sexo-tabla {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  
+    .sexo-radio {
+      display: block;
+    }
+  
+    form {
+      width: 80%;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      grid-template-areas: "nombre apellido"
+        "fecha mail"
+        "sexo sexo"
+        "categoria categoria"
+        "comentario comentario"
+        "submit submit";
+    }
+  
+    .nombre-tabla {
+      grid-area: nombre;
+    }
+  
+    .apellido-tabla {
+      grid-area: apellido;
+    }
+  
+    .fecha-tabla {
+      grid-area: fecha;
+    }
+  
+    .sexo-tabla {
+      grid-area: sexo;
+      width: 50%;
+      margin: 0 auto;
+    }
+  
+    .mail-tabla {
+      grid-area: mail;
+    }
+  
+    .categoria-tabla {
+      grid-area: categoria;
+      width: 60%;
+      margin: 0 auto;
+    }
+  
+    .comentario-tabla {
+      grid-area: comentario;
+      width: 60%;
+      margin: 0 auto;
+    }
+  
+    .submit-tabla {
+      grid-area: submit;
+    }
+  
+    input[type="submit"] {
+      width: 25%;
+    }
+  }
+  
+  /*PC*/
+  
+  @media only screen and (min-width: 1200px) {
+  
+    /*CUERPO PRINCIPAL*/
+  
+    main {
+      padding: 200px 0px 20px 0px;
+    }
+  
+    .sexo-tabla {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  
+    .sexo-radio {
+      display: block;
+    }
+  
+    form {
+      width: 80%;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 30% 20% 20% 30%;
+      gap: 10px;
+      justify-items: center;
+      grid-template-areas: "nombre nombre apellido apellido"
+        "fecha fecha mail mail"
+        ". sexo sexo ."
+        "categoria categoria comentario comentario"
+        ". submit submit .";
+    }
+  
+    .nombre-tabla {
+      grid-area: nombre;
+      width: 90%;
+  
+    }
+  
+    .apellido-tabla {
+      grid-area: apellido;
+      width: 90%;
+    }
+  
+    .fecha-tabla {
+      grid-area: fecha;
+      width: 90%;
+    }
+  
+    .sexo-tabla {
+      grid-area: sexo;
+      padding: 1rem;
+    }
+  
+    .mail-tabla {
+      grid-area: mail;
+      width: 90%;
+    }
+  
+    .categoria-tabla {
+      grid-area: categoria;
+      width: 100%;
+    }
+  
+    .comentario-tabla {
+      grid-area: comentario;
+      width: 100%;
+    }
+  
+    .submit-tabla {
+      grid-area: submit;
+      padding: 0.5rem;
+    }
+  }

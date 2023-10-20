@@ -8,12 +8,27 @@
   --rosa: #DE695B;
 }
 
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--hueso);
+  color: var(--verde-oscuro);
+  font-family: 'Tilt Neon', sans-serif;
+}
+
 /*CELULAR*/
 /*CUERPO PRINCIPAL*/
 
 main {
   padding-top: 60px;
 }
+
+
 
 /* Articulo, precio y boton de compra */
 
@@ -61,6 +76,7 @@ main img {
   padding: 10px;
   border-radius: 5px;
   margin: 1rem 0 2rem 0;
+  font-family: 'Tilt Neon', sans-serif;
 }
 
 #articulo>nav input[type="button"]:hover {
@@ -220,7 +236,6 @@ aside{
   #precio_articulo {
     margin-right: 3rem;
   }
-
 
   #precio {
     font-size: 3rem;
