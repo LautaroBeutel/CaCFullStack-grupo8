@@ -92,3 +92,25 @@ a:hover{color: aqua;}
 /*   <!--Fin sección Lanzamientos-->*/
 
 .clear{clear: both;}
+
+/*AGREGO ESTILOS DE PRUEBA - BORRAR LIBREMENTE*/
+img{
+    width: 2rem;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  #contenedorOfertas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .block2-ofertas{
+    text-align: center;
+    padding: 5px;
+    max-height: 10rem;
+    overflow: hidden;
+  }
