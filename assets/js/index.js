@@ -45,6 +45,28 @@ function eleccionIndex(text){
   sessionStorage.setItem("articuloElegido", text)
 }
 
+
+function terrorIndex(){
+  sessionStorage.setItem("eleccion_cat", "Terror");
+  sessionStorage.setItem("eleccion_user", "terror");
+}
+
+function cFiccionIndex(){
+    sessionStorage.setItem("eleccion_cat", "Ciencia Ficción");
+    sessionStorage.setItem("eleccion_user", "ciencia ficcion");
+  }
+
+  function aventuraIndex(){
+    sessionStorage.setItem("eleccion_cat", "Aventura");
+    sessionStorage.setItem("eleccion_user", "aventura");
+  }
   
-  
-  
+  function policialIndex(){
+      sessionStorage.setItem("eleccion_cat", "Policial");
+      sessionStorage.setItem("eleccion_user", "policial");
+    }
+
+    function autoayudaIndex(){
+        sessionStorage.setItem("eleccion_cat", "Autoayuda");
+        sessionStorage.setItem("eleccion_user", "autoayuda");
+      }
