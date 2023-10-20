@@ -10,7 +10,7 @@ let articuloElegido = sessionStorage.getItem("articuloElegido");
 articulo()
 
 async function articulo(){
-fetch("https://mocki.io/v1/e2958d9a-1195-4c72-bed9-59d37ec85f9e")
+fetch("https://mocki.io/v1/b3f6b230-ed47-4fc6-a43a-7d26e5de10e9")
   .then(data => data.json())
   .then(function (datos){  
   for(let i = 0; i < datos.result.length; i++){
