@@ -8,6 +8,7 @@ function showMenu(){
         menu.style.color = "#FFF";
     } else {
         categorias.style.display = "block";
+        categorias.style.position = "absolute";
         menu.style.color = "var(--rosa)"
     }
 }

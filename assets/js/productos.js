@@ -35,6 +35,10 @@ function cFiccion(){
           sessionStorage.setItem("eleccion_user", "otros");
         }
 
+      if (tituloCategoria.textContent == ""){
+        tituloCategoria.textContent = "Elige una categoría";
+      }
+
 async function eleccion(){
     let eleccion_usuario = sessionStorage.getItem("eleccion_user");
 tituloCategoria.textContent = sessionStorage.getItem("eleccion_cat")
