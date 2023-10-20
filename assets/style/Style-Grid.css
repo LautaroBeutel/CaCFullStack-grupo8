@@ -54,8 +54,8 @@ a:hover{color: aqua;}
     font-size: 30px;
     text-align: center;
 }
-.Fantasia{
-    background-image: url(img/Categorias/Fantasia.jfif);
+.cFiccion{
+    background-image: url(../../img/Categorias/Fantasia.jfif);
     background-repeat: no-repeat;
     background-size: contain  ;
     background-position: center ;
