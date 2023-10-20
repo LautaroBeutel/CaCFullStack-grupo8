@@ -17,7 +17,7 @@ fetch("https://mocki.io/v1/b3f6b230-ed47-4fc6-a43a-7d26e5de10e9")
     if(datos.result[i].titulo == articuloElegido){
      titulo.textContent = datos.result[i].titulo;
      portada.src = datos.result[i].portada;
-     precio.textContent = datos.result[i].precio;
+     precio.textContent = `$${datos.result[i].precio}`;
      tabla[0].textContent = datos.result[i].titulo;
      tabla[1].textContent = datos.result[i].autor;
      tabla[2].textContent = datos.result[i].idioma;
