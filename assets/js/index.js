@@ -9,7 +9,7 @@ fetch("https://mocki.io/v1/b3f6b230-ed47-4fc6-a43a-7d26e5de10e9")
     for(let i = 0; i < datos.result.length; i++){
         precios.push(datos.result[i].precio)
       }      
-    precios.sort((a,b) => a -b);
+    precios.sort((a,b) => a - b);
     for(let i = 0; i <= 2; i++){
         for(let z = 0; z < datos.result.length; z++){
           if(precios[i] == datos.result[z].precio){
