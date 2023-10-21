@@ -1,4 +1,8 @@
 
+.contenedor-carrito{
+    display: none;
+}
+
 /* CARD */
 
 .container-card {
@@ -14,7 +18,7 @@
     background-color: #fff;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    width: 300px;
+    width: 22rem;
     height: 28rem;
 }
 .card-header img {
@@ -91,6 +95,9 @@
         justify-content: space-around;
         margin: 0 auto;
         width: 85%;
+    }
+    .card{
+        width: 16rem;
     }
     
     /* Si no me equivoco esto ya no sirve xq sacamos el header que tenia originalmente, ahora vamos a usar obvio el que hizo alejandro.
@@ -200,6 +207,7 @@
         text-align: center;
         height: 24rem;
     }
+    
     
     /*   <!--Fin sección Ofertas-->*/
 

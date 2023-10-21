@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
     <link rel="stylesheet" href="./assets/style/productos.css">
-    <link rel="stylesheet" href="./assets/style/encabezado.css">
+    <link rel="stylesheet" href="./assets/style/encabezadomio.css">
     
     <link rel="stylesheet" href="./assets/style/footer.css"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="shortcut icon" href="img/libro-icono-fav-2.png" type="image/x-icon">
@@ -20,49 +20,65 @@
 
 <body>
     <!-- ENCABEZADO Y NAVEGACION-->
-    <header>
-        <div id="title_movil">
-            <h1>TAPA DURA</h1>
-        </div>
-    </header>
-    <header>
-        <div id="logo">
-            <a href="./index.html"><img src="./assets/images/logo-prueba.jpg" alt="logo"></a>
-            <h1>TAPA DURA</h1>
-        </div>
-        <div id="menus">
-            <nav>
-                <i class="fa-solid fa-bars fa-2xl" id="menuCel" onclick="showMenu()"></i>
-            </nav>
-            <div>
-                <a href="./carrito.html"><i class="fa-solid fa-cart-shopping fa-2xl"></i></a>
-            </div>
-        </div>
-    </header>
-    <nav>
-        <div id="categorias" style="position:fixed;">
-            <ul>
-                <a href="./productos.html" onclick="terror()">
-                    <li class="boton_cat">Terror</li>
-                </a>
-                <a href="./productos.html" onclick="cFiccion()">
-                    <li class="boton_cat">Ciencia Ficción</li>
-                </a>
-                <a href="./productos.html" onclick="aventura()">
-                    <li class="boton_cat">Aventura</li>
-                </a>
-                <a href="./productos.html" onclick="policial()">
-                    <li class="boton_cat">Policial</li>
-                </a>
-                <a href="./productos.html" onclick="autoayuda()">
-                    <li class="boton_cat">Autoayuda</li>
-                </a>
-                <a href="./productos.html" onclick="otros()">
-                    <li class="boton_cat">Otros</li>
-                </a>
-            </ul>
-        </div>
-    </nav>
+    <div class="header-contenedor">
+        <div class="logo-img-desktop">
+            <a href="./index.html">
+                <img src="./assets/images/logo2.png" alt="Logo Libreria">
+             </a>
+         </div>
+     <div class="container-busqueda-categorias">
+         <div class="container">
+             <nav class="navbar">
+                 <input type="checkbox" id="check">
+                 <ul>
+                     <li><a class="active" href="#">Inicio</a></li>
+                     <li><a href="productos.html">Categorias</a></li>
+                     <li><a href="#ofertas">Ofertas</a></li>    
+                     <li><a href="formulario.html">Contacto</a></li>
+                     <li><a href="#contact">Sobre Nosotros</a></li>       
+                 </ul>
+                 <!-- <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span> -->
+             </nav>            
+         </div>
+         <div class="contenedor-header">
+             <header class="header">
+                
+                 <div class="container-logo-nombre">
+                     <div class="logo-img">
+                         <a href="./index.html">
+                             <img   src="./assets/images/logo2.png" alt="Logo Libreria">
+                         </a>
+                     </div>
+                     <!-- <div>
+                         <h4><strong>Libreria</strong></h4>
+                         <h4><em>TAPA DURA</em></h4>
+                     </div> -->
+                 </div>
+                     <form class="busqueda" method="get" action="/">
+                         <div>
+                             <input id="input" type="search" placeholder="Buscar libros, autores y más..." name="q" autocomplete="off">
+                             <i class="fas fa-search"></i>
+                         </div>
+                         <button class="btn-buscar" type="submit">Buscar</button>
+                     </form>
+                     <div class="contenedor-carrito">
+                         <p >Carrito de compras</p>
+                         <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>  
+                     </div>
+                 <div class="carrito-menu">
+                     <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                     <label for="check" class="checkbtn">
+                         <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+                     </label>
+                 </div>
+     
+                 
+             </header>  
+         </div>
+         
+     </div>
+     
+ </div>
     <!--CUERPO PRINCIPAL: CONTIENE GRUPO DE PRODUCTOS DE INTERES PARA EL USUARIO Y OTRO/S GRUPO/S DE INTERES-->
     <main>
 
