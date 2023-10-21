@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style/carrito.css">
+    <link rel="stylesheet" href="./assets/style/encabezadomio.css">
+    <link rel="shortcut icon" href="img/libro-icono-fav-2.png" type="image/x-icon">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="icon" type="images/png" href="assets/images/logo2.png">
     <title>Tu carrito de compras online</title>
 </head>
 <body>
+    <!-- ENCABEZADO Y NAVEGACION-->
+    <div class="container">
+        <nav class="navbar">
+            <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+                </label>
+                <ul>
+                    <li><a class="active" href="#">Inicio</a></li>
+                    <li><a href="articulo.html">Categorias</a></li>
+                    <li><a href="productos.html">Ofertas</a></li>    
+                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>                    
+                  </ul>                 
+            </div>
+        </nav>
+    <header class="header" id="header">
+        <a href="#">
+            <img class="Logo" src="./assets/images/logo2.png" alt="Logo Libreria">
+          </a>
+      <div class="header-texto">
+        <div class="encabezado-mid">
+            <h1><strong>Libreria</strong>
+                <em>Grupo 8</em></h1>
+          <form id="form" method="get" action="/">
+              <input id="input" type="search" placeholder="Buscar libros, autores y más..." name="q" autocomplete="off">
+              <button type="submit">Buscar</button>
+          </form>          
+        </div>            
+        <div class="encabezado-der">
+            <ul>            
+                <li><a href="perfil.html"><i class="fa-solid fa-user"></i>Perfil</a></li>
+                <li><a href="signup.html">Creá tu cuenta</a></li>
+                <li><a href="login.html">Ingresá</a></li>    
+                <li><a href="compras.html">Mis compras <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>               
+              </ul>                     
+        </div>              
+      </header>  
+        
+    </div>
 
     <h2 class="h2_carrito_desktop">Tu carrito de compras</h2>
    
