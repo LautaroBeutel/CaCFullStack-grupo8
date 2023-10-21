@@ -10,23 +10,17 @@
 
 /*CELULAR*/
 
-* { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
   body {
-    margin: 0;
     background-color: var(--hueso);
     color: var(--verde-oscuro);
-    font-family: 'Tilt Neon', sans-serif;
+    /* font-family: 'Tilt Neon', sans-serif; */
  }
 
 /*CUERPO PRINCIPAL*/
 
-main {
-    padding-top: 60px;
+.main-productos{
+    min-height: 25rem;
+    padding-top: 1rem;
 }
 
 img {
@@ -82,7 +76,7 @@ main a {
     padding: 10px;
     border-radius: 5px;
     margin: 1rem 0 2rem 0;
-    font-family: 'Tilt Neon', sans-serif;;
+    /* font-family: 'Tilt Neon', sans-serif; */
 }
 
 .more input:hover {
@@ -125,21 +119,13 @@ main a {
 @media only screen and (min-width: 769px) and (max-width: 1199px) {
     /*CUERPO PRINCIPAL*/
 
-    main {
-        padding-top: 160px;
-    }
-
-    .prod_title {
-        padding-top: 2rem;
-    }
-
     section{
         display: block;
     }
 
     section .prod_title{
         text-align: center;
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     #articles{
@@ -161,10 +147,6 @@ main a {
 
 @media only screen and (min-width: 1200px) {
     /*CUERPO PRINCIPAL*/
-
-    main {
-        padding-top: 210px;
-    }
 
     section{
         display: block;
