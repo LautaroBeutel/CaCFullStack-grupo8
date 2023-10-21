@@ -15,6 +15,7 @@
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     width: 300px;
+    height: 28rem;
 }
 .card-header img {
     width: 100%;
@@ -27,7 +28,7 @@
     justify-content: center;
     align-items: flex-start;
     padding: 20px;
-    min-height: 200px;
+    height: 55%;
     gap: 1rem;
     background-color: #f3f5c9;
 }
@@ -80,6 +81,17 @@
         margin-top: 50px;
     }
 
+    .contenedorOfertas-class{
+        display: flex;
+    }
+
+    .contenedorOfertas-class{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 auto;
+        width: 85%;
+    }
     
     /* Si no me equivoco esto ya no sirve xq sacamos el header que tenia originalmente, ahora vamos a usar obvio el que hizo alejandro.
     #MainHeader img {

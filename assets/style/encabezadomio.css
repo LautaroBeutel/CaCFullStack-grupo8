@@ -17,17 +17,23 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    
+    color: black;
   }
   
-  body {
-    background: #dad299; /* fallback for old browsers */  
+  /* body {
+    background: #dad299;
     background: linear-gradient(
       to right,
       #b0dab9,
       #dad299
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }  
+    );
+  } */
+  
+
+  .container-logo-nombre{
+    display: flex;
+    flex-direction: column;
+  }
     
   
   i{
@@ -45,12 +51,22 @@
 
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: var(--marron-claro);
-  grid-area: encabezado;
+  /* grid-area: encabezado; */
 }
 
+.carrito-menu{
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  gap: 1rem;
+}
+
+.carrito-menu i{
+  padding: 0;
+}
 
 .header-texto {
   width: 100%;
@@ -64,13 +80,36 @@ h1{
   padding-left: 67px;
 }
 
-.Logo{
-  width: 100%;
+/* .Logo{
+  width: 5rem;
   position: relative;
-  aspect-ratio: 200/133;
+} */
 
+.logo-img img{
+  width: 3rem;
 }
 
+.busqueda{
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-buscar{
+  border: none;
+  width: 3.5rem;
+  border-radius: 10px;
+  background-color: #b31c40a8;
+  color: white;
+}
+
+.contenedor-categorias{
+  padding: 1rem 2rem;
+}
+
+.titulo-index{
+  text-align: center;
+  margin: 1rem 0;
+}
 
 .encabezado-mid>form {
   display: flex;
@@ -211,12 +250,9 @@ li a.active, li a:hover {
 }
 
 .checkbtn{
-  font-size: 20px;
+  font-size: 16px;
   color: #fff;
-  float: right;
   line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
   display: none;
 }
 

@@ -18,7 +18,7 @@ fetch("https://mocki.io/v1/b3f6b230-ed47-4fc6-a43a-7d26e5de10e9")
     paginas.sort((a,b) => b - a);   
 
 
-    for(let i = 0; i <= 4; i++){
+    for(let i = 0; i < 6; i++){
         for(let z = 0; z < datos.result.length; z++){
           if(precios[i] == datos.result[z].precio){
             ofertas.push(datos.result[z]);
