@@ -30,8 +30,51 @@ fetch("https://mocki.io/v1/b3f6b230-ed47-4fc6-a43a-7d26e5de10e9")
         }
   
     for(let i = 0; i < ofertas.length; i++){
-        contenedorOfertas.insertAdjacentHTML("beforeend",`<a href="./articulo.html" onclick="eleccionIndex('${ofertas[i].titulo}')"><div class="grid-item-ofertas"><img src="${ofertas[i].portada}" alt="foto_producto"><h3>${ofertas[i].titulo}</h3><p>$${ofertas[i].precio}</p></div></a>`);
-        contenedorPaginas.insertAdjacentHTML("beforeend",`<a href="./articulo.html" onclick="eleccionIndex('${mayoresPaginas[i].titulo}')"><div class="grid-item-ofertas"><img src="${mayoresPaginas[i].portada}" alt="foto_producto"><h3>${mayoresPaginas[i].titulo}</h3><p>$${mayoresPaginas[i].precio}</p></div></a>`);
+        contenedorOfertas.insertAdjacentHTML("beforeend",
+          `<div class="container-card ">
+            <a href="./articulo.html" onclick="eleccionIndex('${ofertas[i].titulo}')">
+              <div class="card">
+                <div class="card-header">
+                  <img src="${ofertas[i].portada}" alt="foto_producto">
+                </div>
+                <div class="card-body">
+                  <span class="tag tag-teal">${ofertas[i].categoria}</span>
+                  <h3>${ofertas[i].titulo}</h3>
+                  <p>Precio: $ <span class="precio-card">${ofertas[i].precio}</span</p>
+                  <p>Autor: ${ofertas[i].autor}</p>
+                  <p>Páginas: ${ofertas[i].paginas}</p>
+                  <p>Idioma: ${ofertas[i].idioma}</p>
+                </div>
+              </div>
+              </a>
+            </div>`
+        )
+        contenedorPaginas.insertAdjacentHTML("beforeend",
+        // `<a href="./articulo.html" onclick="eleccionIndex('${mayoresPaginas[i].titulo}')">
+        // <div class="grid-item-ofertas">
+        // <img src="${mayoresPaginas[i].portada}" alt="foto_producto">
+        // <h3>${mayoresPaginas[i].titulo}</h3>
+        // <p>$${mayoresPaginas[i].precio}</p>
+        // </div></a>`);
+
+        `<div class="container-card ">
+            <a href="./articulo.html" onclick="eleccionIndex('${mayoresPaginas[i].titulo}')">
+              <div class="card">
+                <div class="card-header">
+                <img src="${mayoresPaginas[i].portada}" alt="foto_producto">
+                </div>
+                <div class="card-body">
+                  <span class="tag tag-teal">${mayoresPaginas[i].categoria}</span>
+                  <h3>${mayoresPaginas[i].titulo}</h3>
+                  <p>Precio: $ <span class="precio-card">${mayoresPaginas[i].precio}</span</p>
+                  <p>Autor: ${mayoresPaginas[i].autor}</p>
+                  <p>Páginas: ${mayoresPaginas[i].paginas}</p>
+                  <p>Idioma: ${mayoresPaginas[i].idioma}</p>
+                </div>
+              </div>
+            </a>
+          </div>`
+        )
 
     }
   
