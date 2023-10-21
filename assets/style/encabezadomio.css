@@ -1,4 +1,5 @@
 /* HEADER COMUN PARA TODAS LAS PAGINAS */
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
 
 :root{
     --marron-claro: #D08C60;
@@ -71,19 +72,21 @@ h1{
 }
 
 
-form {
+.encabezado-mid>form {
   display: flex;
-  justify-content: center;
-  text-align: center; 
+  text-align: center;
   width: 100%;
   line-height: 20px;
   height: 63px;
   padding: 15px;
   border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 
-#input {
+#form #input {
   border-radius: 9999px;
   border: 1px solid #eee;  
   flex: 1;
@@ -97,7 +100,7 @@ form {
 }
 
 
-button[type="submit"] {
+.encabezado-mid>form>button[type="submit"] {
   background-color: #e6ad42;
   color: white;
   border: none;
@@ -110,7 +113,9 @@ button[type="submit"] {
 }
 
 
-button[type="submit"]:hover {
+
+
+.encabezado-mid>form>button[type="submit"]:hover {
   background-color: #a1b300;
   border-radius: 99px;
   margin: 3px;

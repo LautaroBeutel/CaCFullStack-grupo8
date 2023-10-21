@@ -6,11 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index Oficial</title>
     <link rel="stylesheet" href="./assets/style/Style-Grid.css">
+    <link rel="stylesheet" href="./assets/style/articulo.css">
+    <link rel="stylesheet" href="./assets/style/encabezadomio.css">    
     <link rel="shortcut icon" href="img/libro-icono-fav-2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/style/footer.css"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1fcc785506.js" crossorigin="anonymous"></script>
 </head>
 
 
 <body>
+    <!-- ENCABEZADO Y NAVEGACION-->
+    <div class="container">
+        <nav class="navbar">
+            <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+                </label>
+                <ul>
+                    <li><a class="active" href="#">Inicio</a></li>
+                    <li><a href="productos.html">Categorias</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>    
+                    <li><a href="formulario.html">Contacto</a></li>
+                    <li><a href="#contact">Sobre Nosotros</a></li>       
+                  </ul>                 
+            </div>
+        </nav>
+    <header class="header" id="header">
+        <a href="#">
+            <img class="Logo" src="./assets/images/logo2.png" alt="Logo Libreria">
+          </a>
+      <div class="header-texto">
+        <div class="encabezado-mid">
+            <h1><strong>Libreria</strong>
+            <em>TAPA DURA</em></h1>
+          <form id="form" method="get" action="/">
+              <input id="input" type="search" placeholder="Buscar libros, autores y más..." name="q" autocomplete="off">
+              <button type="submit">Buscar</button>
+          </form>          
+        </div>            
+        <div class="encabezado-der">
+            <ul>            
+                <!-- <li><a href="perfil.html"><i class="fa-solid fa-user"></i>Perfil</a></li>
+                <li><a href="signup.html">Creá tu cuenta</a></li>
+                <li><a href="login.html">Ingresá</a></li>  -->   
+                <li><a href="carrito.html">Mis compras <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>               
+              </ul>                     
+        </div>              
+      </header>  
+        
+    </div>
+    
+    <!--MAIN-->
     
     <div class="clear"></div>
     <a href="categorias.html">
@@ -48,7 +98,7 @@
     <hr>
     <div class="clear"></div>
     <a href="ofertas.html">
-        <h2>Fijate estas increibles ofertas</h2>
+        <h2 id="ofertas">Fijate estas increibles ofertas</h2>
     </a>
     <div id="contenedorOfertas" class="grid-container-ofertas">
 
@@ -95,7 +145,17 @@
         </a>
     <script src="./assets/js/index.js"></script>
 </body>
-<div class="clear"></div>
-
+<div class="clear">
+    <footer id="contact">
+        <h2>Visita nuestras redes sociales</h2>
+        <nav>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a>
+            <a href="mailto:#@#?subject=Consulta"><i class="fa-regular fa-envelope fa-xl"></i></a>
+        </nav>
+        <p>Codo a Codo - Grupo 8</p>
+    </footer>
+</div>
 
 </html>

@@ -42,6 +42,20 @@
     color: var(--rosa);
   }
   
+
+  .encabezado-mid>form {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    line-height: 20px;
+    height: 63px;
+    padding: 15px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  } 
+  
   form,
   form>div {
     display: flex;
