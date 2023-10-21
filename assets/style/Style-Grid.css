@@ -1,4 +1,8 @@
 
+.contenedor-carrito{
+    display: none;
+}
+
 /* CARD */
 
 .container-card {
@@ -14,7 +18,8 @@
     background-color: #fff;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    width: 300px;
+    width: 22rem;
+    height: 28rem;
 }
 .card-header img {
     width: 100%;
@@ -27,7 +32,7 @@
     justify-content: center;
     align-items: flex-start;
     padding: 20px;
-    min-height: 200px;
+    height: 55%;
     gap: 1rem;
     background-color: #f3f5c9;
 }
@@ -77,9 +82,55 @@
         font-size: 36px;
         text-align: center;
         text-decoration: black underline;
-        margin-top: 60px;
-        margin-bottom: 30px;
-        color: black;
+        margin-top: 50px;
+    }
+
+    .contenedorOfertas-class{
+        display: flex;
+    }
+
+    .contenedorOfertas-class{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 auto;
+        width: 85%;
+    }
+    .card{
+        width: 16rem;
+    }
+    
+    /* Si no me equivoco esto ya no sirve xq sacamos el header que tenia originalmente, ahora vamos a usar obvio el que hizo alejandro.
+    #MainHeader img {
+        width: 100px;
+        display: inline
+    }
+
+    #MainHeader{
+        padding-top: 5px;
+    }
+    .logo{
+        float: left;
+    }
+    .titulo{
+        display: inline;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .titulo h1{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 300%;
+        text-align: center;
+    }
+
+    .titulo p{
+        font-size: 150%;
+
+    }
+
+    .carrito{
+        float: right;
     }
 
     */
@@ -158,7 +209,8 @@
         text-align: center;
         height: 14rem;
     }
-*/    
+    
+    
     /*   <!--Fin sección Ofertas-->*/
 
     .Membresia{

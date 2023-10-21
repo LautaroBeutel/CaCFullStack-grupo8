@@ -20,97 +20,120 @@
 
 <body>
     <!-- ENCABEZADO Y NAVEGACION-->
-    <div class="container">
-        <nav class="navbar">
-            <input type="checkbox" id="check">
-                <label for="check" class="checkbtn">
-                    <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
-                </label>
-                <ul>
-                    <li><a class="active" href="#">Inicio</a></li>
-                    <li><a href="productos.html">Categorias</a></li>
-                    <li><a href="#ofertas">Ofertas</a></li>    
-                    <li><a href="formulario.html">Contacto</a></li>
-                    <li><a href="#contact">Sobre Nosotros</a></li>       
-                  </ul>                 
+    
+       <div class="header-contenedor">
+           <div class="logo-img-desktop">
+               <a href="./index.html">
+                   <img src="./assets/images/logo2.png" alt="Logo Libreria">
+                </a>
             </div>
-        </nav>
-    <header class="header" id="header">
-        <a href="#">
-            <img class="Logo" src="./assets/images/logo2.png" alt="Logo Libreria">
-          </a>
-      <div class="header-texto">
-        <div class="encabezado-mid">
-            <h1><strong>Libreria</strong>
-            <em>TAPA DURA</em></h1>
-          <form id="form" method="get" action="/">
-              <input id="input" type="search" placeholder="Buscar libros, autores y más..." name="q" autocomplete="off">
-              <button type="submit">Buscar</button>
-          </form>          
-        </div>            
-        <div class="encabezado-der">
-            <ul>            
-                <!-- <li><a href="perfil.html"><i class="fa-solid fa-user"></i>Perfil</a></li>
-                <li><a href="signup.html">Creá tu cuenta</a></li>
-                <li><a href="login.html">Ingresá</a></li>  -->   
-                <li><a href="carrito.html">Mis compras <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>               
-              </ul>                     
-        </div>              
-      </header>  
+        <div class="container-busqueda-categorias">
+            <div class="container">
+                <nav class="navbar">
+                    <input type="checkbox" id="check">
+                    <ul>
+                        <li><a class="active" href="#">Inicio</a></li>
+                        <li><a href="productos.html">Categorias</a></li>
+                        <li><a href="#ofertas">Ofertas</a></li>    
+                        <li><a href="formulario.html">Contacto</a></li>
+                        <li><a href="#contact">Sobre Nosotros</a></li>       
+                    </ul>
+                    <!-- <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span> -->
+                </nav>            
+            </div>
+            <div class="contenedor-header">
+                <header class="header">
+                   
+                    <div class="container-logo-nombre">
+                        <div class="logo-img">
+                            <a href="./index.html">
+                                <img   src="./assets/images/logo2.png" alt="Logo Libreria">
+                            </a>
+                        </div>
+                        <!-- <div>
+                            <h4><strong>Libreria</strong></h4>
+                            <h4><em>TAPA DURA</em></h4>
+                        </div> -->
+                    </div>
+                        <form class="busqueda" method="get" action="/">
+                            <div>
+                                <input id="input" type="search" placeholder="Buscar libros, autores y más..." name="q" autocomplete="off">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <button class="btn-buscar" type="submit">Buscar</button>
+                        </form>
+                        <div class="contenedor-carrito">
+                            <p >Tu carrito de compras</p>
+                            <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>  
+                        </div>
+                    <div class="carrito-menu">
+                        <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                        <label for="check" class="checkbtn">
+                            <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+                        </label>
+                    </div>
+        
+                    
+                </header>  
+            </div>
+            
+        </div>
         
     </div>
     
     <!--MAIN-->
     
     <div class="clear"></div>
-    <a href="/productos.html">
-        <h2 class="SemiTitulo">Categorias</h2>
-    </a>
-    <div class="grid-container-categorias">
-        <a class="grid-item-categorias " href="./productos.html" onclick="cFiccionIndex()">
-            <div>Ciencia Ficcion</div>    
+    <div class="contenedor-categorias">
+        <a href="/productos.html">
+            <h2 class="SemiTitulo">Categorias</h2>
         </a>
-        <a class="grid-item-categorias" href="./productos.html" onclick="policialIndex()">
-            <div>Policial</div>    
-        </a>
-        <a class="grid-item-categorias" href="./productos.html" onclick="terrorIndex()">
-            <div>Terror</div>    
-        </a>
-        <a class="grid-item-categorias" href="./productos.html" onclick="aventuraIndex()">
-            <div>Aventura</div>    
-        </a>
-        <a class="grid-item-categorias" href="./productos.html" onclick="autoayudaIndex()">
-            <div>Autoayuda</div>    
-        </a>
-        <a class="grid-item-categorias cFiccion" href="./productos.html" onclick="cFiccionIndex()">   
-        </a>
-        <a class="grid-item-categorias Policial" href="./productos.html" onclick="policialIndex()"> 
-        </a>
-        <a class="grid-item-categorias Terror" href="./productos.html" onclick="terrorIndex()"> 
-        </a>
-        <a class="grid-item-categorias Aventura" href="./productos.html" onclick="aventuraIndex()">
-        </a>
-        <a class="grid-item-categorias Autoayuda" href="./productos.html" onclick="autoayudaIndex()">    
-        </a>
+        <div class="grid-container-categorias">
+            <a class="grid-item-categorias " href="./productos.html" onclick="cFiccionIndex()">
+                <div>Ciencia Ficcion</div>    
+            </a>
+            <a class="grid-item-categorias" href="./productos.html" onclick="policialIndex()">
+                <div>Policial</div>    
+            </a>
+            <a class="grid-item-categorias" href="./productos.html" onclick="terrorIndex()">
+                <div>Terror</div>    
+            </a>
+            <a class="grid-item-categorias" href="./productos.html" onclick="aventuraIndex()">
+                <div>Aventura</div>    
+            </a>
+            <a class="grid-item-categorias" href="./productos.html" onclick="autoayudaIndex()">
+                <div>Autoayuda</div>    
+            </a>
+            <a class="grid-item-categorias cFiccion" href="./productos.html" onclick="cFiccionIndex()">   
+            </a>
+            <a class="grid-item-categorias Policial" href="./productos.html" onclick="policialIndex()"> 
+            </a>
+            <a class="grid-item-categorias Terror" href="./productos.html" onclick="terrorIndex()"> 
+            </a>
+            <a class="grid-item-categorias Aventura" href="./productos.html" onclick="aventuraIndex()">
+            </a>
+            <a class="grid-item-categorias Autoayuda" href="./productos.html" onclick="autoayudaIndex()">    
+            </a>
+        </div>
     </div>
     <!--Fin sección Categorias-->
 
     <hr>
     <div class="clear"></div>
     <a href="ofertas.html">
-        <h2 class="SemiTitulo">Fijate estas increibles ofertas</h2>
+        <h2 class="titulo-index">¡Fijate estas increibles ofertas!</h2>
     </a>
-    <div id="contenedorOfertas" class="grid-container-ofertas">
+    <div id="contenedorOfertas" class="contenedorOfertas-class">
 
     </div>
     <!--Fin sección Ofertas -->
 
     <div class="clear"></div>
     <a href="lanzamientos.html">
-        <h2 class="SemiTitulo">Para grandes lectores</h2>
+        <h2 class="titulo-index">Para grandes lectores</h2>
     </a>
 
-    <div id="contenedorPaginas" class="grid-container-ofertas">
+    <div id="contenedorPaginas" class="contenedorOfertas-class">
 
     </div>
 

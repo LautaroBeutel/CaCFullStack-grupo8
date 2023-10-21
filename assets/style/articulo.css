@@ -16,8 +16,8 @@
 
 body {
   margin: 0;
-  background-color: var(--hueso);
-  color: var(--verde-oscuro);
+  /* background-color: var(--hueso);
+  color: var(--verde-oscuro); */
   font-family: 'Tilt Neon', sans-serif;
 }
 

@@ -102,11 +102,11 @@ img{
     text-decoration: none;
   }
   
-  #contenedorOfertas{
+  /* #contenedorOfertas{
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+  } */
   
   .block2-ofertas{
     text-align: center;
