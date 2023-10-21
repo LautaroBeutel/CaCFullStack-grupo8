@@ -31,7 +31,7 @@ i:hover {
 #title_movil {
   display: block;
   margin: 0 auto;
-  font-family: 'Permanent Marker', cursive;
+  /* font-family: 'Permanent Marker', cursive; */
 }
 
 header:first-child {
@@ -134,7 +134,7 @@ header {
     display: inline-block;
     font-size: 2rem;
     width: 50%;
-    font-family: 'Permanent Marker', cursive;
+    /* font-family: 'Permanent Marker', cursive; */
   }
 
   #menus {
@@ -213,7 +213,7 @@ header {
     display: inline-block;
     font-size: 2rem;
     width: 50%;
-    font-family: 'Permanent Marker', cursive;
+    /* font-family: 'Permanent Marker', cursive; */
   }
 
   #menus {

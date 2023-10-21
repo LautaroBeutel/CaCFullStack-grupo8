@@ -10,17 +10,12 @@
   
   /*CELULAR*/
 
-   * { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
   
   body {
-    margin: 0;
     background-color: var(--hueso);
     color: var(--verde-oscuro);
-    font-family: 'Tilt Neon', sans-serif;  }
+    /* font-family: 'Tilt Neon', sans-serif;   */
+  }
   
   
   /*CUERPO PRINCIPAL*/
@@ -98,7 +93,7 @@
     width: 80%;
     margin: 10px auto;
     border-radius: 5px;
-    font-family: 'Tilt Neon', sans-serif;
+    /* font-family: 'Tilt Neon', sans-serif; */
     font-size: 1rem;
   }
   
