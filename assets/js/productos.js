@@ -43,7 +43,7 @@ async function eleccion(){
     let eleccion_usuario = sessionStorage.getItem("eleccion_user");
 tituloCategoria.textContent = sessionStorage.getItem("eleccion_cat")
 
-fetch("https://mocki.io/v1/e2958d9a-1195-4c72-bed9-59d37ec85f9e")
+fetch("https://mocki.io/v1/b3f6b230-ed47-4fc6-a43a-7d26e5de10e9")
   .then(data => data.json())
   .then(function (datos){  
   for(let i = 0; i < datos.result.length; i++){
@@ -55,7 +55,7 @@ fetch("https://mocki.io/v1/e2958d9a-1195-4c72-bed9-59d37ec85f9e")
 }
 
 async function eleccionArticulo(index){
- fetch("https://mocki.io/v1/e2958d9a-1195-4c72-bed9-59d37ec85f9e")
+ fetch("https://mocki.io/v1/b3f6b230-ed47-4fc6-a43a-7d26e5de10e9")
   .then(data => data.json())
   .then(function (datos){  
   for(let i = 0; i < datos.result.length; i++){

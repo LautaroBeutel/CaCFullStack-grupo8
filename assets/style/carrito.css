@@ -7,6 +7,7 @@
     box-sizing: border-box;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> ed041af63fef346cd422d4cd445620b88c417221
@@ -17,6 +18,9 @@
 <<<<<<< HEAD
 =======
 =======
+=======
+
+>>>>>>> 49e70c39b9b0814d5a36d04888e019f7439c4d5f
 .h2_carrito_desktop{
     display: none;
 }
@@ -31,15 +35,20 @@
 .titulo_info_carrito h5{
     display: none;
 }
+<<<<<<< HEAD
 >>>>>>> ee2a7ee5cd4aa408250ee088fc5d4891200a03a8
 >>>>>>> ed041af63fef346cd422d4cd445620b88c417221
+=======
+
+>>>>>>> 49e70c39b9b0814d5a36d04888e019f7439c4d5f
 .separador_carrito{
     width: 90%;
     height: 1px;
     background-color: rgb(231, 231, 231);
 }
 .contenedor_carrito{
-    border: 1px solid rgb(231, 231, 231);
+
+    border: 1px solid rgb(199, 199, 199);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,6 +60,7 @@
 }
 .contenedor_carrito img{
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 30%;
 =======
 <<<<<<< HEAD
@@ -59,13 +69,16 @@
     width: 80%;
 >>>>>>> ee2a7ee5cd4aa408250ee088fc5d4891200a03a8
 >>>>>>> ed041af63fef346cd422d4cd445620b88c417221
+=======
+    width: 80%;
+>>>>>>> 49e70c39b9b0814d5a36d04888e019f7439c4d5f
 }
 .total_cantidad_libro_carrito{
     color: red;
     font-weight: bold;
 }
 .btn_cantidad_carrito{
-    border: 2px solid rgb(194, 194, 194);
+    border: 1px solid rgb(216, 216, 216);
     display: flex;
     border-radius: 5px;
 }
@@ -82,7 +95,7 @@
     align-items: center;
 }
 .contenedor_cupon_carrito, .total_carrito{
-    border: 1px solid rgb(231, 231, 231);
+    border: 1px solid rgb(199, 199, 199);
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -117,11 +130,14 @@
 .info_total_carrito span{
     width: 4rem;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> 49e70c39b9b0814d5a36d04888e019f7439c4d5f
 }
 
 @media (min-width: 1024px) {
@@ -172,6 +188,9 @@
         gap: 1.5rem;
     }
 }
+<<<<<<< HEAD
 
 >>>>>>> ee2a7ee5cd4aa408250ee088fc5d4891200a03a8
 >>>>>>> ed041af63fef346cd422d4cd445620b88c417221
+=======
+>>>>>>> 49e70c39b9b0814d5a36d04888e019f7439c4d5f
