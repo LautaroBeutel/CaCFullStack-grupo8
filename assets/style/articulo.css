@@ -63,10 +63,6 @@ main img {
   text-align: center;
 }
 
-#precio::before {
-  content: "$ ";
-}
-
 #articulo>nav {
   grid-area: boton;
 }
