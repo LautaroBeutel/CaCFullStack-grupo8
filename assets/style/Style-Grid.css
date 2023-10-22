@@ -98,40 +98,6 @@
         width: 16rem;
     }
     
-    /* Si no me equivoco esto ya no sirve xq sacamos el header que tenia originalmente, ahora vamos a usar obvio el que hizo alejandro.
-    #MainHeader img {
-        width: 100px;
-        display: inline
-    }
-
-    #MainHeader{
-        padding-top: 5px;
-    }
-    .logo{
-        float: left;
-    }
-    .titulo{
-        display: inline;
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    .titulo h1{
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 300%;
-        text-align: center;
-    }
-
-    .titulo p{
-        font-size: 150%;
-
-    }
-
-    .carrito{
-        float: right;
-    }
-
-    */
     a{text-decoration: none;color: black;}
     a:active{color: black;}
     a:hover{color: rgb(28, 34, 34);}
@@ -195,22 +161,7 @@
     /*   <!--Fin sección Categorias-->*/
 
     
-/*ESTA PARTE ES LA QUE ROMPE LAS CARDS
-    .grid-container-ofertas{
-        display: grid;
-        grid-template-columns: repeat(5,1fr);
-        background-color: #2196F3;
-        padding: 10px;
-    }
-    .grid-item-ofertas{
-        background-color: rgba(255, 255, 255, 0.8);
-        border: 1px solid rgba(0, 0, 0, 0.8);
-        padding: 20px;
-        text-align: center;
-        height: 14rem;
-    }
-    
-    
+
     /*   <!--Fin sección Ofertas-->*/
 
     .Membresia{
@@ -316,22 +267,6 @@
     /*   <!--Fin sección Categorias-->*/
 
 
-/*ESTA PARTE ES LA QUE ROMPE LAS CARDS
-    .grid-container-ofertas{
-        display: grid;
-        grid-template-columns: repeat(5,20%);
-        background-color: #2196F3;
-        padding: 10px;
-    }
-    .grid-item-ofertas{
-        background-color: rgba(255, 255, 255, 0.8);
-        border: 1px solid rgba(0, 0, 0, 0.8);
-        padding: 20px;
-        text-align: center;
-        height: 14rem;
-        font-size: 10px;
-    }
-*/
     /*   <!--Fin sección Ofertas-->*/
 
 
@@ -436,22 +371,6 @@
     }
     /*   <!--Fin sección Categorias-->*/
 
-
-/* ESTA PARTE ES LA QUE ROMPE LAS CARDS
-    .grid-container-ofertas{
-        display: grid;
-        grid-template-columns: repeat(5,20%);
-        background-color: #2196F3;
-        padding: 10px;
-    }
-    .grid-item-ofertas{
-        background-color: rgba(255, 255, 255, 0.8);
-        border: 1px solid rgba(0, 0, 0, 0.8);
-        padding: 20px;
-        text-align: center;
-        height: 24rem;
-    }
-*/
 
     /*   <!--Fin sección Ofertas-->*/
 
