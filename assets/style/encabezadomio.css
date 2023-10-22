@@ -104,6 +104,7 @@ padding-left: 67px;
   border-radius: 10px;
   background-color: #b31c40a8;
   color: white;
+  cursor: pointer;
 }
 
 .contenedor-categorias{
