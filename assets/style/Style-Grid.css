@@ -139,56 +139,58 @@
     .grid-container-categorias{
         display: grid;
         grid-template-columns: repeat(5,20%);
-        grid-template-rows: 10vh 50vh;
-        /* background-color: #2196F3; */
+        grid-template-rows: 10vh 30vh;
+        background-color: #f1dca7;
         padding: 10px;
-    }
-    .grid-item-categorias{
-        background-color: rgba(255, 255, 255, 0.8);
-        border: 1px solid rgba(153, 11, 11, 0.8);
-        padding: 20px;
-        font-size: 30px;
-        text-align: center;
-    }
+        border: 1px solid black;}
+
+
+        .grid-item-categorias{
+            background-color: #d08c60;
+            border-right: 1px solid black;
+            border-top: 1px solid black;
+            padding: 0px;
+            font-size: 30px;
+            text-align: center;
+        }
+
     .cFiccion{
         background-image: url(../../img/Categorias/Fantasia3.jpg);
         background-repeat: no-repeat;
         background-size:contain  ;
         background-position: center ;
-        border: rgb(184, 230, 20);
-        border: 1px solid;
+        border-right: 1px dotted black;
+        border-left: 1px dotted black;
     }
     .Policial{
         background-image: url(../../img/Categorias/Policial3.jpg);
         background-repeat: no-repeat;
         background-size:contain  ;
         background-position: center ;
-        border: black;
-        border: 1px solid;
+        border-right: 1px dotted black;
     }
     .Terror{
         background-image: url(../../img/Categorias/Terror3.jpg);
         background-repeat: no-repeat;
         background-size: contain  ;
         background-position: center ;
-        border: black;
-        border: 1px solid;
+        border-right: 1px dotted black;
     }
     .Aventura{
         background-image: url(../../img/Categorias/Aventura3.jpg);
         background-repeat: no-repeat;
         background-size: contain  ;
         background-position: center ;
-        border: black;
-        border: 1px solid;
+        border-right: 1px dotted black;
+
     }
     .Autoayuda{
         background-image: url(../../img/Categorias/Autoayuda3.jpg);
         background-repeat: no-repeat;
         background-size: contain  ;
         background-position: center ;
-        border: black;
-        border: 1px solid;
+        border-right: 1px dotted black;
+
     }
     /*   <!--Fin sección Categorias-->*/
 
@@ -260,12 +262,15 @@
         display: grid;
         grid-template-columns: repeat(5,20%);
         grid-template-rows: 10vh 30vh;
-        background-color: #2196F3;
+        background-color: #f1dca7;
         padding: 10px;
+        border: 1px solid black;
+
     }
     .grid-item-categorias{
-        background-color: rgba(255, 255, 255, 0.8);
-        border: 1px solid rgba(153, 11, 11, 0.8);
+        background-color: #d08c60;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
         padding: 0px;
         font-size: 20px;
         text-align: center;
@@ -275,40 +280,38 @@
         background-repeat: no-repeat;
         background-size:contain  ;
         background-position: center ;
-        border: rgb(184, 230, 20);
-        border: 1px solid;
+        border-right: 1px dotted black;
+        border-left: 1px dotted black;
     }
     .Policial{
         background-image: url(../../img/Categorias/Policial3.jpg);
         background-repeat: no-repeat;
         background-size:contain  ;
         background-position: center ;
-        border: black;
-        border: 1px solid;
+        border-right: 1px dotted black;
     }
     .Terror{
         background-image: url(../../img/Categorias/Terror3.jpg);
         background-repeat: no-repeat;
         background-size: contain  ;
         background-position: center ;
-        border: black;
-        border: 1px solid;
+        border-right: 1px dotted black;
     }
     .Aventura{
         background-image: url(../../img/Categorias/Aventura3.jpg);
         background-repeat: no-repeat;
         background-size: contain  ;
         background-position: center ;
-        border: black;
-        border: 1px solid;
+        border-right: 1px dotted black;
+
     }
     .Autoayuda{
         background-image: url(../../img/Categorias/Autoayuda3.jpg);
         background-repeat: no-repeat;
         background-size: contain  ;
         background-position: center ;
-        border: black;
-        border: 1px solid;
+        border-right: 1px dotted black;
+
     }
     /*   <!--Fin sección Categorias-->*/
 
@@ -381,55 +384,57 @@
         display: grid;
         grid-template-columns: repeat(5,20%);
         grid-template-rows: 10vh 30vh;
-        background-color: #2196F3;
+        background-color: #f1dca7;
         padding: 10px;
-    }
-    .grid-item-categorias{
-        background-color: rgba(255, 255, 255, 0.8);
-        border: 1px solid rgba(153, 11, 11, 0.8);
-        padding-top: 10px;
-        font-size: 15px;
-        text-align: center;
-    }
+        border: 1px solid black;}
+
+
+        .grid-item-categorias{
+            background-color: #d08c60;
+            border-right: 1px solid black;
+            border-top: 1px solid black;
+            padding: 0px;
+            font-size: 15px;
+            text-align: center;
+        }
+
     .cFiccion{
         background-image: url(../../img/Categorias/Fantasia3.jpg);
         background-repeat: no-repeat;
         background-size:contain  ;
         background-position: center ;
-        border: rgb(184, 230, 20);
-        border: 1px solid;
+        border-right: 1px dotted black;
+        border-left: 1px dotted black;
     }
     .Policial{
         background-image: url(../../img/Categorias/Policial3.jpg);
         background-repeat: no-repeat;
         background-size:contain  ;
         background-position: center ;
-        border: black;
-        border: 1px solid;
+        border-right: 1px dotted black;
     }
     .Terror{
         background-image: url(../../img/Categorias/Terror3.jpg);
         background-repeat: no-repeat;
         background-size: contain  ;
         background-position: center ;
-        border: black;
-        border: 1px solid;
+        border-right: 1px dotted black;
     }
     .Aventura{
         background-image: url(../../img/Categorias/Aventura3.jpg);
         background-repeat: no-repeat;
         background-size: contain  ;
         background-position: center ;
-        border: black;
-        border: 1px solid;
+        border-right: 1px dotted black;
+
     }
     .Autoayuda{
         background-image: url(../../img/Categorias/Autoayuda3.jpg);
         background-repeat: no-repeat;
         background-size: contain  ;
         background-position: center ;
-        border: black;
-        border: 1px solid;
+        border-right: 1px dotted black;
+
     }
     /*   <!--Fin sección Categorias-->*/
 
@@ -576,7 +581,7 @@
         height: 30vh;
         background-size:contain;
         background-repeat: no-repeat;
-        font-size:2.9vw;
+        font-size:2.8vw;
         margin-bottom: 20px;
     }
 }
@@ -589,7 +594,7 @@
         height: 30vh;
         background-size:contain;
         background-repeat: no-repeat;
-        font-size:3.2vw;
+        font-size:3.1vw;
         margin-bottom: 20px;
     }
 }
