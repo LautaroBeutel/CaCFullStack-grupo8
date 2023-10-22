@@ -50,13 +50,6 @@ fetch("https://mocki.io/v1/61e0a2c5-ecd2-4916-9b5c-b49a47a4069c")
             </div>`
         )
         contenedorPaginas.insertAdjacentHTML("beforeend",
-        // `<a href="./articulo.html" onclick="eleccionIndex('${mayoresPaginas[i].titulo}')">
-        // <div class="grid-item-ofertas">
-        // <img src="${mayoresPaginas[i].portada}" alt="foto_producto">
-        // <h3>${mayoresPaginas[i].titulo}</h3>
-        // <p>$${mayoresPaginas[i].precio}</p>
-        // </div></a>`);
-
         `<div class="container-card ">
             <a href="./articulo.html" onclick="eleccionIndex('${mayoresPaginas[i].titulo}')">
               <div class="card">
