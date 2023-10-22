@@ -6,6 +6,8 @@
     --marron-oscuro: #997B66;
     --verde-oscuro: #797D62;
     --rosa: #DE695B;
+    --card-cuerpo: #dfc388;
+    --card-precio: rgb(16, 155, 16);
 }
 
 /*CELULAR*/
@@ -18,6 +20,22 @@
 
 /*CUERPO PRINCIPAL*/
 
+#listaCategorias ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    position: static;
+    background-color: transparent;
+}
+
+#listaCategorias ul li:hover{
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
 .main-productos{
     min-height: 25rem;
     padding-top: 1rem;
@@ -29,7 +47,7 @@ img {
     margin-top: 10px;
 }
 
-section{
+section:last-child{
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
@@ -47,7 +65,7 @@ section{
     margin: 1rem auto;
     width: 20rem;
     height: 50%;
-    background-color: var(--verde-claro);
+    background-color: var(--card-cuerpo);
     border: 2px solid var(--hueso);
 }
 
@@ -65,7 +83,7 @@ main a {
 }
 
 .prod_price {
-    color: var(--amarillo);
+    color: var(--card-precio);
     font-weight: 800;
     font-size: 1.2rem;
     padding: 10px 0;
@@ -90,30 +108,6 @@ main a {
     box-shadow: 0px 0px 10px 5px var(--rosa);
 }
 
-/*ANIMACION*/
-@keyframes translate-button {
-    0% {
-        transform: translateX(0px);
-    }
-
-    25% {
-        transform: translateX(5px);
-    }
-
-    50% {
-        transform: translateX(0px);
-    }
-
-    75% {
-        transform: translateX(-5px);
-    }
-
-    100% {
-        transform: translateX(0px);
-    }
-}
-
-
 /*TABLET*/
 
 @media only screen and (min-width: 769px) and (max-width: 1199px) {
@@ -130,14 +124,22 @@ main a {
 
     #articles{
         display: grid;
-        grid-template-columns: 30% 30% 30%;
+        grid-template-columns: 1fr 1fr 1fr;
         justify-content: center;
         gap: 1rem;
     }
 
+
     .all_articles article {
-        width: 100%;
         height: 25rem;
+    }
+
+    #listaCategorias ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
     }
 
     
@@ -159,15 +161,21 @@ main a {
 
     #articles{
         display: grid;
-        grid-template-columns: 20% 20% 20% 20%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         justify-content: center;
         gap: 1rem;
     }
 
     .all_articles article {
-        width: 100%;
         height: 25rem;
     }
     
+    #listaCategorias ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1rem;
+        padding: 1rem 5rem;
+    }
    
 }

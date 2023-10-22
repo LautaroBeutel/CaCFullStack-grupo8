@@ -7,7 +7,7 @@ let paginas = [];
 let ofertas = [];
 let mayoresPaginas = [];
 
-fetch("https://mocki.io/v1/b3f6b230-ed47-4fc6-a43a-7d26e5de10e9")
+fetch("https://mocki.io/v1/61e0a2c5-ecd2-4916-9b5c-b49a47a4069c")
   .then(data => data.json())
   .then(function (datos){
     for(let i = 0; i < datos.result.length; i++){

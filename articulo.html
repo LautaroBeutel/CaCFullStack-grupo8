@@ -29,10 +29,10 @@
              <nav class="navbar">
                  <input type="checkbox" id="check">
                  <ul>
-                     <li><a class="active" href="#">Inicio</a></li>
-                     <li><a href="productos.html">Categorias</a></li>
-                     <li><a href="#ofertas">Ofertas</a></li>    
-                     <li><a href="formulario.html">Contacto</a></li>
+                     <li><a class="active" href="./index.html">Inicio</a></li>
+                     <li><a href="./productos.html">Categorias</a></li>
+                     <li><a href="./index.html#ofertasImperdibles">Ofertas</a></li>    
+                     <li><a href="./formulario.html">Contacto</a></li>
                      <li><a href="#contact">Sobre Nosotros</a></li>       
                  </ul>
                  <!-- <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span> -->
@@ -79,7 +79,7 @@
  </div>
     <!--CUERPO PRINCIPAL: CONTIENE NOMBRE DEL ARTICULO, FOTO, PRECIO, BOTON DE COMPRA, DESCRIPCION-->
     <main>
-        <section class="main-articulo">
+        <section class="main-articulo" id="articuloTituloPrecio">
             <div>
                 <div id="articulo_id">
                     <h1 id="titulo">Aca va el titulo del libro</h1>
@@ -91,7 +91,7 @@
 
             </div>
             <nav>
-                <input type="button" value="Agregar al carrito" id="add_carrito">
+                <a id="refCarrito" href="./carrito.html"><input type="button" value="Agregar al carrito" id="add_carrito"></a>
             </nav>
         </section>
         <section id="informacion">
