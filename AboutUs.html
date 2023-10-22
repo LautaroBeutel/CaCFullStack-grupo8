@@ -1,65 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca de nosotros</title>
     <link rel="stylesheet" href="assets/style/Style-AboutUs.css">
+    <link rel="stylesheet" href="./assets/style/encabezadomio.css">
+    <link rel="stylesheet" href="./assets/style/general.css">
+    <link rel="stylesheet" href="./assets/style/footer.css">
     <script src="https://kit.fontawesome.com/b4da994de9.js" crossorigin="anonymous"></script>
     
 </head>
 <body>    
+
+      <!-- ENCABEZADO Y NAVEGACION-->
+      <div class="header-contenedor">
+        <div class="logo-img-desktop">
+            <a href="./index.html">
+                <img src="./assets/images/logo2.png" alt="Logo Libreria">
+             </a>
+         </div>
+     <div class="container-busqueda-categorias">
+         <div class="container">
+             <nav class="navbar">
+                 <input type="checkbox" id="check">
+                 <ul>
+
+                     <li><a class="active" href="./index.html">Inicio</a></li>
+                     <li><a href="./productos.html">Categorias</a></li>
+                     <li><a href="./index.html#ofertasImperdibles">Ofertas</a></li>    
+                     <li><a href="#contact">Contacto</a></li>
+                     <li><a href="./AboutUs.html">Sobre Nosotros</a></li>       
+
+                 </ul>
+                 <!-- <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span> -->
+             </nav>            
+         </div>
+         <div class="contenedor-header">
+             <header class="header">
+                
+                 <div class="container-logo-nombre">
+                     <div class="logo-img">
+                         <a href="./index.html">
+                             <img   src="./assets/images/logo2.png" alt="Logo Libreria">
+                         </a>
+                     </div>
+                     <!-- <div>
+                         <h4><strong>Libreria</strong></h4>
+                         <h4><em>TAPA DURA</em></h4>
+                     </div> -->
+                 </div>
+                     <form class="busqueda" method="get" action="/">
+                         <div>
+                             <input id="input" type="search" placeholder="Buscar libros, autores y más..." name="q" autocomplete="off">
+                             <i class="fas fa-search"></i>
+                         </div>
+                         <button class="btn-buscar" type="submit">Buscar</button>
+                     </form>
+                     <div class="contenedor-carrito">
+                         <p >Tu carrito de compras</p>
+                         <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>  
+                     </div>
+                 <div class="carrito-menu">
+                     <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                     <label for="check" class="checkbtn">
+                         <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+                     </label>
+                 </div>
+     
+                 
+             </header>  
+         </div>
+         
+     </div>
+     
+ </div>
+
+ <!-- ABOUT US -->
+
     <section class="contenedor-grid">
-        <div class="item header">
-            <header>Acerca de nuestra empresa...</header>
+        <div class="item">
+            <h1>Acerca de nuestra empresa</h1>
             <p>Dentro de nuestra pagina vas a poder comprar desde los libros mas nuevos hasta los clasicos imperdibles!!! </p>
         </div>
         <div class="item contenido">
-            <h1 >Encontranos aca</h1>
-            <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=580&amp;height=400&amp;hl=en&amp;q=Yenny grand splendid&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://connectionsgame.org/">Connections Unlimited</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>
+            <h2>Encontranos aca</h2>
+            <div class="mapouter" id="mapa"><iframe id="ubicame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016888186392!2d-58.38414532470355!3d-34.60373445749834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1697956319309!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         </div>
-        <div class="item left">
-            <p>Veni a visitarnos y pasate por nuestras sucursales!</p>
             <div class="sucursales">
-                <address class="address">
-                    <span>Sucursal Principal-Recoleta</span>
+                <p>Veni a visitarnos!</p>
+                <div id="domicilios">
+                <address class="sucTapaDura">
+                    <span>Sucursal CABA</span>
                     <br>
-                    <span>Ateneo Grand Splendid</span>
+                    <span>Tapa Dura - Sucursal Grupo 8</span>
                     <br>
-                    <span>Av. Sta. Fe 1860, C1123 CABA</span>
+                    <a href="#mapa" onclick="cambioMapa(1)"><span>Av. 9 de Julio s/n, C1043 CABA</span></a>
                 </address>
-                <address class="address">
-                    <span>Sucursal Principal-Recoleta</span>
+                <address class="sucTapaDura">
+                    <span>Sucursal Provincia Santa Fe</span>
                     <br>
-                    <span>Ateneo Grand Splendid</span>
+                    <span>Tapa Dura - Sucursal CaC</span>
                     <br>
-                    <span>Av. Sta. Fe 1860, C1123 CABA</span>
-                </address>
-                <address class="address">
-                    <span>Sucursal Principal-Recoleta</span>
-                    <br>
-                    <span>Ateneo Grand Splendid</span>
-                    <br>
-                    <span>Av. Sta. Fe 1860, C1123 CABA</span>
-                </address>
-                <address class="address">
-                    <span>Sucursal Principal-Recoleta</span>
-                    <br>
-                    <span>Ateneo Grand Splendid</span>
-                    <br>
-                    <span>Av. Sta. Fe 1860, C1123 CABA</span>
+                    <a href="#mapa" onclick="cambioMapa(2)"><span>Sta Fe 581, S2000 Rosario, Santa Fe</span></a>
                 </address>
             </div>
-        </div>
-        <div class="item footer">
-            <p>&copy;Grupo 8-comision 23512</p>
-            <div class="footer-icons">
-                <a href=""><span class="fa-brands fa-facebook"></span></a>
-                <a href=""><span class="fa-brands fa-instagram"></span></a>
-                <a href=""><span class="fa-brands fa-youtube"></span></a>
-                <a href=""><span class="fa-solid fa-envelope"></span></a>
+                <!--
+                <address class="address">
+                    <span>Sucursal Principal-Recoleta</span>
+                    <br>
+                    <span>Ateneo Grand Splendid</span>
+                    <br>
+                    <span>Av. Sta. Fe 1860, C1123 CABA</span>
+                </address>
+                <address class="address">
+                    <span>Sucursal Principal-Recoleta</span>
+                    <br>
+                    <span>Ateneo Grand Splendid</span>
+                    <br>
+                    <span>Av. Sta. Fe 1860, C1123 CABA</span>
+                </address>
+                <address class="address">
+                    <span>Sucursal Principal-Recoleta</span>
+                    <br>
+                    <span>Ateneo Grand Splendid</span>
+                    <br>
+                    <span>Av. Sta. Fe 1860, C1123 CABA</span>
+                </address>
+                <address class="address">
+                    <span>Sucursal Principal-Recoleta</span>
+                    <br>
+                    <span>Ateneo Grand Splendid</span>
+                    <br>
+                    <span>Av. Sta. Fe 1860, C1123 CABA</span>
+                </address>
+                -->
             </div>
-        </div>
     </section>
+
+    <!-- PIE DE PAGINA CON LA INFORMACION DE CONTACTO, INFORMACION DE LA LIBRERIA, ETC-->
+    <footer id="contact">
+        <h2>Visita nuestras redes sociales</h2>
+        <nav>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a>
+            <a href="mailto:#@#?subject=Consulta"><i class="fa-regular fa-envelope fa-xl"></i></a>
+        </nav>
+        <p>Codo a Codo - Grupo 8</p>
+    </footer>
+
+    <script src="./assets/js/menuDesplegable.js"></script>
+    <script src="./assets/js/aboutUs.js"></script>
 </body>
 </html>
