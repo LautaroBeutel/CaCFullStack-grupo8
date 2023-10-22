@@ -1,0 +1,598 @@
+
+.contenedor-carrito{
+    display: none;
+}
+
+/* CARD */
+
+.container-card {
+    display: flex;
+    justify-content: center;
+}
+.precio-card{
+    color: rgb(16, 155, 16);
+    font-weight: bold;
+}
+.card {
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 22rem;
+    height: 28rem;
+}
+.card-header img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    height: 55%;
+    gap: 1rem;
+    background-color: #f3f5c9;
+}
+
+.tag {
+    background: #cccccc;
+    font-size: 12px;
+    margin: 0;
+    color: #fff;
+    padding: 2px 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.tag-teal {
+    background-color: #b31c40a8;
+}
+.card-body p {
+    font-size: 13px;
+}
+.user {
+    display: flex;
+    margin-top: auto;
+}
+
+.user img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.user-info h5 {
+    margin: 0;
+}
+.user-info small {
+    color: #545d7a;
+}
+
+/* FIN CARD */
+
+
+@media only screen and (min-width: 768px){
+    
+
+    .SemiTitulo{
+        font-size: 36px;
+        text-align: center;
+        text-decoration: black underline;
+        margin-top: 50px;
+    }
+
+    .contenedorOfertas-class{
+        display: flex;
+    }
+
+    .contenedorOfertas-class{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 auto;
+        width: 85%;
+    }
+    .card{
+        width: 16rem;
+    }
+    
+    /* Si no me equivoco esto ya no sirve xq sacamos el header que tenia originalmente, ahora vamos a usar obvio el que hizo alejandro.
+    #MainHeader img {
+        width: 100px;
+        display: inline
+    }
+
+    #MainHeader{
+        padding-top: 5px;
+    }
+    .logo{
+        float: left;
+    }
+    .titulo{
+        display: inline;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .titulo h1{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 300%;
+        text-align: center;
+    }
+
+    .titulo p{
+        font-size: 150%;
+
+    }
+
+    .carrito{
+        float: right;
+    }
+
+    */
+    a{text-decoration: none;color: black;}
+    a:active{color: black;}
+    a:hover{color: rgb(28, 34, 34);}
+
+    .grid-container-categorias{
+        display: grid;
+        grid-template-columns: repeat(5,20%);
+        grid-template-rows: 10vh 30vh;
+        background-color: #f1dca7;
+        padding: 10px;
+
+    }
+    
+    .grid-item-categorias{
+        background-color: #d08c60;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+        padding: 0px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .cFiccion{
+        background-image: url(../../img/Categorias/Fantasia3.jpg);
+        background-repeat: no-repeat;
+        background-size:contain  ;
+        background-position: center ;
+        border-right: 1px dotted black;
+        border-left: 1px dotted black;
+    }
+    .Policial{
+        background-image: url(../../img/Categorias/Policial3.jpg);
+        background-repeat: no-repeat;
+        background-size:contain  ;
+        background-position: center ;
+        border-right: 1px dotted black;
+    }
+    .Terror{
+        background-image: url(../../img/Categorias/Terror3.jpg);
+        background-repeat: no-repeat;
+        background-size: contain  ;
+        background-position: center ;
+        border-right: 1px dotted black;
+    }
+    .Aventura{
+        background-image: url(../../img/Categorias/Aventura3.jpg);
+        background-repeat: no-repeat;
+        background-size: contain  ;
+        background-position: center ;
+        border-right: 1px dotted black;
+
+    }
+    .Autoayuda{
+        background-image: url(../../img/Categorias/Autoayuda3.jpg);
+        background-repeat: no-repeat;
+        background-size: contain  ;
+        background-position: center ;
+        border-right: 1px dotted black;
+
+    }
+    /*   <!--Fin sección Categorias-->*/
+
+    
+/*ESTA PARTE ES LA QUE ROMPE LAS CARDS
+    .grid-container-ofertas{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        background-color: #2196F3;
+        padding: 10px;
+    }
+    .grid-item-ofertas{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        text-align: center;
+        height: 14rem;
+    }
+    
+    
+    /*   <!--Fin sección Ofertas-->*/
+
+    .Membresia{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 50vh;
+        width: 100%;
+        height: 30vh;
+        background-size:contain;
+        background-repeat: no-repeat;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .Membresia-texto{
+        text-align: center;
+        background: linear-gradient(to right, rgb(185, 185, 19), orange);
+        padding-top: 20px;
+
+    }
+    .img-membresia{
+        background-image: url(../../img/membresia.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+    }
+    .clear{clear: both;}
+
+    img{
+        width: 10rem;
+    }
+}
+@media only screen and (min-width: 600px){
+
+    .SemiTitulo{
+        font-size: 36px;
+        text-align: center;
+        text-decoration: black underline;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        color: black;
+    }
+    
+    a{text-decoration: none;color: black;}
+    a:active{color: black;}
+    a:hover{color: rgb(28, 34, 34);}
+
+    .grid-container-categorias{
+        display: grid;
+        grid-template-columns: repeat(5,20%);
+        grid-template-rows: 10vh 30vh;
+        background-color: #f1dca7;
+        padding: 10px;
+        border: 1px solid black;
+
+    }
+    .grid-item-categorias{
+        background-color: #d08c60;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+        padding: 0px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .cFiccion{
+        background-image: url(../../img/Categorias/Fantasia3.jpg);
+        background-repeat: no-repeat;
+        background-size:contain  ;
+        background-position: center ;
+        border-right: 1px dotted black;
+        border-left: 1px dotted black;
+    }
+    .Policial{
+        background-image: url(../../img/Categorias/Policial3.jpg);
+        background-repeat: no-repeat;
+        background-size:contain  ;
+        background-position: center ;
+        border-right: 1px dotted black;
+    }
+    .Terror{
+        background-image: url(../../img/Categorias/Terror3.jpg);
+        background-repeat: no-repeat;
+        background-size: contain  ;
+        background-position: center ;
+        border-right: 1px dotted black;
+    }
+    .Aventura{
+        background-image: url(../../img/Categorias/Aventura3.jpg);
+        background-repeat: no-repeat;
+        background-size: contain  ;
+        background-position: center ;
+        border-right: 1px dotted black;
+
+    }
+    .Autoayuda{
+        background-image: url(../../img/Categorias/Autoayuda3.jpg);
+        background-repeat: no-repeat;
+        background-size: contain  ;
+        background-position: center ;
+        border-right: 1px dotted black;
+
+    }
+    /*   <!--Fin sección Categorias-->*/
+
+
+/*ESTA PARTE ES LA QUE ROMPE LAS CARDS
+    .grid-container-ofertas{
+        display: grid;
+        grid-template-columns: repeat(5,20%);
+        background-color: #2196F3;
+        padding: 10px;
+    }
+    .grid-item-ofertas{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        text-align: center;
+        height: 14rem;
+        font-size: 10px;
+    }
+*/
+    /*   <!--Fin sección Ofertas-->*/
+
+
+    .Membresia{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 50vh;
+        width: 100%;
+        height: 30vh;
+        background-size:contain;
+        background-repeat: no-repeat;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .Membresia-texto{
+        text-align: center;
+        background: linear-gradient(to right, rgb(185, 185, 19), orange);
+        padding-top: 20px;
+
+    }
+    .img-membresia{
+        background-image: url(../../img/membresia.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+    }
+    .clear{clear: both;}
+
+    img{
+        width: 5rem;
+    }
+}
+@media only screen and (max-width: 600px){
+
+    .SemiTitulo{
+        font-size: 36px;
+        text-align: center;
+        text-decoration: black underline;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        color: black;
+    }
+    
+    a{text-decoration: none;color: black;}
+    a:active{color: black;}
+    a:hover{color: rgb(28, 34, 34);}
+
+    .grid-container-categorias{
+        display: grid;
+        grid-template-columns: repeat(5,20%);
+        grid-template-rows: 10vh 30vh;
+        background-color: #f1dca7;
+        padding: 10px;
+
+    }
+    .grid-item-categorias{
+        background-color: #d08c60;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+        padding: 0px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .cFiccion{
+        background-image: url(../../img/Categorias/Fantasia3.jpg);
+        background-repeat: no-repeat;
+        background-size:contain  ;
+        background-position: center ;
+        border-right: 1px dotted black;
+        border-left: 1px dotted black;
+    }
+    .Policial{
+        background-image: url(../../img/Categorias/Policial3.jpg);
+        background-repeat: no-repeat;
+        background-size:contain  ;
+        background-position: center ;
+        border-right: 1px dotted black;
+    }
+    .Terror{
+        background-image: url(../../img/Categorias/Terror3.jpg);
+        background-repeat: no-repeat;
+        background-size: contain  ;
+        background-position: center ;
+        border-right: 1px dotted black;
+    }
+    .Aventura{
+        background-image: url(../../img/Categorias/Aventura3.jpg);
+        background-repeat: no-repeat;
+        background-size: contain  ;
+        background-position: center ;
+        border-right: 1px dotted black;
+
+    }
+    .Autoayuda{
+        background-image: url(../../img/Categorias/Autoayuda3.jpg);
+        background-repeat: no-repeat;
+        background-size: contain  ;
+        background-position: center ;
+        border-right: 1px dotted black;
+
+    }
+    /*   <!--Fin sección Categorias-->*/
+
+
+/* ESTA PARTE ES LA QUE ROMPE LAS CARDS
+    .grid-container-ofertas{
+        display: grid;
+        grid-template-columns: repeat(5,20%);
+        background-color: #2196F3;
+        padding: 10px;
+    }
+    .grid-item-ofertas{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        text-align: center;
+        height: 24rem;
+    }
+*/
+
+    /*   <!--Fin sección Ofertas-->*/
+
+
+    .Membresia{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 50vh;
+        width: 100%;
+        height: 30vh;
+        background-size:contain;
+        background-repeat: no-repeat;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .Membresia-texto{
+        text-align: center;
+        background: linear-gradient(to right, rgb(185, 185, 19), orange);
+        padding-top: 20px;
+
+    }
+    .img-membresia{
+        background-image: url(../../img/membresia.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+    }
+    .clear{clear: both;}
+
+    img{
+        width: 2rem;
+    }
+}
+
+
+
+/*ACA EMPIEZA LA SECCION DE LA MEMBRESIA, DONDE CAMBIO EL TAMAÑO DEL FONT DEL TEXTO*/
+@media only screen and (min-width: 1200px){
+    .Membresia{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 50vh;
+        width: 100%;
+        height: 30vh;
+        background-size:contain;
+        background-repeat: no-repeat;
+        font-size: 1.7vw;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .Membresia{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 50vh;
+        width: 100%;
+        height: 30vh;
+        background-size:contain;
+        background-repeat: no-repeat;
+        font-size: 1.8vw;
+        margin-bottom: 20px;
+    }
+
+}
+@media only screen and (max-width: 1024px){
+    .Membresia{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 50vh;
+        width: 100%;
+        height: 30vh;
+        background-size:contain;
+        background-repeat: no-repeat;
+        font-size: 2vw;
+        margin-bottom: 20px;
+    }
+
+}
+@media only screen and (max-width: 800px){
+    .Membresia{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 50vh;
+        width: 100%;
+        height: 30vh;
+        background-size:contain;
+        background-repeat: no-repeat;
+        font-size:2.3vw;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 700px){
+    .Membresia{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 50vh;
+        width: 100%;
+        height: 30vh;
+        background-size:contain;
+        background-repeat: no-repeat;
+        font-size:2.4vw;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .Membresia{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 50vh;
+        width: 100%;
+        height: 30vh;
+        background-size:contain;
+        background-repeat: no-repeat;
+        font-size:2.6vw;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 500px){
+    .Membresia{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 50vh;
+        width: 100%;
+        height: 30vh;
+        background-size:contain;
+        background-repeat: no-repeat;
+        font-size:2.8vw;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 400px){
+    .Membresia{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 50vh;
+        width: 100%;
+        height: 30vh;
+        background-size:contain;
+        background-repeat: no-repeat;
+        font-size:3.1vw;
+        margin-bottom: 20px;
+    }
+}

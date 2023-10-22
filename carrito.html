@@ -4,14 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style/carrito.css">
+    <link rel="stylesheet" href="./assets/style/encabezadomio.css">
+    <link rel="stylesheet" href="./assets/style/general.css">
+    <link rel="stylesheet" href="./assets/style/footer.css"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="img/libro-icono-fav-2.png" type="image/x-icon">
     <title>Tu carrito de compras online</title>
 </head>
 <body>
+    <!-- ENCABEZADO Y NAVEGACION-->
+    <div class="header-contenedor">
+        <div class="logo-img-desktop">
+            <a href="./index.html">
+                <img src="./assets/images/logo2.png" alt="Logo Libreria">
+             </a>
+         </div>
+     <div class="container-busqueda-categorias">
+         <div class="container">
+             <nav class="navbar">
+                 <input type="checkbox" id="check">
+                 <ul>
 
-    <h2 class="h2_carrito_desktop">Tu carrito de compras</h2>
+                     <li><a class="active" href="./index.html">Inicio</a></li>
+                     <li><a href="./productos.html">Categorias</a></li>
+                     <li><a href="./index.html#ofertasImperdibles">Ofertas</a></li>    
+                     <li><a href="#contact">Contacto</a></li>
+                     <li><a href="./AboutUs.html">Sobre Nosotros</a></li>       
+
+                 </ul>
+                 <!-- <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span> -->
+             </nav>            
+         </div>
+         <div class="contenedor-header">
+             <header class="header">
+                
+                 <div class="container-logo-nombre">
+                     <div class="logo-img">
+                         <a href="./index.html">
+                             <img   src="./assets/images/logo2.png" alt="Logo Libreria">
+                         </a>
+                     </div>
+                     <!-- <div>
+                         <h4><strong>Libreria</strong></h4>
+                         <h4><em>TAPA DURA</em></h4>
+                     </div> -->
+                 </div>
+                     <form class="busqueda" method="get" action="/">
+                         <div>
+                             <input id="input" type="search" placeholder="Buscar libros, autores y más..." name="q" autocomplete="off">
+                             <i class="fas fa-search"></i>
+                         </div>
+                         <button class="btn-buscar" type="submit">Buscar</button>
+                     </form>
+                     <div class="contenedor-carrito">
+                         <p >Carrito de compras</p>
+                         <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>  
+                     </div>
+                 <div class="carrito-menu">
+                     <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                     <label for="check" class="checkbtn">
+                         <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+                     </label>
+                 </div>
+     
+                 
+             </header>  
+         </div>
+         
+     </div>
+     
+ </div>
+
+    <h2 class="h2_carrito_desktop">Tu carrito</h2>
    
     <div class="contenedor_carrito">
-        <h2 class="h2_carrito">Tu carrito de compras</h2>
+        <h2 class="h2_carrito">Tu carrito</h2>
         <div class="titulo_info_carrito">
             <h5>Producto</h5>
             <img src="./assets/images/curso-de-programacion-python.jpg" alt="">
@@ -28,9 +94,9 @@
         <div class="titulo_info_carrito">
             <h5>Cantidad</h5>
             <div class="btn_cantidad_carrito">
-                <button><i class="fa-solid fa-plus"></i></button>
+                <button class="btns"><i class="fa-solid fa-minus"></i></button>
                 <span>1</span>
-                <button><i class="fa-solid fa-minus"></i></button>
+                <button class="btns"><i class="fa-solid fa-plus"></i></button>
             </div>
         </div>
         <div class="titulo_info_carrito">
@@ -63,4 +129,16 @@
     </div>
     <script src="https://kit.fontawesome.com/f137d8c77f.js" crossorigin="anonymous"></script>
 </body>
+<div class="clear">
+    <footer id="contact">
+        <h2>Visita nuestras redes sociales</h2>
+        <nav>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a>
+            <a href="mailto:#@#?subject=Consulta"><i class="fa-regular fa-envelope fa-xl"></i></a>
+        </nav>
+        <p>Codo a Codo - Grupo 8</p>
+    </footer>
+</div>
 </html>

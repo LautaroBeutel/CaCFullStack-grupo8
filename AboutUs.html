@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Articulo</title>
-    <link rel="stylesheet" href="./assets/style/articulo.css">
+    <title>Acerca de nosotros</title>
+    <link rel="stylesheet" href="assets/style/Style-AboutUs.css">
     <link rel="stylesheet" href="./assets/style/encabezadomio.css">
     <link rel="stylesheet" href="./assets/style/general.css">
-    <link rel="stylesheet" href="./assets/style/footer.css"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> -->
-    <script src="https://kit.fontawesome.com/1fcc785506.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/style/footer.css">
+    <script src="https://kit.fontawesome.com/b4da994de9.js" crossorigin="anonymous"></script>
+    
 </head>
+<body>    
 
-<body>
-    <!-- ENCABEZADO Y NAVEGACION-->
-    <div class="header-contenedor">
+      <!-- ENCABEZADO Y NAVEGACION-->
+      <div class="header-contenedor">
         <div class="logo-img-desktop">
             <a href="./index.html">
                 <img src="./assets/images/logo2.png" alt="Logo Libreria">
@@ -79,63 +75,69 @@
      </div>
      
  </div>
-    <!--CUERPO PRINCIPAL: CONTIENE NOMBRE DEL ARTICULO, FOTO, PRECIO, BOTON DE COMPRA, DESCRIPCION-->
-    <main>
-        <section class="main-articulo" id="articuloTituloPrecio">
-            <div>
-                <div id="articulo_id">
-                    <h1 id="titulo">Aca va el titulo del libro</h1>
-                    <img src="./assets/images/foto-prueba.jpg" alt="portada del libro" id="portada_libro">
-                </div>
-                <div id="precio_articulo">
-                    <p id="precio">XXXX</p>
-                </div>
 
-            </div>
-            <nav>
-                <a id="refCarrito" href="./carrito.html"><input type="button" value="Agregar al carrito" id="add_carrito"></a>
-            </nav>
-        </section>
-        <section id="informacion">
-            <div id="tabla">
-                <h2>Información del producto</h2>
-                <div id="info">
-                    <table>
-                        <tr>
-                            <td>Título</td>
-                            <td class="celda_articulo">TITULO DEL LIBRO</td>
-                        </tr>
-                        <tr>
-                            <td>Autor</td>
-                            <td class="celda_articulo">AUTOR DEL LIBRO</td>
-                        </tr>
-                        <tr>
-                            <td>Idioma</td>
-                            <td class="celda_articulo">IDIOMA DEL LIBRO</td>
-                        </tr>
-                        <tr>
-                            <td>Número de páginas</td>
-                            <td class="celda_articulo">NUMERO DE PAGINAS</td>
-                        </tr>
-                        <tr>
-                            <td>Fecha de publicación</td>
-                            <td class="celda_articulo">AÑO DE PUBLICACION</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div id="description">
-                <h2>Descripción</h2>
-                <p id="description_text">Aca va una descripcion del producto.</p>
-            </div>
-        </section>
+ <!-- ABOUT US -->
 
-        <aside>
-            <h3>¿Quieres enterarte de las últimas publicaciones?</h3>
-            <p>Suscríbete a nuestro Newsletter haciendo <a href="./formulario.html"><b>click aquí</b></a></p>
-        </aside>
+    <section class="contenedor-grid">
+        <div class="item">
+            <h1>Acerca de nuestra empresa</h1>
+            <p>Dentro de nuestra pagina vas a poder comprar desde los libros mas nuevos hasta los clasicos imperdibles!!! </p>
+        </div>
+        <div class="item contenido">
+            <h2>Encontranos aca</h2>
+            <div class="mapouter" id="mapa"><iframe id="ubicame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016888186392!2d-58.38414532470355!3d-34.60373445749834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1697956319309!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        </div>
+            <div class="sucursales">
+                <p>Veni a visitarnos!</p>
+                <div id="domicilios">
+                <address class="sucTapaDura">
+                    <span>Sucursal CABA</span>
+                    <br>
+                    <span>Tapa Dura - Sucursal Grupo 8</span>
+                    <br>
+                    <a href="#mapa" onclick="cambioMapa(1)"><span>Av. 9 de Julio s/n, C1043 CABA</span></a>
+                </address>
+                <address class="sucTapaDura">
+                    <span>Sucursal Provincia Santa Fe</span>
+                    <br>
+                    <span>Tapa Dura - Sucursal CaC</span>
+                    <br>
+                    <a href="#mapa" onclick="cambioMapa(2)"><span>Sta Fe 581, S2000 Rosario, Santa Fe</span></a>
+                </address>
+            </div>
+                <!--
+                <address class="address">
+                    <span>Sucursal Principal-Recoleta</span>
+                    <br>
+                    <span>Ateneo Grand Splendid</span>
+                    <br>
+                    <span>Av. Sta. Fe 1860, C1123 CABA</span>
+                </address>
+                <address class="address">
+                    <span>Sucursal Principal-Recoleta</span>
+                    <br>
+                    <span>Ateneo Grand Splendid</span>
+                    <br>
+                    <span>Av. Sta. Fe 1860, C1123 CABA</span>
+                </address>
+                <address class="address">
+                    <span>Sucursal Principal-Recoleta</span>
+                    <br>
+                    <span>Ateneo Grand Splendid</span>
+                    <br>
+                    <span>Av. Sta. Fe 1860, C1123 CABA</span>
+                </address>
+                <address class="address">
+                    <span>Sucursal Principal-Recoleta</span>
+                    <br>
+                    <span>Ateneo Grand Splendid</span>
+                    <br>
+                    <span>Av. Sta. Fe 1860, C1123 CABA</span>
+                </address>
+                -->
+            </div>
+    </section>
 
-    </main>
     <!-- PIE DE PAGINA CON LA INFORMACION DE CONTACTO, INFORMACION DE LA LIBRERIA, ETC-->
     <footer id="contact">
         <h2>Visita nuestras redes sociales</h2>
@@ -148,9 +150,7 @@
         <p>Codo a Codo - Grupo 8</p>
     </footer>
 
-    <script src="./assets/js/menuCelular.js"></script>
-    <script src="./assets/js/articulo.js"></script>
-    <script src="./assets/js/productos.js"></script>
+    <script src="./assets/js/menuDesplegable.js"></script>
+    <script src="./assets/js/aboutUs.js"></script>
 </body>
-
 </html>

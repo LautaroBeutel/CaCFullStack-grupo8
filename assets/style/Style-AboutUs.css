@@ -1,0 +1,311 @@
+@media only screen and (max-width: 600px){
+    .contenedor-grid{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .contenedor-grid .item h1{
+        padding: 0;
+    }
+    
+    .item{
+        color: antiquewhite;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .item p:first-child{
+        margin-top: 1rem;
+        margin-bottom: -1rem;
+    }
+
+    .mapouter iframe{
+        width: 20rem;
+        height: 20rem;
+        padding-top: 2rem;
+    }
+
+    .sucursales p{
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+
+    #domicilios{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    address{
+        padding:1rem;
+        text-align: center;
+    }
+
+    address span:last-child{
+        color: rgb(192, 30, 30);
+    }
+
+
+
+/*
+    .address{
+        display: block;
+        text-align: left;
+        line-height: 2;
+        margin-bottom: 10px;
+    }
+    .address span{
+        font-size: 16px;
+    }
+    .header{
+        grid-area: header;
+    }
+    .header header{
+        padding-top: 10px;
+        font-weight: bold;
+        text-align: center;
+        font-size:20px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .header p{
+        padding: 15px 10px;
+        font-size: 16px;
+        color: whitesmoke;
+        text-align: center;
+    }
+    .left p{
+        text-align: center;
+        font-size: 20px;
+    }
+    .contenido{
+        padding-bottom: 10px;
+        grid-area: contenido;
+    }
+    .contenido h1{
+        text-align: center;
+        font-size: 18px;
+    }
+    .footer{
+        grid-area: footer;
+        display:flex;
+        align-items:  center;
+        padding: 0px 5vw;
+        justify-content: space-between;
+    }
+    .footer p{
+        font-size:14px
+    }
+    .footer-icons{
+        display: inline-flex;
+        gap: 2vw;
+    }
+    .footer-icons a{
+        color: antiquewhite;
+    }
+    */
+}
+
+@media only screen and (min-width: 601px){
+
+    .contenedor-grid{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .contenedor-grid .item h1{
+        padding: 0;
+    }
+    
+    .item{
+        color: antiquewhite;
+        border: none;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .item p:first-child{
+        margin-top: 1rem;
+        margin-bottom: -1rem;
+    }
+
+    .mapouter iframe{
+        width: 30rem;
+        height: 30rem;
+        padding-top: 2rem;
+    }
+
+    .sucursales p{
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+
+    #domicilios{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    address{
+        padding:1rem;
+        text-align: center;
+    }
+
+    address span:last-child{
+        color: rgb(192, 30, 30);
+    }
+
+    /*
+    .contenedor-grid{
+        display: block;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    body{
+        background-color: black;
+    }
+    .item{
+        color: antiquewhite;
+        padding: 0px 10px;
+        border: solid 2px;
+        border-color: aquamarine;
+    }
+    .sucursales{
+        display: flex;
+    }
+
+    .address{
+        display: block;
+        text-align: left;
+        line-height: 2;
+        margin-bottom: 10px;
+    }
+    .address span{
+        font-size: 16px;
+    }
+    .header{
+        grid-area: header;
+    }
+    .header header{
+        padding-top: 10px;
+        font-weight: bold;
+        text-align: center;
+        font-size:20px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .header p{
+        padding: 15px 10px;
+        font-size: 16px;
+        color: whitesmoke;
+        text-align: center;
+    }
+    .left p{
+        text-align: center;
+        font-size: 20px;
+    }
+    .contenido{
+        padding-bottom: 10px;
+        grid-area: contenido;
+    }
+    .contenido h1{
+        text-align: center;
+        font-size: 18px;
+    }
+    .footer{
+        grid-area: footer;
+        display:flex;
+        align-items:  center;
+        padding: 0px 5vw;
+        justify-content: space-between;
+    }
+    .footer p{
+        font-size:14px
+    }
+    .footer-icons{
+        display: inline-flex;
+        gap: 2vw;
+    }
+    .footer-icons a{
+        color: antiquewhite;
+    }
+    
+}
+
+@media only screen and (min-width: 768px){
+
+    
+    .contenedor-grid{
+        display: block;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    body{
+        background-color: black;
+    }
+    .item{
+        color: antiquewhite;
+        padding: 0px 10px;
+        border: solid 2px;
+        border-color: aquamarine;
+    }
+    .sucursales{
+        display: flex;
+    }
+
+    .address{
+        display: block;
+        text-align: left;
+        line-height: 2;
+        margin-bottom: 10px;
+    }
+    .address span{
+        font-size: 16px;
+    }
+    .header{
+        grid-area: header;
+    }
+    .header header{
+        padding-top: 10px;
+        font-weight: bold;
+        text-align: center;
+        font-size:20px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .header p{
+        padding: 15px 10px;
+        font-size: 16px;
+        color: whitesmoke;
+        text-align: center;
+    }
+    .left p{
+        text-align: center;
+        font-size: 20px;
+    }
+    .contenido{
+        padding-bottom: 10px;
+        grid-area: contenido;
+    }
+    .contenido h1{
+        text-align: center;
+        font-size: 18px;
+    }
+    .footer{
+        grid-area: footer;
+        display:flex;
+        align-items:  center;
+        padding: 0px 5vw;
+        justify-content: space-between;
+    }
+    .footer p{
+        font-size:14px
+    }
+    .footer-icons{
+        display: inline-flex;
+        gap: 2vw;
+    }
+    .footer-icons a{
+        color: antiquewhite;
+    }
+    */
+}

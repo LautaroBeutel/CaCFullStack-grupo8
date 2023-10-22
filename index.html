@@ -5,104 +5,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index Oficial</title>
-    <link rel="stylesheet" href="Style-Grid.css">
+    <link rel="stylesheet" href="./assets/style/Style-Grid.css">
+    <link rel="stylesheet" href="./assets/style/articulo.css">
+    <link rel="stylesheet" href="./assets/style/encabezadomio.css">    
+    <link rel="stylesheet" href="./assets/style/general.css">
     <link rel="shortcut icon" href="img/libro-icono-fav-2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/style/footer.css"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/1fcc785506.js" crossorigin="anonymous"></script>
 </head>
 
 
 <body>
+    <!-- ENCABEZADO Y NAVEGACION-->
+    
+       <div class="header-contenedor">
+           <div class="logo-img-desktop">
+               <a href="./index.html">
+                   <img src="./assets/images/logo2.png" alt="Logo Libreria">
+                </a>
+            </div>
+        <div class="container-busqueda-categorias">
+            <div class="container">
+                <nav class="navbar">
+                    <input type="checkbox" id="check">
+                    <ul>
+
+                        <li><a class="active" href="./index.html">Inicio</a></li>
+                        <li><a href="./productos.html">Categorias</a></li>
+                        <li><a href="#ofertasImperdibles">Ofertas</a></li>    
+                        <li><a href="#contact">Contacto</a></li>
+                        <li><a href="AboutUs.html">Sobre Nosotros</a></li>       
+
+                    </ul>
+                    <!-- <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span> -->
+                </nav>            
+            </div>
+            <div class="contenedor-header">
+                <header class="header">
+                   
+                    <div class="container-logo-nombre">
+                        <div class="logo-img">
+                            <a href="./index.html">
+                                <img   src="./assets/images/logo2.png" alt="Logo Libreria">
+                            </a>
+                        </div>
+                        <!-- <div>
+                            <h4><strong>Libreria</strong></h4>
+                            <h4><em>TAPA DURA</em></h4>
+                        </div> -->
+                    </div>
+                        <form class="busqueda" method="get" action="/">
+                            <div>
+                                <input id="input" type="search" placeholder="Buscar libros, autores y más..." name="q" autocomplete="off">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <button class="btn-buscar" type="submit">Buscar</button>
+                        </form>
+                        <div class="contenedor-carrito">
+                            <p >Tu carrito de compras</p>
+                            <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>  
+                        </div>
+                    <div class="carrito-menu">
+                        <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                        <label for="check" class="checkbtn">
+                            <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+                        </label>
+                    </div>
+        
+                    
+                </header>  
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    <!--MAIN-->
+    
     <div class="clear"></div>
-    <a href="categorias.html">
-        <h2>Categorias</h2>
-    </a>
-    <div class="grid-container-categorias">
-        <a class="grid-item-categorias " href="">
-            <div>Fantasia</div>    
+    <div class="contenedor-categorias">
+        <a href="./productos.html">
+            <h2 class="SemiTitulo">Categorias</h2>
         </a>
-        <a class="grid-item-categorias" href="">
-            <div>Policiales</div>    
-        </a>
-        <a class="grid-item-categorias" href="">
-            <div>Filosofia</div>    
-        </a>
-        <a class="grid-item-categorias" href="">
-            <div>Novela Romantica</div>    
-        </a>
-        <a class="grid-item-categorias" href="">
-            <div>Novela Historica</div>    
-        </a>
-        <a class="grid-item-categorias Fantasia" href="">   
-        </a>
-        <a class="grid-item-categorias Policiales" href=""> 
-        </a>
-        <a class="grid-item-categorias Filosofia" href=""> 
-        </a>
-        <a class="grid-item-categorias Novela Romantica" href="">
-        </a>
-        <a class="grid-item-categorias Novela Historica" href="">    
-        </a>
+        <div class="grid-container-categorias">
+            <a style="border-left: 1px solid black;" class="grid-item-categorias " href="./productos.html" onclick="cFiccionIndex()">
+                <div>Ciencia Ficcion</div>    
+            </a>
+            <a class="grid-item-categorias" href="./productos.html" onclick="policialIndex()">
+                <div style="margin-top: 10px;">Policial</div>    
+            </a>
+            <a class="grid-item-categorias" href="./productos.html" onclick="terrorIndex()">
+                <div style="margin-top: 10px;">Terror</div>    
+            </a>
+            <a class="grid-item-categorias" href="./productos.html" onclick="aventuraIndex()">
+                <div style="margin-top: 10px;">Aventura</div>    
+            </a>
+            <a class="grid-item-categorias" href="./productos.html" onclick="autoayudaIndex()">
+
+                <div style="margin-top: 10px;">Autoayuda</div>    
+
+            </a>
+            <a class="grid-item-categorias cFiccion" href="./productos.html" onclick="cFiccionIndex()">   
+            </a>
+            <a class="grid-item-categorias Policial" href="./productos.html" onclick="policialIndex()"> 
+            </a>
+            <a class="grid-item-categorias Terror" href="./productos.html" onclick="terrorIndex()"> 
+            </a>
+            <a class="grid-item-categorias Aventura" href="./productos.html" onclick="aventuraIndex()">
+            </a>
+            <a class="grid-item-categorias Autoayuda" href="./productos.html" onclick="autoayudaIndex()">    
+            </a>
+        </div>
     </div>
     <!--Fin sección Categorias-->
 
     <hr>
     <div class="clear"></div>
-    <a href="ofertas.html">
-        <h2>Fijate estas increibles ofertas</h2>
+    <a href="ofertas.html" id="ofertasImperdibles">
+        <h2 class="titulo-index">¡Fijate estas increibles ofertas!</h2>
     </a>
-    <div id="contenedorOfertas"></div>
-    <div class="grid-container-ofertas">
-        
-        <a class="grid-item-ofertas" href="">
-            <div>1</div>    
-        </a>
-        <a class="grid-item-ofertas" href="">
-            <div>2</div>    
-        </a>
-        <a class="grid-item-ofertas" href="">
-            <div>3</div>    
-        </a>
-        <a class="grid-item-ofertas" href="">
-            <div>4</div>    
-        </a>
-        <a class="grid-item-ofertas" href="">
-            <div>5</div>    
-        </a>
+    <div id="contenedorOfertas" class="contenedorOfertas-class">
+
     </div>
     <!--Fin sección Ofertas -->
 
     <div class="clear"></div>
     <a href="lanzamientos.html">
-        <h2>Fijate estas increibles ofertas</h2>
+        <h2 class="titulo-index">Para grandes lectores</h2>
     </a>
-    <div class="grid-container-lanzamientos">
-        <a class="grid-item-lanzamientos" href="">
-            <div>1</div>    
-        </a>
-        <a class="grid-item-lanzamientos" href="">
-            <div>2</div>    
-        </a>
-        <a class="grid-item-lanzamientos" href="">
-            <div>3</div>    
-        </a>
-        <a class="grid-item-lanzamientos" href="">
-            <div>4</div>    
-        </a>
-        <a class="grid-item-lanzamientos" href="">
-            <div>5</div>    
-        </a>
+
+    <div id="contenedorPaginas" class="contenedorOfertas-class">
+
     </div>
-    <!--Fin sección Lanzamientos-->
+
+    <!--Fin sección Grandes Lectores-->
+    
     <hr>
-    <h2 style="font-size: 40px;text-align: center;">Unite a nuestra club de lectores!</h2>
-        <a class="Membresia" href="membresia.html">
-            <div>
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi expedita veniam totam commodi consequatur repellat mollitia suscipit non, hic accusantium, nisi, odit repellendus pariatur atque! Recusandae vero sed ut cupiditate nulla cum necessitatibus impedit quaerat id, explicabo voluptate vitae doloribus.</h3>
+    <h2 class="SemiTitulo" style="text-decoration: black wavy underline;">Unite a nuestra club de lectores!</h2>
+        <a class="Membresia" href="./formulario.html">
+            <div class="Membresia-texto">
+                <h3>Desde "Tapa Dura" esperamos que encuentres de tu interes nuestra selección de libros.
+                    Continuamente estamos actualizando nuestras catalogos y ofreciendo las mejores ofertas
+                    que podras encontrar en el mercado! 
+                    Si quieres estar al tanto de las últimas novedades,
+                    suscríbete a nuestro Newsletter haciendo click aquí.</h3>
+                <h2>Es completamente gratuito!!!</h2>
             </div>
             <div class="img-membresia"></div>
         </a>
     <script src="./assets/js/index.js"></script>
 </body>
-<div class="clear"></div>
-
+<div class="clear">
+    <footer id="contact" style="margin-top:100px ;">
+        <h2>Visita nuestras redes sociales</h2>
+        <nav>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a>
+            <a href="mailto:#@#?subject=Consulta"><i class="fa-regular fa-envelope fa-xl"></i></a>
+        </nav>
+        <p>Codo a Codo - Grupo 8</p>
+    </footer>
+</div>
 
 </html>
