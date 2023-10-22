@@ -21,7 +21,7 @@
   /*CUERPO PRINCIPAL*/
   
   main {
-    padding-top: 60px;
+    padding-top: 20px;
   }
   
   main>div {
@@ -51,19 +51,19 @@
     flex-wrap: wrap;
   } 
   
-  form,
-  form>div {
+  form:last-child,
+  form:last-child>div {
     display: flex;
     flex-direction: column;
   }
   
-  form label,
-  form fieldset {
+  form:last-child label,
+  form:last-child fieldset {
     margin: 5px 0 5px 0px;
     padding: 5px;
   }
   
-  form input {
+  form:last-child input {
     padding: 5px 0px;
   }
   
@@ -89,7 +89,7 @@
     padding: 10px;
   }
   
-  input[type="submit"] {
+  input[type="submit"]:last-child {
     width: 80%;
     margin: 10px auto;
     border-radius: 5px;
@@ -106,13 +106,13 @@
     box-shadow: 0px 0px 5px 2px var(--rosa);
   }
   
-  input[type="submit"]:hover {
+  input[type="submit"]:last-child:hover {
     background-color: var(--amarillo);
     animation: translate-button 0.2s linear 1;
     z-index: 0;
   }
   
-  input[type="submit"]:active {
+  input[type="submit"]:last-child:active {
     border-color: #fff;
     color: var(--rosa);
     box-shadow: 0px 0px 10px 5px var(--rosa);
@@ -150,7 +150,7 @@
     /*CUERPO PRINCIPAL*/
   
     main {
-      padding: 200px 0px 20px 0px;
+      padding: 40px;
     }
   
     .sexo-tabla {
@@ -163,10 +163,11 @@
       display: block;
     }
   
-    form {
+    form:last-child {
       width: 80%;
       padding: 20px;
       display: grid;
+      justify-items: center;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
       grid-template-areas: "nombre apellido"
@@ -176,27 +177,30 @@
         "comentario comentario"
         "submit submit";
     }
-  
+
     .nombre-tabla {
       grid-area: nombre;
+      width: 100%;
     }
   
     .apellido-tabla {
       grid-area: apellido;
+      width: 100%;
     }
   
     .fecha-tabla {
       grid-area: fecha;
+      width: 100%;
     }
   
     .sexo-tabla {
       grid-area: sexo;
-      width: 50%;
-      margin: 0 auto;
+      padding: 1rem;
     }
   
     .mail-tabla {
       grid-area: mail;
+      width: 100%;
     }
   
     .categoria-tabla {
@@ -213,10 +217,12 @@
   
     .submit-tabla {
       grid-area: submit;
+      
     }
-  
-    input[type="submit"] {
-      width: 25%;
+
+    input[type="submit"]:last-child {
+      width: 35%;
+      padding: 0.5rem;
     }
   }
   
@@ -227,7 +233,7 @@
     /*CUERPO PRINCIPAL*/
   
     main {
-      padding: 200px 0px 20px 0px;
+      padding: 50px;
     }
   
     .sexo-tabla {
@@ -240,12 +246,12 @@
       display: block;
     }
   
-    form {
+    form:last-child {
       width: 80%;
       padding: 20px;
       display: grid;
       grid-template-columns: 30% 20% 20% 30%;
-      gap: 10px;
+      gap: 2rem;
       justify-items: center;
       grid-template-areas: "nombre nombre apellido apellido"
         "fecha fecha mail mail"
@@ -292,6 +298,10 @@
   
     .submit-tabla {
       grid-area: submit;
+    }
+
+    input[type="submit"]:last-child {
       padding: 0.5rem;
+      max-width: 80%;
     }
   }

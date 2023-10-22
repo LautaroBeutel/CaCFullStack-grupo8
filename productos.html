@@ -31,11 +31,13 @@
              <nav class="navbar">
                  <input type="checkbox" id="check">
                  <ul>
-                     <li><a class="active" href="#">Inicio</a></li>
-                     <li><a href="productos.html">Categorias</a></li>
-                     <li><a href="#ofertas">Ofertas</a></li>    
-                     <li><a href="formulario.html">Contacto</a></li>
-                     <li><a href="AboutUs.html">Sobre Nosotros</a></li>       
+
+                     <li><a class="active" href="./index.html">Inicio</a></li>
+                     <li><a href="./productos.html">Categorias</a></li>
+                     <li><a href="./index.html#ofertasImperdibles">Ofertas</a></li>    
+                     <li><a href="#contact">Contacto</a></li>
+                     <li><a href="./AboutUs.html">Sobre Nosotros</a></li>       
+
                  </ul>
                  <!-- <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span> -->
              </nav>            
@@ -81,6 +83,19 @@
  </div>
     <!--CUERPO PRINCIPAL: CONTIENE GRUPO DE PRODUCTOS DE INTERES PARA EL USUARIO Y OTRO/S GRUPO/S DE INTERES-->
     <main class="main-productos">
+
+        <section id="listaCategorias">
+            <ul>
+                <a href="./productos.html" onclick="terror()" class="boton_cat"><li>Terror</li></a>
+                <a href="./productos.html" onclick="cFiccion()" class="boton_cat"><li>Ciencia ficción</li></a>
+                <a href="./productos.html" onclick="aventura()" class="boton_cat"><li>Aventura</li></a>
+                <a href="./productos.html" onclick="policial()" class="boton_cat"><li>Policial</li></a>
+                <a href="./productos.html" onclick="autoayuda()" class="boton_cat"><li>Autoayuda</li></a>
+                <a href="./productos.html" onclick="otros()" class="boton_cat"><li>Otros</li></a>
+            </ul>
+        </section>
+
+        <hr><br>
 
         <section>
             <div class="prod_title">

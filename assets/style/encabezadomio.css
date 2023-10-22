@@ -43,26 +43,6 @@
   }
     
   
-  i{
-    color: #FFF;
-    size: 10px;    
-    padding-right: 10px;
-  }
-  
-  i:hover{
-    color: var(--amarillo);
-    cursor: pointer;
-  }  
-
-* { 
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-  
-}
-
 body {
   background: #dad299; /* fallback for old browsers */  
   background: linear-gradient(

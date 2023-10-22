@@ -142,17 +142,17 @@
         grid-template-rows: 10vh 30vh;
         background-color: #f1dca7;
         padding: 10px;
-        border: 1px solid black;}
 
-
-        .grid-item-categorias{
-            background-color: #d08c60;
-            border-right: 1px solid black;
-            border-top: 1px solid black;
-            padding: 0px;
-            font-size: 30px;
-            text-align: center;
-        }
+    }
+    
+    .grid-item-categorias{
+        background-color: #d08c60;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+        padding: 0px;
+        font-size: 30px;
+        text-align: center;
+    }
 
     .cFiccion{
         background-image: url(../../img/Categorias/Fantasia3.jpg);
@@ -386,18 +386,16 @@
         grid-template-rows: 10vh 30vh;
         background-color: #f1dca7;
         padding: 10px;
-        border: 1px solid black;}
 
-
-        .grid-item-categorias{
-            background-color: #d08c60;
-            border-right: 1px solid black;
-            border-top: 1px solid black;
-            padding: 0px;
-            font-size: 15px;
-            text-align: center;
-        }
-
+    }
+    .grid-item-categorias{
+        background-color: #d08c60;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+        padding: 0px;
+        font-size: 15px;
+        text-align: center;
+    }
     .cFiccion{
         background-image: url(../../img/Categorias/Fantasia3.jpg);
         background-repeat: no-repeat;
