@@ -1,5 +1,5 @@
 let form = document.getElementById("formulario")
-let inputs = document.getElementsByTagName("input");
+let inputs = document.getElementsByClassName("nombrecompleto");
 let fecha = document.querySelector("#fecha");
 let mail = document.querySelector("#mail");
 let categoria = document.getElementsByName("categoria");
