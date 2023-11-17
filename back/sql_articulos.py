@@ -28,7 +28,8 @@ class Articulo():
         respuesta = self.cursor.fetchone()
         if respuesta:
             self.cursor.execute(f'DELETE FROM productos WHERE id = {id}')
-            return True
+            self.conn.commit()
+            return self.cursor.rowcount > 0
         else:
             print(f'No se borro el artículo porque no se encontró ningún producto con el id {id}')
             return False
@@ -57,7 +58,7 @@ class Articulo():
         if respuesta:
             self.cursor.execute(f'UPDATE productos SET {columna} = "{modificacion}" WHERE id = {id}')
             self.conn.commit()
-            return True
+            return self.cursor.rowcount > 0
         else:
             print(f'No se modificó el artículo porque no se encontró ningún producto con el id {id}')
             return False
