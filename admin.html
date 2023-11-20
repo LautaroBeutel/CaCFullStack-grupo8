@@ -1,21 +1,19 @@
-<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-    <link rel="stylesheet" href="./assets/style/formulario.css">
+    <title>Index Oficial</title>
+    <link rel="stylesheet" href="./assets/style/Style-Grid.css">
     <link rel="stylesheet" href="./assets/style/encabezadomio.css">
     <link rel="stylesheet" href="./assets/style/general.css">
-    <link rel="stylesheet" href="./assets/style/footer.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="shortcut icon" href="img/libro-icono-fav-2.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/style/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./assets/style/admin.css">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> -->
     <script src="https://kit.fontawesome.com/1fcc785506.js" crossorigin="anonymous"></script>
 </head>
@@ -23,7 +21,6 @@
 <body>
     <!-- ENCABEZADO Y NAVEGACION-->
 
-    <!-- ENCABEZADO Y NAVEGACION-->
     <div class="header-contenedor">
         <div class="logo-img-desktop">
             <a href="./index.html">
@@ -35,11 +32,13 @@
                 <nav class="navbar">
                     <input type="checkbox" id="check">
                     <ul>
+
                         <li><a class="active" href="./index.html">Inicio</a></li>
                         <li><a href="./productos.html">Categorias</a></li>
-                        <li><a href="./index.html#ofertasImperdibles">Ofertas</a></li>
+                        <li><a href="#ofertasImperdibles">Ofertas</a></li>
                         <li><a href="#contact">Contacto</a></li>
-                        <li><a href="./AboutUs.html">Sobre Nosotros</a></li>
+                        <li><a href="AboutUs.html">Sobre Nosotros</a></li>
+
                     </ul>
                     <!-- <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span> -->
                 </nav>
@@ -54,9 +53,9 @@
                             </a>
                         </div>
                         <!-- <div>
-                     <h4><strong>Libreria</strong></h4>
-                     <h4><em>TAPA DURA</em></h4>
-                 </div> -->
+                                <h4><strong>Libreria</strong></h4>
+                                <h4><em>TAPA DURA</em></h4>
+                            </div> -->
                     </div>
                     <form class="busqueda" method="get" action="/">
                         <div>
@@ -76,63 +75,25 @@
                             <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
                         </label>
                     </div>
-
-
                 </header>
             </div>
-
         </div>
-
     </div>
 
-    <!--CUERPO PRINCIPAL: CONTIENE FORMULARIO-->
-    <main>
-        <div>
-            <h2>¡Completa el formulario y recibe todas las novedades de tus libros favoritos!</h2>
-            <form action="" id="formulario">
-                <div class="nombre-tabla "><label for="nombre">Nombres</label><input type="text" name="nombre"
-                        id="nombre" class="nombrecompleto" required></div>
-                <div class="apellido-tabla"><label for="apellido">Apellido</label><input type="text" name="apellido"
-                        id="apellido" class="nombrecompleto" required></div>
-                <div class="fecha-tabla"><label for="fecha">Fecha de nacimiento</label><input type="date" name="fecha"
-                        id="fecha" required></div>
-                <fieldset class="sexo-tabla">
-                    <legend>Sexo</legend>
-                    <div class="sexo-radio">
-                        <input type="radio" name="sexo" id="masculino" checked><label for="masculino">Masculino</label>
-                        <input type="radio" name="sexo" id="femenino"><label for="femenino">Femenino</label>
-                        <input type="radio" name="sexo" id="sexo-otros"><label for="sexo-otros">Otro</label>
-                    </div>
-                </fieldset>
-                <div class="mail-tabla"><label for="mail">Correo electrónico</label><input type="email" name="mail"
-                        id="mail" required></div>
-                <fieldset class="categoria-tabla">
-                    <legend>Categorías favoritas</legend>
-                    <div class="check-box">
-                        <input type="checkbox" name="categoria" id="cat-terror"><label for="cat-terror">Terror</label>
-                        <input type="checkbox" name="categoria" id="cat-ficcion"><label for="cat-ficcion">Ciencia
-                            Ficción</label>
-                        <input type="checkbox" name="categoria" id="cat-aventura"><label
-                            for="cat-aventura">Aventura</label>
-                        <input type="checkbox" name="categoria" id="cat-policial"><label
-                            for="cat-policial">Policial</label>
-                        <input type="checkbox" name="categoria" id="cat-fantasia"><label
-                            for="cat-fantasia">Fantasía</label>
-                        <input type="checkbox" name="categoria" id="cat-otros"><label for="cat-otros">Otros</label>
-                    </div>
-                </fieldset>
-                <fieldset class="comentario-tabla">
-                    <legend>¿Tienes dudas o sugerencias?</legend>
-                    <textarea name="comentario" id="comentario" cols="30" rows="10"
-                        placeholder="Escribe aquí tu comentario (máximo: 140 caracteres)" maxlength="140"></textarea>
-                </fieldset>
-                <input type="submit" value="Enviar formulario" class="submit-tabla">
-            </form>
-        </div>
+    <!-- CUERPO -->
 
-    </main>
-    <!-- PIE DE PAGINA CON LA INFORMACION DE CONTACTO, INFORMACION DE LA LIBRERIA, ETC-->
-    <footer id="contact">
+    <h1 class="titulo_main">PANEL DE ADMINISTRADOR</h1>
+    <div>
+        <div class="contenedor_admin">
+            <a href="#"><input type="button" value="Ver clientes" class="botones_admin"></a>
+            <a href="#"><input type="button" value="Buscar clientes" class="botones_admin"></a>
+            <a href="#"><input type="button" value="Borrar cliente" class="botones_admin"></a>
+            <a href="#"><input type="button" value="Modificar cliente" class="botones_admin"></a>
+            <a href="#"><input type="button" value="Ver compras" class="botones_admin compras"></a>
+        </div>
+    </div>
+
+    <footer id="contact" style="margin-top:100px ;">
         <h2>Visita nuestras redes sociales</h2>
         <nav>
             <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a>
@@ -142,8 +103,8 @@
         </nav>
         <p>Codo a Codo - Grupo 8</p>
     </footer>
+    </div>
 
-    <script src="./assets/js/formulario.js"></script>
     <script src="./assets/js/productos.js"></script>
 
 </body>
