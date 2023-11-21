@@ -13,13 +13,30 @@ class Lectores():
         self.conn = mysql.connector.connect(host = host, user= user, password= password, database= database)
         self.cursor = self.conn.cursor(dictionary=True)
 
+    #Crear tablas
+    def crear_tablas(self):
+        self.cursor.execute('SHOW TABLES')
+        control = self.cursor.fetchall() 
+        self.cursor.execute('CREATE TABLE IF NOT EXISTS lectores (id int(4) AUTO_INCREMENT, nombre varchar(20) NOT NULL, apellido varchar(20) NOT NULL, nacimiento varchar(10) NOT NULL, email varchar(50) NOT NULL, sexo varchar(15) NOT NULL,  preferencias varchar(200) DEFAULT NULL, comentario varchar(140) DEFAULT NULL, PRIMARY KEY (id));')
+        self.cursor.execute('CREATE TABLE IF NOT EXISTS productos ( id int(3) AUTO_INCREMENT, titulo varchar(70) DEFAULT NULL, precio int(8) NOT NULL, portada varchar(100) NOT NULL, categoria varchar(20) NOT NULL, autor varchar(20) NOT NULL, paginas int(4) NOT NULL, idioma varchar(20) NOT NULL, publicacion int(4) NOT NULL, descripcion varchar(2000) NOT NULL, stock int(3) NOT NULL, PRIMARY KEY (id));')
+        self.cursor.execute('CREATE TABLE IF NOT EXISTS compras ( idArticulo int(4) NOT NULL, idCliente int(4) NOT NULL, cantidad int(2) NOT NULL, FOREIGN KEY (idArticulo) REFERENCES productos(id), FOREIGN KEY (idCliente) REFERENCES lectores(id));')
+        self.conn.commit()
+        self.cursor.execute('SHOW TABLES')
+        respuesta = self.cursor.fetchall()
+        if respuesta == control:
+            print("No se han creado nuevas tablas ya que las mismas estaban creadas con anterioridad")
+            return False
+        else:
+            print("Las tablas se han creado con éxito")
+            return True
+    
     #Agregar un cliente a la tabla lectores
 
     def agregar_lector(self, nombre, apellido, nacimiento, email, preferencias, comentario):
-        self.cursor.execute(f'SELECT * FROM lectores WHERE titulo = "{email}"')
+        self.cursor.execute(f'SELECT * FROM lectores WHERE email = "{email}"')
         respuesta = self.cursor.fetchone()
         if respuesta:
-            print(f'Ya existe un lector registrado con este correo elctrónico: {email}')
+            print(f'Ya existe un lector registrado con este correo electrónico: {email}')
             return False
         else:
             self.cursor.execute(f"INSERT INTO lectores (nombre, apellido, nacimiento, email, preferencias, comentario) VALUES ('{nombre}', '{apellido}', '{nacimiento}', '{email}', '{preferencias}', '{comentario}')")
@@ -80,10 +97,8 @@ class Lectores():
             print('Error al acceder a los datos de los lectores')
             return False
 
-# @app.route('/formulario, methods=["GET"]')
-    
-
-
-
 
 clientes = Lectores(host='localhost', user='root', password='', database='grupo8')
+#clientes.crear_tablas()
+
+

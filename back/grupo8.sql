@@ -40,12 +40,13 @@ CREATE TABLE `compras` (
 --
 
 CREATE TABLE `lectores` (
-  `id` int(4) NOT NULL,
+  `id` int(4) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(20) NOT NULL,
   `apellido` varchar(20) NOT NULL,
   `nacimiento` varchar(10) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `preferencias` varchar(20) DEFAULT NULL,
+  `sexo` varchar(15) NOT NULL,
+  `preferencias` varchar(200) DEFAULT NULL,
   `comentario` varchar(140) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -56,7 +57,7 @@ CREATE TABLE `lectores` (
 --
 
 CREATE TABLE `productos` (
-  `id` int(3) NOT NULL,
+  `id` int(3) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(70) DEFAULT NULL,
   `precio` int(8) NOT NULL,
   `portada` varchar(100) NOT NULL,
