@@ -1,0 +1,182 @@
+/* HEADER COMUN PARA TODAS LAS PAGINAS */
+
+:root{
+    --marron-claro: #D08C60;
+    --amarillo: #FFCB69;
+    --verde-claro: #9B9B7A;
+    --hueso: #F1DCA7;
+    --marron-oscuro: #997B66;
+    --verde-oscuro: #797D62;
+    --rosa: #DE695B;
+  }
+  
+  * { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  body {
+    background: #dad299; /* fallback for old browsers */  
+    background: linear-gradient(
+      to right,
+      #b0dab9,
+      #dad299
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+    
+  
+  i{
+    color: #FFF;
+    size: 10px;    
+    padding-right: 10px;
+  }
+  
+  i:hover{
+    color: var(--amarillo);
+    cursor: pointer;
+  }  
+
+  /* HEADER */ 
+
+.encabezado{
+  display: grid;  
+  width: 100%;
+  background-color: var(--marron-claro);
+}
+
+.enlace .Logo{
+  position: absolute;
+ 
+  height: 140px;
+  margin: 0px 20px;
+}
+
+.encabezado-der {  
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.encabezado-der ul{ 
+  float: right;
+  margin-right: 20px;
+}
+
+.encabezado-der ul li {
+  display: inline-block;
+  line-height: 60px;
+  margin: 0px 0px;
+}
+
+.encabezado-der li a{
+  color: #fff;
+  font-size: 18px;
+  padding: 7px 13px;
+  border-radius: 3px;  
+}
+
+
+/* Navbar Estilos */
+
+.nav-menu{
+  background-color: var(--marron-claro);
+}
+
+.navbar{
+  background-color: var(--marron-claro);
+  height: 81px;
+  width: 100%;
+}
+
+/* .nav-form{
+  display: flex;
+  grid-template-columns:  20% 1fr 3fr;
+} */
+
+.navbar ul {
+  float: right;
+  margin-right: 20px;  
+  padding: 0px auto;
+  margin: 0 auto;
+}
+
+
+.navbar ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+.navbar li a{
+  color: #fff;
+  font-size: 18px;
+  padding: 7px 13px;
+  border-radius: 3px; 
+}
+
+li a.active, li a:hover {
+  background: var(--rosa);
+  transition: .5s;
+}
+
+.checkbtn{
+  font-size: 20px;
+  color: #fff;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+
+/* MEDIA QUERY */
+
+@media (max-width: 952px) {
+  .enlace{
+    padding-left: 20px;
+  }
+  .navbar ul li a {
+    font-size: 16px;
+  }  
+}
+
+
+@media (max-width: 855px) {
+  .checkbtn{
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #997B66;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  } 
+  .navbar ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  .navbar ul li a {
+    font-size: 20px;
+  }
+  li a:hover, li a.active{
+    background: none;
+    color: red;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}

@@ -1,0 +1,142 @@
+
+body {
+    background: #dad299; /* fallback for old browsers */  
+    background: linear-gradient(
+      to right,
+      #b0dab9,
+      #dad299
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+  ul {
+    list-style: none;
+    color: white;
+  }
+  
+  a {
+    font-size: 1.5;
+    color: #FFCB69;
+    color: var(--color-white);
+    text-decoration: none;    
+    position: relative;
+  }
+
+  a::after{
+    content: '';
+    opacity: 0;
+    transition: all 0.2s;
+    height: 2px;
+    width: 100%;
+    background-color: var(--marron-claro);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  a:hover::after{        
+    opacity: 1;
+}
+
+
+  .menu-btn{
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 2;
+    display: none;
+  }
+  
+  .container{
+    margin: 16px auto;
+    width: 90%;
+  }
+  
+  .nav-main{
+    align-items: center;
+    display: flex;
+    font-size: 17px;
+    justify-content: space-between;
+    padding: 20px 0;
+    height: 60px;
+  }
+  
+  .nav-logo{
+    width: 110px;
+    background: white;
+  }
+
+  
+  
+  .nav-main ul {
+    display: flex;
+  }
+  
+  .nav-main ul li {
+    padding: 10px;
+  }
+  
+  .nav-main ul li a {
+    padding: 8px;
+  }
+  
+  .nav-main ul li a:hover{
+    border-bottom: 2px solid var(--color-white);
+  
+  }
+  
+
+
+  @media (max-width: 991px){
+
+    .header-right-part {
+        margin: 15px 0;
+    }
+
+  }
+@media (max-width: 991px) {
+
+  .header-right-part {
+      float: none;
+      padding: 0 0 0 108px;
+  }
+
+}
+@media (max-width: 1199px){
+
+  .header-right-part {
+      padding: 0 0 0 110px;
+      margin: 24px 0;
+  }
+
+}
+
+  
+  /* media queries*/
+  
+  @media (max-width: 950px){
+    .menu-btn {
+      display: block;
+    }
+    .nav-main ul.nav-menu{
+      background: #9B9B7A;
+      height: 100%;
+      display: block;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+    
+    @media (min-width: 768px) {
+
+      .col-md-6 {
+          -webkit-box-flex: 0;
+          -webkit-flex: 0 0 50%;
+          -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+          max-width: 50%;
+      }
+
+    }
+
+  }

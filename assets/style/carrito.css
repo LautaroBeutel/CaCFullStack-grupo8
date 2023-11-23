@@ -4,7 +4,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed041af63fef346cd422d4cd445620b88c417221
 
+.h2_carrito{
+    text-align: center;
+}
+<<<<<<< HEAD
+=======
+=======
+=======
+
+>>>>>>> 49e70c39b9b0814d5a36d04888e019f7439c4d5f
 .h2_carrito_desktop{
     display: none;
 }
@@ -19,7 +33,12 @@
 .titulo_info_carrito h5{
     display: none;
 }
+<<<<<<< HEAD
+>>>>>>> ee2a7ee5cd4aa408250ee088fc5d4891200a03a8
+>>>>>>> ed041af63fef346cd422d4cd445620b88c417221
+=======
 
+>>>>>>> 49e70c39b9b0814d5a36d04888e019f7439c4d5f
 .separador_carrito{
     width: 90%;
     height: 1px;
@@ -39,7 +58,19 @@
     background-color: #cfa9908c;
 }
 .contenedor_carrito img{
+<<<<<<< HEAD
+<<<<<<< HEAD
+    width: 30%;
+=======
+<<<<<<< HEAD
+    width: 30%;
+=======
     width: 80%;
+>>>>>>> ee2a7ee5cd4aa408250ee088fc5d4891200a03a8
+>>>>>>> ed041af63fef346cd422d4cd445620b88c417221
+=======
+    width: 80%;
+>>>>>>> 49e70c39b9b0814d5a36d04888e019f7439c4d5f
 }
 .total_cantidad_libro_carrito{
     color: red;
@@ -107,6 +138,15 @@
 }
 .info_total_carrito span{
     width: 4rem;
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> 49e70c39b9b0814d5a36d04888e019f7439c4d5f
 }
 
 @media (min-width: 1024px) {
@@ -157,3 +197,9 @@
         gap: 1.5rem;
     }
 }
+<<<<<<< HEAD
+
+>>>>>>> ee2a7ee5cd4aa408250ee088fc5d4891200a03a8
+>>>>>>> ed041af63fef346cd422d4cd445620b88c417221
+=======
+>>>>>>> 49e70c39b9b0814d5a36d04888e019f7439c4d5f

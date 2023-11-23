@@ -17,6 +17,7 @@
     color: var(--verde-oscuro);
     /* font-family: 'Tilt Neon', sans-serif; */
  }
+>>>>>>> ed041af63fef346cd422d4cd445620b88c417221
 
 /*CUERPO PRINCIPAL*/
 
@@ -43,8 +44,11 @@
 
 img {
     width: 10rem;
+<<<<<<< HEAD
+=======
     max-width: 100%;
     margin-top: 10px;
+>>>>>>> ed041af63fef346cd422d4cd445620b88c417221
 }
 
 section:last-child{
@@ -78,6 +82,14 @@ main a {
     color: #000;
 }
 
+.prod_name{
+    display: flex;
+    width: 15rem;
+    justify-content: center;
+    
+  }
+
+>>>>>>> ed041af63fef346cd422d4cd445620b88c417221
 .prod_price::before {
     content: "$";
 }
@@ -86,7 +98,11 @@ main a {
     color: var(--card-precio);
     font-weight: 800;
     font-size: 1.2rem;
+<<<<<<< HEAD
+    padding-top: 5px;
+=======
     padding: 10px 0;
+>>>>>>> ed041af63fef346cd422d4cd445620b88c417221
 }
 
 .more input {
