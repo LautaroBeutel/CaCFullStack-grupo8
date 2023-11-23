@@ -45,7 +45,7 @@ tituloCategoria.textContent = sessionStorage.getItem("eleccion_cat")
 
 fetch("https://mocki.io/v1/61e0a2c5-ecd2-4916-9b5c-b49a47a4069c")
   .then(data => data.json())
-  .then(function (datos){  
+  .then(function (datos){
   for(let i = 0; i < datos.result.length; i++){
     if(datos.result[i].categoria == eleccion_usuario){
      productos.insertAdjacentHTML("beforeend",`<a href="./articulo.html" class="articulo" onclick="eleccionArticulo(${i})"><article><img src="${datos.result[i].portada}" alt="foto_producto"><h3 class="prod_name">${datos.result[i].titulo}</h3><p class="prod_price">${datos.result[i].precio}</p></article></a>`);}
