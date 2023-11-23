@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style/carrito.css">
+    <title>Acerca de nosotros</title>
+    <link rel="stylesheet" href="assets/style/Style-AboutUs.css">
     <link rel="stylesheet" href="./assets/style/encabezadomio.css">
     <link rel="stylesheet" href="./assets/style/general.css">
-    <link rel="stylesheet" href="./assets/style/footer.css"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="shortcut icon" href="img/libro-icono-fav-2.png" type="image/x-icon">
-    <title>Tu carrito de compras online</title>
+    <link rel="stylesheet" href="./assets/style/footer.css">
+    <script src="https://kit.fontawesome.com/b4da994de9.js" crossorigin="anonymous"></script>
+    
 </head>
-<<<<<<< HEAD
 <body>    
-=======
-<body>
-    <!-- ENCABEZADO Y NAVEGACION-->
-    <div class="header-contenedor">
+
+      <!-- ENCABEZADO Y NAVEGACION-->
+      <div class="header-contenedor">
         <div class="logo-img-desktop">
             <a href="./index.html">
                 <img src="./assets/images/logo2.png" alt="Logo Libreria">
@@ -59,7 +58,7 @@
                          <button class="btn-buscar" type="submit">Buscar</button>
                      </form>
                      <div class="contenedor-carrito">
-                         <p >Carrito de compras</p>
+                         <p >Tu carrito de compras</p>
                          <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>  
                      </div>
                  <div class="carrito-menu">
@@ -77,67 +76,69 @@
      
  </div>
 
-    <h2 class="h2_carrito_desktop">Tu carrito</h2>
-   
-    <div class="contenedor_carrito">
-        <h2 class="h2_carrito">Tu carrito</h2>
-        <div class="titulo_info_carrito">
-            <h5>Producto</h5>
-            <img src="./assets/images/curso-de-programacion-python.jpg" alt="">
+ <!-- ABOUT US -->
+
+    <section class="contenedor-grid">
+        <div class="item">
+            <h1>Acerca de nuestra empresa</h1>
+            <p>Dentro de nuestra pagina vas a poder comprar desde los libros mas nuevos hasta los clasicos imperdibles!!! </p>
         </div>
-        <div class="titulo_info_carrito">
-            <h5>Título</h5>
-            <h4>Curso de programación Python</h4>
+        <div class="item contenido">
+            <h2>Encontranos aca</h2>
+            <div class="mapouter" id="mapa"><iframe id="ubicame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016888186392!2d-58.38414532470355!3d-34.60373445749834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1697956319309!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         </div>
-        <span class="separador_carrito"></span>
-        <div class="titulo_info_carrito">
-            <h5>Precio</h5>
-            <p>$5.000</p>
-        </div>
-        <div class="titulo_info_carrito">
-            <h5>Cantidad</h5>
-            <div class="btn_cantidad_carrito">
-                <button><i class="fa-solid fa-plus"></i></button>
-                <span>1</span>
-                <button><i class="fa-solid fa-minus"></i></button>
+            <div class="sucursales">
+                <p>Veni a visitarnos!</p>
+                <div id="domicilios">
+                <address class="sucTapaDura">
+                    <span>Sucursal CABA</span>
+                    <br>
+                    <span>Tapa Dura - Sucursal Grupo 8</span>
+                    <br>
+                    <a href="#mapa" onclick="cambioMapa(1)"><span>Av. 9 de Julio s/n, C1043 CABA</span></a>
+                </address>
+                <address class="sucTapaDura">
+                    <span>Sucursal Provincia Santa Fe</span>
+                    <br>
+                    <span>Tapa Dura - Sucursal CaC</span>
+                    <br>
+                    <a href="#mapa" onclick="cambioMapa(2)"><span>Sta Fe 581, S2000 Rosario, Santa Fe</span></a>
+                </address>
             </div>
-        </div>
-        <div class="titulo_info_carrito">
-            <h5>Total</h5>
-            <p class="total_cantidad_libro_carrito">$5.000</p>
-        </div>
-    </div>
-    <div class="cupon_tota_carrito">
-        <div class="contenedor_cupon_carrito">
-            <h2>¿Tienes algún cupón de descuento?</h2>
-            <input type="text" placeholder="Ingrese el código del cupón">
-            <button>Aplicar cupón</button>
-        </div>
-        <div class="total_carrito">
-            <h2>Total del carrito</h2>
-            <div class="info_total_carrito">
-                <p>Subtotal</p>
-                <span>$800</span>
+                <!--
+                <address class="address">
+                    <span>Sucursal Principal-Recoleta</span>
+                    <br>
+                    <span>Ateneo Grand Splendid</span>
+                    <br>
+                    <span>Av. Sta. Fe 1860, C1123 CABA</span>
+                </address>
+                <address class="address">
+                    <span>Sucursal Principal-Recoleta</span>
+                    <br>
+                    <span>Ateneo Grand Splendid</span>
+                    <br>
+                    <span>Av. Sta. Fe 1860, C1123 CABA</span>
+                </address>
+                <address class="address">
+                    <span>Sucursal Principal-Recoleta</span>
+                    <br>
+                    <span>Ateneo Grand Splendid</span>
+                    <br>
+                    <span>Av. Sta. Fe 1860, C1123 CABA</span>
+                </address>
+                <address class="address">
+                    <span>Sucursal Principal-Recoleta</span>
+                    <br>
+                    <span>Ateneo Grand Splendid</span>
+                    <br>
+                    <span>Av. Sta. Fe 1860, C1123 CABA</span>
+                </address>
+                -->
             </div>
-            <div class="info_total_carrito">
-                <p>Descuento</p>
-                <span>$0</span>
-            </div>
-            <div class="info_total_carrito">
-                <p>Total</p>
-                <span>$800</span>
-            </div>
-            <button class="btn_finalizar_compra_carrito">Finalizar compra</button>
-        </div>
-    </div>
-    <script src="https://kit.fontawesome.com/f137d8c77f.js" crossorigin="anonymous"></script>
-<<<<<<< HEAD
->>>>>>> ee2a7ee5cd4aa408250ee088fc5d4891200a03a8
->>>>>>> ed041af63fef346cd422d4cd445620b88c417221
-=======
->>>>>>> 49e70c39b9b0814d5a36d04888e019f7439c4d5f
-</body>
-<div class="clear">
+    </section>
+
+    <!-- PIE DE PAGINA CON LA INFORMACION DE CONTACTO, INFORMACION DE LA LIBRERIA, ETC-->
     <footer id="contact">
         <h2>Visita nuestras redes sociales</h2>
         <nav>
@@ -148,5 +149,8 @@
         </nav>
         <p>Codo a Codo - Grupo 8</p>
     </footer>
-</div>
+
+    <script src="./assets/js/menuDesplegable.js"></script>
+    <script src="./assets/js/aboutUs.js"></script>
+</body>
 </html>

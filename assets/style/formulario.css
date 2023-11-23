@@ -290,23 +290,18 @@ input[type="submit"]:active {
   
   /*CELULAR*/
 
-   * { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
   
   body {
-    margin: 0;
     background-color: var(--hueso);
     color: var(--verde-oscuro);
-    font-family: 'Tilt Neon', sans-serif;  }
+    /* font-family: 'Tilt Neon', sans-serif;   */
+  }
   
   
   /*CUERPO PRINCIPAL*/
   
   main {
-    padding-top: 60px;
+    padding-top: 20px;
   }
   
   main>div {
@@ -322,19 +317,33 @@ input[type="submit"]:active {
     color: var(--rosa);
   }
   
-  form,
-  form>div {
+
+  .encabezado-mid>form {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    line-height: 20px;
+    height: 63px;
+    padding: 15px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  } 
+  
+  form:last-child,
+  form:last-child>div {
     display: flex;
     flex-direction: column;
   }
   
-  form label,
-  form fieldset {
+  form:last-child label,
+  form:last-child fieldset {
     margin: 5px 0 5px 0px;
     padding: 5px;
   }
   
-  form input {
+  form:last-child input {
     padding: 5px 0px;
   }
   
@@ -360,11 +369,11 @@ input[type="submit"]:active {
     padding: 10px;
   }
   
-  input[type="submit"] {
+  input[type="submit"]:last-child {
     width: 80%;
     margin: 10px auto;
     border-radius: 5px;
-    font-family: 'Tilt Neon', sans-serif;
+    /* font-family: 'Tilt Neon', sans-serif; */
     font-size: 1rem;
   }
   
@@ -377,13 +386,13 @@ input[type="submit"]:active {
     box-shadow: 0px 0px 5px 2px var(--rosa);
   }
   
-  input[type="submit"]:hover {
+  input[type="submit"]:last-child:hover {
     background-color: var(--amarillo);
     animation: translate-button 0.2s linear 1;
     z-index: 0;
   }
   
-  input[type="submit"]:active {
+  input[type="submit"]:last-child:active {
     border-color: #fff;
     color: var(--rosa);
     box-shadow: 0px 0px 10px 5px var(--rosa);
@@ -421,7 +430,7 @@ input[type="submit"]:active {
     /*CUERPO PRINCIPAL*/
   
     main {
-      padding: 200px 0px 20px 0px;
+      padding: 40px;
     }
   
     .sexo-tabla {
@@ -434,10 +443,11 @@ input[type="submit"]:active {
       display: block;
     }
   
-    form {
+    form:last-child {
       width: 80%;
       padding: 20px;
       display: grid;
+      justify-items: center;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
       grid-template-areas: "nombre apellido"
@@ -447,27 +457,30 @@ input[type="submit"]:active {
         "comentario comentario"
         "submit submit";
     }
-  
+
     .nombre-tabla {
       grid-area: nombre;
+      width: 100%;
     }
   
     .apellido-tabla {
       grid-area: apellido;
+      width: 100%;
     }
   
     .fecha-tabla {
       grid-area: fecha;
+      width: 100%;
     }
   
     .sexo-tabla {
       grid-area: sexo;
-      width: 50%;
-      margin: 0 auto;
+      padding: 1rem;
     }
   
     .mail-tabla {
       grid-area: mail;
+      width: 100%;
     }
   
     .categoria-tabla {
@@ -484,10 +497,12 @@ input[type="submit"]:active {
   
     .submit-tabla {
       grid-area: submit;
+      
     }
-  
-    input[type="submit"] {
-      width: 25%;
+
+    input[type="submit"]:last-child {
+      width: 35%;
+      padding: 0.5rem;
     }
   }
   
@@ -498,7 +513,7 @@ input[type="submit"]:active {
     /*CUERPO PRINCIPAL*/
   
     main {
-      padding: 200px 0px 20px 0px;
+      padding: 50px;
     }
   
     .sexo-tabla {
@@ -511,12 +526,12 @@ input[type="submit"]:active {
       display: block;
     }
   
-    form {
+    form:last-child {
       width: 80%;
       padding: 20px;
       display: grid;
       grid-template-columns: 30% 20% 20% 30%;
-      gap: 10px;
+      gap: 2rem;
       justify-items: center;
       grid-template-areas: "nombre nombre apellido apellido"
         "fecha fecha mail mail"
@@ -563,7 +578,11 @@ input[type="submit"]:active {
   
     .submit-tabla {
       grid-area: submit;
+    }
+
+    input[type="submit"]:last-child {
       padding: 0.5rem;
+      max-width: 80%;
     }
   }
 >>>>>>> ed041af63fef346cd422d4cd445620b88c417221

@@ -6,73 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
     <link rel="stylesheet" href="./assets/style/productos.css">
-    <link rel="stylesheet" href="./assets/style/encabezado.css">
+    <link rel="stylesheet" href="./assets/style/encabezadomio.css">
+    <link rel="stylesheet" href="./assets/style/general.css">
     <link rel="stylesheet" href="./assets/style/footer.css">
-<<<<<<< HEAD
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-=======
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="img/libro-icono-fav-2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/style/footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
->>>>>>> ed041af63fef346cd422d4cd445620b88c417221
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1fcc785506.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- ENCABEZADO Y NAVEGACION-->
-<<<<<<< HEAD
-    
-=======
-    <header>
-        <div id="title_movil">
-            <h1>TAPA DURA</h1>
+    <div class="header-contenedor">
+        <div class="logo-img-desktop">
+            <a href="./index.html">
+                <img src="./assets/images/logo2.png" alt="Logo Libreria">
+            </a>
         </div>
-    </header>
-    <header>
-        <div id="logo">
-            <a href="./index.html"><img src="./assets/images/logo-prueba.jpg" alt="logo"></a>
-            <h1>TAPA DURA</h1>
-        </div>
-        <div id="menus">
-            <nav>
-                <i class="fa-solid fa-bars fa-2xl" id="menuCel" onclick="showMenu()"></i>
-            </nav>
-            <div>
-                <a href="./carrito.html"><i class="fa-solid fa-cart-shopping fa-2xl"></i></a>
+        <div class="container-busqueda-categorias">
+            <div class="container">
+                <nav class="navbar">
+                    <input type="checkbox" id="check">
+                    <ul>
+
+                        <li><a class="active" href="./index.html">Inicio</a></li>
+                        <li><a href="./productos.html">Categorias</a></li>
+                        <li><a href="./index.html#ofertasImperdibles">Ofertas</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                        <li><a href="./AboutUs.html">Sobre Nosotros</a></li>
+
+                    </ul>
+                    <!-- <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span> -->
+                </nav>
             </div>
+            <div class="contenedor-header">
+                <header class="header">
+
+                    <div class="container-logo-nombre">
+                        <div class="logo-img">
+                            <a href="./index.html">
+                                <img src="./assets/images/logo2.png" alt="Logo Libreria">
+                            </a>
+                        </div>
+                        <!-- <div>
+                         <h4><strong>Libreria</strong></h4>
+                         <h4><em>TAPA DURA</em></h4>
+                     </div> -->
+                    </div>
+                    <form class="busqueda" method="get" action="/">
+                        <div>
+                            <input id="input" type="search" placeholder="Buscar libros, autores y más..." name="q"
+                                autocomplete="off">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <button class="btn-buscar" type="submit">Buscar</button>
+                    </form>
+                    <div class="contenedor-carrito">
+                        <p>Carrito de compras</p>
+                        <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                    </div>
+                    <div class="carrito-menu">
+                        <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+                        <label for="check" class="checkbtn">
+                            <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+                        </label>
+                    </div>
+
+
+                </header>
+            </div>
+
         </div>
-    </header>
-    <nav>
-        <div id="categorias" style="position:fixed;">
+
+    </div>
+    <!--CUERPO PRINCIPAL: CONTIENE GRUPO DE PRODUCTOS DE INTERES PARA EL USUARIO Y OTRO/S GRUPO/S DE INTERES-->
+    <main class="main-productos">
+
+        <section id="listaCategorias">
             <ul>
-                <a href="./productos.html" onclick="terror()">
-                    <li class="boton_cat">Terror</li>
+                <a href="./productos.html" onclick="terror()" class="boton_cat">
+                    <li>Terror</li>
                 </a>
-                <a href="./productos.html" onclick="cFiccion()">
-                    <li class="boton_cat">Ciencia Ficción</li>
+                <a href="./productos.html" onclick="cFiccion()" class="boton_cat">
+                    <li>Ciencia ficción</li>
                 </a>
-                <a href="./productos.html" onclick="aventura()">
-                    <li class="boton_cat">Aventura</li>
+                <a href="./productos.html" onclick="aventura()" class="boton_cat">
+                    <li>Aventura</li>
                 </a>
-                <a href="./productos.html" onclick="policial()">
-                    <li class="boton_cat">Policial</li>
+                <a href="./productos.html" onclick="policial()" class="boton_cat">
+                    <li>Policial</li>
                 </a>
-                <a href="./productos.html" onclick="autoayuda()">
-                    <li class="boton_cat">Autoayuda</li>
+                <a href="./productos.html" onclick="autoayuda()" class="boton_cat">
+                    <li>Autoayuda</li>
                 </a>
-                <a href="./productos.html" onclick="otros()">
-                    <li class="boton_cat">Otros</li>
+                <a href="./productos.html" onclick="otros()" class="boton_cat">
+                    <li>Otros</li>
                 </a>
             </ul>
-        </div>
-    </nav>
->>>>>>> ed041af63fef346cd422d4cd445620b88c417221
-    <!--CUERPO PRINCIPAL: CONTIENE GRUPO DE PRODUCTOS DE INTERES PARA EL USUARIO Y OTRO/S GRUPO/S DE INTERES-->
-    <main>
+        </section>
+
+        <hr><br>
 
         <section>
             <div class="prod_title">
@@ -103,19 +141,7 @@
 >>>>>>> 49e70c39b9b0814d5a36d04888e019f7439c4d5f
 
             </div>
-<<<<<<< HEAD
-            <div class="more">
-                <a href="#">
-                    <input type="button" value="Ver más">
-                </a>
-            </div>
-<<<<<<< HEAD
-=======
-            -->
->>>>>>> ed041af63fef346cd422d4cd445620b88c417221
-=======
-                
->>>>>>> 49e70c39b9b0814d5a36d04888e019f7439c4d5f
+
         </section>
     </main>
     <!-- PIE DE PAGINA CON LA INFORMACION DE CONTACTO, INFORMACION DE LA LIBRERIA, ETC-->
@@ -134,7 +160,6 @@
         <p>Codo a Codo - Grupo 8</p>
     </footer>
 
-    <script src="./assets/js/menuCelular.js"></script>
     <script src="./assets/js/productos.js"></script>
 >>>>>>> ed041af63fef346cd422d4cd445620b88c417221
 </body>
