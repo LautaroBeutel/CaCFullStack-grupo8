@@ -10,7 +10,7 @@ let sexoElegido = "";
 let preferencias = [];
 let verificador = 0;
 
-const URL = 'http://127.0.0.1:5000';
+const URL = 'http://127.0.0.1:5000/';
 
 function nombreCompletoCheck(e){
   let check = true;
@@ -85,9 +85,9 @@ function boxCheck(e){
   }
 }
 
-function verificadorFinal(e){
+function cargaFormulario(e){
   if (verificador == 4){
-    alert('llego')
+    alert('Intentando agregar al lector')
     e.preventDefault()
     let formData = new FormData();
     formData.append('nombre', document.querySelector('#nombre').value);
@@ -96,15 +96,26 @@ function verificadorFinal(e){
     formData.append('email', mail.value);
     formData.append('sexo', sexoElegido);
     formData.append('preferencias', preferencias.toString());
-    formData.append('comentario', document.querySelector('#comentario'));
+    formData.append('comentario', document.querySelector('#comentario').value);
 
 
     fetch(URL + 'lectores', {method: 'POST', body: formData})
-    
-    // HASTA ACA LLEGUE - FALTA CODIGO
-
+    .then(function (respuesta){
+      if(respuesta.ok) {return respuesta.json();}
+    })
+    .then(function (datos){
+      alert('Agregado correctamente')
+    //Limpieza del formulario
+      document.querySelector('#nombre').value = "";
+      document.querySelector('#apellido').value= "";
+      fecha.value= "";
+      mail.value= "";
+      document.querySelector('#comentario').value = "";
+    })
+    .catch( function(error){
+      alert(`Error al intentar agregar al lector: ${error}`)
+    })
     }
-
   }
 
 
@@ -114,7 +125,7 @@ let sub = function (e){
   fechaCheck(e);
   mailCheck(e);
   boxCheck(e);
-  verificadorFinal(e)
+  cargaFormulario(e)
 }
 
 form.addEventListener("submit", sub);
