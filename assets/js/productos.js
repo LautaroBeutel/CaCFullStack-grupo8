@@ -60,7 +60,8 @@ async function eleccionArticulo(index){
   .then(function (datos){  
   for(let i = 0; i < datos.result.length; i++){
     if(i == index){
-     sessionStorage.setItem("articuloElegido", `${(datos.result[i].titulo)}`)}
+      sessionStorage.setItem("articuloElegido", `${(datos.result[i].titulo)}`)
+    }
     }
 })
   .catch(error => console.error(error))
