@@ -4,7 +4,7 @@ let fecha = document.querySelector("#fecha");
 let mail = document.querySelector("#mail");
 let checkbox = [document.querySelector("#cat-terror"), document.querySelector("#cat-ficcion"), document.querySelector("#cat-aventura"), document.querySelector("#cat-policial"), document.querySelector("#cat-fantasia"),  document.querySelector("#cat-otros")];
 let sexo = [document.querySelector('#masculino'), document.querySelector('#femenino'), document.querySelector('#sexo-otros')];
-
+let comentario = document.querySelector('#comentario');
 
 let sexoElegido = "";
 let preferencias = [];
@@ -87,33 +87,38 @@ function boxCheck(e){
 
 function cargaFormulario(e){
   if (verificador == 4){
-    alert('Intentando agregar al lector')
     e.preventDefault()
     let formData = new FormData();
-    formData.append('nombre', document.querySelector('#nombre').value);
-    formData.append('apellido', document.querySelector('#apellido').value);
+    formData.append('nombre', document.querySelector('#nombre').value.toUpperCase());
+    formData.append('apellido', document.querySelector('#apellido').value.toUpperCase());
     formData.append('nacimiento', fecha.value);
     formData.append('email', mail.value);
-    formData.append('sexo', sexoElegido);
+    formData.append('sexo', sexoElegido.toUpperCase());
     formData.append('preferencias', preferencias.toString());
-    formData.append('comentario', document.querySelector('#comentario').value);
+    formData.append('comentario', comentario.value);
 
 
-    fetch(URL + 'lectores', {method: 'POST', body: formData})
-    .then(function (respuesta){
-      if(respuesta.ok) {return respuesta.json();}
-    })
+    fetch(URL + 'lectores', {method: 'POST', body: formData, mode: 'no-cors'})
+    .then(data => data.json())
     .then(function (datos){
-      alert('Agregado correctamente')
+      console.log('Agregado correctamente')
     //Limpieza del formulario
       document.querySelector('#nombre').value = "";
       document.querySelector('#apellido').value= "";
       fecha.value= "";
       mail.value= "";
-      document.querySelector('#comentario').value = "";
+      preferencias =[];
+      comentario.value = "";
     })
-    .catch( function(error){
-      alert(`Error al intentar agregar al lector: ${error}`)
+    .catch(function(error){
+      console.log(`Error al intentar agregar al lector: ${error}`)
+      //Limpieza del formulario
+      document.querySelector('#nombre').value = "";
+      document.querySelector('#apellido').value= "";
+      fecha.value= "";
+      mail.value= "";
+      preferencias = [];
+      comentario.value = "";
     })
     }
   }
