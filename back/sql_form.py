@@ -245,4 +245,11 @@ def eliminar_cliente(id):
 
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     app.run(debug=True)
+=======
+    app.run(debug=True)
+
+
+
+>>>>>>> 3208427f128d62823d390cb41910e2882de4aabf
