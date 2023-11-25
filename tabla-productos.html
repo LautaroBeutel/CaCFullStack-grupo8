@@ -82,16 +82,22 @@
 
     <!-- CUERPO -->
 
-    <h1 class="titulo_main">PANEL DE ADMINISTRADOR</h1>
-    <div>
-        <div class="contenedor_admin">
-            <a href="./tabla-producto.html"><input type="button" value="Ver Productos" class="botones_admin" id="admin_prod"></a>
-            <a href="./tablas.html"><input type="button" value="Ver clientes" class="botones_admin" id="admin_ver"></a>
-            <a href="./tablas.html"><input type="button" value="Buscar clientes" class="botones_admin" id="admin_buscar" onclick="pedirId()"></a>
-            <a href="./tablas.html"><input type="button" value="Borrar cliente" class="botones_admin" id="admin_borrar" onclick="pedirId()"></a>
-            <a href="./tablas.html"><input type="button" value="Modificar cliente" class="botones_admin" id="admin_modif" onclick="pedirId()"></a>
-            <a href="./tablas.html"><input type="button" value="Ver compras" class="botones_admin compras" id="admin_compras"></a>
-        </div>
+    <a href="./admin.html"><h3 class="titulo_main">Volver</h3></a>
+    <div class="contenedor">
+        <table class="tabla">
+            <tr class="tabla-productos">
+                <th>ID</th>
+                <th>TITULO</th>
+                <th>PRECIO</th>
+                <th>PORTADA</th>
+                <th>CATEGORIA</th>
+                <th>AUTOR</th>
+                <th>PAGINAS</th>
+                <th>IDIOMA</th>
+                <th>PUBLICACION</th>
+                <th>DESCRIPCION</th>
+            </tr>
+        </table>
     </div>
 
     <footer id="contact" style="margin-top:100px ;">
@@ -107,7 +113,7 @@
     </div>
 
     <script src="./assets/js/productos.js"></script>
-    <script src="./assets/js/admin.js"></script>
+    <script src="./assets/js/productossql.js"></script>
 
 </body>
 

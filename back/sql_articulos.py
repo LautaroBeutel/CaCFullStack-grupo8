@@ -1,4 +1,4 @@
-import mysql.connector
+import mysql.connector 
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
@@ -10,15 +10,15 @@ CORS(app)
 app.run(port = 5000, debug = True)
 
 @app.route('/')
-def saludar():
+def saludar():   
     return '<h1>Prueba exitosa</h1>'
 
-class Articulo():
-
+class Articulo():   
     #Conexion a la base de datos
 
     def __init__(self, host, user, password, database):
-        self.conn = mysql.connector.connect(host = host, user= user, password= password, database= database)
+        self.conn = mysql.connector.connect(host = host, user= user
+        ,password= password, database= database)
         self.cursor = self.conn.cursor(dictionary=True)
 
     #Agregar un articulo a la tabla productos
@@ -78,6 +78,7 @@ class Articulo():
             return False
 
 libreria = Articulo(host='localhost', user='root', password='', database='grupo8')
+
 
 # Agrego libros
 
