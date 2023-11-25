@@ -97,13 +97,15 @@ function cargaFormulario(e){
     formData.append('sexo', sexoElegido);
     formData.append('preferencias', preferencias.toString());
     formData.append('comentario', document.querySelector('#comentario').value);
-
+    console.log("1", formData)
+    
+  
 
     fetch(URL + 'lectores', {method: 'POST', body: formData})
     .then(function (respuesta){
       if(respuesta.ok) {return respuesta.json();}
     })
-    .then(function (datos){
+    .then(function (datos){      
       alert('Agregado correctamente')
     //Limpieza del formulario
       document.querySelector('#nombre').value = "";

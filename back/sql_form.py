@@ -6,16 +6,15 @@ import os
 import time
 
 app = Flask(__name__)
-CORS(app)
-app.run()
+CORS(app= app, origins='http://127.0.0.1:5000')
 
 @app.route('/')
 def saludar():
-    return '<h1>Prueba exitosa</h1>'
+    return '<h1>Prueba exitosa - Grupo 8</h1>'
 
 #Base de datos de Lectores
 
-class Lectores():
+class TapaDura():
     def __init__(self, host, user, password, database):
         self.conn = mysql.connector.connect(host = host, user= user, password= password, database= database)
         self.cursor = self.conn.cursor(dictionary=True)
@@ -24,8 +23,8 @@ class Lectores():
     def crear_tablas(self):
         self.cursor.execute('SHOW TABLES')
         control = self.cursor.fetchall() 
-        self.cursor.execute('CREATE TABLE IF NOT EXISTS lectores (id int(4) AUTO_INCREMENT, nombre varchar(20) NOT NULL, apellido varchar(20) NOT NULL, nacimiento varchar(10) NOT NULL, email varchar(50) NOT NULL, sexo varchar(15) NOT NULL,  preferencias varchar(200) DEFAULT NULL, comentario varchar(140) DEFAULT NULL, PRIMARY KEY (id));')
-        self.cursor.execute('CREATE TABLE IF NOT EXISTS productos ( id int(3) AUTO_INCREMENT, titulo varchar(70) DEFAULT NULL, precio int(8) NOT NULL, portada varchar(100) NOT NULL, categoria varchar(20) NOT NULL, autor varchar(20) NOT NULL, paginas int(4) NOT NULL, idioma varchar(20) NOT NULL, publicacion int(4) NOT NULL, descripcion varchar(2000) NOT NULL, stock int(3) NOT NULL, PRIMARY KEY (id));')
+        self.cursor.execute('CREATE TABLE IF NOT EXISTS lectores (id int(4) AUTO_INCREMENT, nombre varchar(20) NOT NULL, apellido varchar(20) NOT NULL, nacimiento varchar(10) NOT NULL, email varchar(50) NOT NULL, sexo varchar(15) NOT NULL,  preferencias varchar(200) NOT NULL, comentario varchar(140), PRIMARY KEY (id));')
+        self.cursor.execute('CREATE TABLE IF NOT EXISTS productos ( id int(3) AUTO_INCREMENT, titulo varchar(70) DEFAULT NULL, precio float(10) NOT NULL, portada varchar(100) NOT NULL, categoria varchar(20) NOT NULL, autor varchar(20) NOT NULL, paginas int(4) NOT NULL, idioma varchar(20) NOT NULL, publicacion int(4) NOT NULL, descripcion varchar(2000) NOT NULL, stock int(3) NOT NULL, PRIMARY KEY (id));')
         self.cursor.execute('CREATE TABLE IF NOT EXISTS compras ( idArticulo int(4) NOT NULL, idCliente int(4) NOT NULL, cantidad int(2) NOT NULL, FOREIGN KEY (idArticulo) REFERENCES productos(id), FOREIGN KEY (idCliente) REFERENCES lectores(id));')
         self.conn.commit()
         self.cursor.execute('SHOW TABLES')
@@ -39,7 +38,7 @@ class Lectores():
     
     #Agregar un cliente a la tabla lectores
 
-    def agregar_lector(self, nombre, apellido, nacimiento, email, sexo ,preferencias, comentario):
+    def agregar_lector(self, nombre, apellido, nacimiento, email, sexo , preferencias, comentario):
         self.cursor.execute(f'SELECT * FROM lectores WHERE email = "{email}"')
         respuesta = self.cursor.fetchone()
         if respuesta:
@@ -48,6 +47,7 @@ class Lectores():
         else:
             self.cursor.execute(f"INSERT INTO lectores (nombre, apellido, nacimiento, email, sexo, preferencias, comentario) VALUES ('{nombre}', '{apellido}', '{nacimiento}', '{email}', '{sexo}', '{preferencias}', '{comentario}')")
             self.conn.commit()
+            print(f'{nombre, apellido} se ha agregado correctamente.')
             return True   
     
     #Borrar cliente de la tabla lectores
@@ -69,10 +69,7 @@ class Lectores():
         self.cursor.execute(f'SELECT * FROM lectores WHERE id = {id}')
         respuesta = self.cursor.fetchone()
         if respuesta:
-            print('-' * 10)
-            print(respuesta)
-            print('-' * 10)
-            return True
+            return respuesta
         else:
             print('-' * 10)
             print('Lector no encontrado')
@@ -95,26 +92,25 @@ class Lectores():
     # Ver todos los clientes
 
     def ver_lectores(self):
-        self.cursor.execute('SELECT * FROM lectores WHERE = 1')
+        self.cursor.execute('SELECT * FROM lectores')
         respuesta = self.cursor.fetchall()
         if respuesta:
-            print(respuesta)
-            return True
+            print(True)
+            return respuesta
         else:
             print('Error al acceder a los datos de los lectores')
             return False
 
-
-#Base de datos de Articulos
-
-class Articulo():
+    #Base de datos Articulos
 
     #Conexion a la base de datos
 
-    def __init__(self, host, user, password, database):
-        self.conn = mysql.connector.connect(host = host, user= user, password= password, database= database)
-        self.cursor = self.conn.cursor(dictionary=True)
-
+    #Ver todos los articulos
+    def ver_productos(self):
+        self.cursor.execute('SELECT * FROM productos')
+        respuesta = self.cursor.fetchall()
+        return respuesta
+    
     #Agregar un articulo a la tabla productos
 
     def agregar_articulo(self, titulo, precio, portada, categoria, autor, paginas, idioma, publicacion, descripcion, stock):
@@ -171,9 +167,10 @@ class Articulo():
             print(f'No se modificó el artículo porque no se encontró ningún producto con el id {id}')
             return False
 
-libreria = Articulo(host='localhost', user='root', password='', database='grupo8')
 
-clientes = Lectores(host='localhost', user='root', password='', database='grupo8')
+grupo8cac = TapaDura(host='localhost', user='root', password='', database='grupo8')
+
+#Agrega lector desde formulario
 
 @app.route("/lectores", methods=["POST"])
 def agregar_lector_formulario():
@@ -185,10 +182,35 @@ def agregar_lector_formulario():
     preferencias = request.form['preferencias']
     comentario = request.form['comentario']
 
-    Lectores.agregar_lector(nombre, apellido, nacimiento, email, sexo, preferencias, comentario) 
+    grupo8cac.agregar_lector(nombre, apellido, nacimiento, email, sexo, preferencias, comentario)
+
+#Muestra todos los productos
+
+@app.route('/productos', methods=['GET'])
+def listar_productos():
+    productos  = grupo8cac.ver_productos()
+    return jsonify(productos)
+
+# Muestra todos los clientes
+@app.route('/lectores', methods=['GET'])
+def listar_clientes():
+    lectores  = grupo8cac.ver_lectores()
+    return jsonify(lectores)
+
+#Buscar clientes
+@app.route('/lectores/<int:id>', methods=['GET'])
+def buscar_cliente(id):
+    lector = grupo8cac.buscar_lector(id)
+    return jsonify(lector)
+
+#Borrar cliente
+@app.route('/lectores/<int:id>', methods=['DELETE'])
+def eliminar_cliente(id):
+    if grupo8cac.borrar_lector(id):
+        return print(f'Cliente eliminado. ID: {id}')
 
 #Crear tablas
-#clientes.crear_tablas()
+# clientes.crear_tablas()
 
 # Agrego libros
 # libreria.agregar_articulo('FRANKENSTEIN', 10590, 'https://www.tematika.com/media/catalog/Ilhsa/Imagenes/649567.jpg', 'terror', 'Shelley, Mary', 100, 'español', 2018, 'Publicado el 1 de enero de 1818 y enmarcado en la tradición de la novela gótica, el texto habla de temas tales como la moral científica, la creación y destrucción de vida y el atrevimiento de la humanidad en su relación con Dios. De ahí, el subtítulo de la obra: el protagonista intenta rivalizar en poder con Dios, como una suerte de Prometeo moderno que arrebata el fuego sagrado de la vida a la divinidad.', 2)
@@ -222,5 +244,5 @@ def agregar_lector_formulario():
 # libreria.agregar_articulo('EL PODER DEL AHORA', 7199, 'https://www.tematika.com/media/catalog/Ilhsa/Imagenes/595822.jpg', 'autoayuda', 'Tolle, Eckhart', 266, 'español', 2015, 'El poder del ahora es un libro único. Tiene la capacidad de crear una experiencia en los lectores y de cambiar su vida. Hoy ya es considerado una obra maestra. Su autor; Eckhart Tolle; se convirtió en un maestro universal; un gran espíritu con un mensaje revelador: se puede alcanzar un estado de iluminación aquí y ahora. Es posible vivir libre del sufrimiento; la ansiedad y la neurosis. Para lograrlo sólo tenemos que comprender nuestro papel de creadores del propio dolor. Es la mente la que nos causa los problemas con su corriente de pensamientos constante sobre el pasado; preocupándose por el futuro. Cometemos el error de identificarnos con ella; de pensar que eso es lo que somos; cuando de hecho somos seres mucho más grandes. Escrito en un formato de preguntas y respuestas que lo hace muy accesible; este libro es una invitación a la reflexión; que abrirá las puertas a la plenitud espiritual y permitirá ver la vida con nuevos ojos y empezar a disfrutar del verdadero poder del ahora.', 0)
 
 
-
-
+if __name__ == "__main__":
+    app.run(debug=True)
