@@ -5,8 +5,10 @@ from werkzeug.utils import secure_filename
 import os
 import time
 
+URL = 'http://127.0.0.1:5000/'
+
 app = Flask(__name__)
-CORS(app= app, origins='http://127.0.0.1:5000')
+CORS(app= app, origins= URL)
 
 @app.route('/')
 def saludar():
@@ -208,6 +210,13 @@ def buscar_cliente(id):
 def eliminar_cliente(id):
     if grupo8cac.borrar_lector(id):
         return print(f'Cliente eliminado. ID: {id}')
+
+@app.route('/lectores/<int:id>', methods= ['PUT'])
+def modificar_cliente(id):
+    columna = input('Escribe que es lo que deseas modificar')
+    modificacion = input('Escribe el nuevo valor')
+    if grupo8cac.modificar_lector(id, columna, modificacion):
+        return print(f'En el cliente con ID {id} se ha modificado el dato de {columna} por {modificacion}')
 
 #Crear tablas
 # clientes.crear_tablas()
