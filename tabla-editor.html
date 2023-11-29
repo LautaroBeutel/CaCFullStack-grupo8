@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos - Admin</title>
+    <title>Editor - Admin</title>
     <link rel="stylesheet" href="./assets/style/Style-Grid.css">
     <link rel="stylesheet" href="./assets/style/encabezadomio.css">
     <link rel="stylesheet" href="./assets/style/general.css">
@@ -83,19 +83,37 @@
     <!-- CUERPO -->
 
     <a href="./admin.html"><h3 class="titulo_main">Volver</h3></a>
+
+    <div class="botones">
+        <input type="button" value="Buscar cliente" class="botones_admin" id="admin_buscar" onclick="busqueda()">
+        <input type="button" value="Modificar cliente" class="botones_admin" id="admin_modif" onclick="modif()">
+        <input type="button" value="Eliminar cliente" class="botones_admin" id="admin_eliminar" onclick="eliminar()">
+    </div>
+    <div class="seleccion">
+        <div class="buscar" style='display:none'>
+            <label for="id-busqueda">Introduzca un número ID</label><input type="number" class="editor" name="id-busqueda" id="id-busqueda">
+            <input type="button" value="Buscar" class="botones_admin" id="eleccion_buscar" onclick='buscarCliente(idBusqueda.value)'>
+        </div>
+        <div class="modif" style='display:none'>
+            <label for="id-modif">Introduzca un número ID</label><input type="number" class="editor" name="id-modif" id="id-modif"><input type="button" value="Modificar" class="botones_admin" id="eleccion_modificar" onclick='modificarCliente(idModif.value)'>
+        </div>
+        <div class="eliminar" style='display:none'>
+            <label for="id-eliminar">Introduzca un número ID</label><input type="number" class="editor" name="id-eliminar" id="id-eliminar">
+            <input type="button" value="Eliminar" class="botones_admin" id="eleccion_eliminar">
+        </div>
+    </div>
+
     <div class="contenedor">
         <table class="tabla">
             <tr class="tabla-productos">
                 <th>ID</th>
-                <th>TITULO</th>
-                <th>PRECIO</th>
-                <th>PORTADA</th>
-                <th>CATEGORIA</th>
-                <th>AUTOR</th>
-                <th>PAGINAS</th>
-                <th>IDIOMA</th>
-                <th>PUBLICACION</th>
-                <th>DESCRIPCION</th>
+                <th>NOMBRE</th>
+                <th>APELLIDO</th>
+                <th>NACIMIENTO</th>
+                <th>CORREO ELECTRONICO</th>
+                <th>SEXO</th>
+                <th>PREFERENCIAS</th>
+                <th>COMENTARIO</th>
             </tr>
         </table>
     </div>
@@ -113,7 +131,7 @@
     </div>
 
     <script src="./assets/js/productos.js"></script>
-    <script src="./assets/js/productossql.js"></script>
+    <script src="./assets/js/modifsql.js"></script>
 
 </body>
 

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "liveServer.settings.port": 5000,
     "python.defaultInterpreterPath": "~/.pyenv/versions/3.10.2/envs/<my-virtual-env-name>/bin/python",
     "python.linting.ignorePatterns": [
@@ -6,3 +7,8 @@
     ],
 }
 
+=======
+    "liveServer.settings.port": 5501,
+    "editor.inlineSuggest.showToolbar": "onHover"
+}
+>>>>>>> origin/development

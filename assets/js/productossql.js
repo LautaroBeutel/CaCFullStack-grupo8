@@ -1,7 +1,8 @@
 //alert(sessionStorage.getItem('idSeleccionado'));
-let tabla = document.querySelector('.tabla')
+let tabla = document.querySelector('.tabla');
+const URL = 'http://127.0.0.1:5000/';
 
-fetch('http://127.0.0.1:5000/productos', {method: 'GET', mode: 'no-cors'})
+fetch(URL + 'productos', {method: 'GET', mode: 'no-cors'})
 .then(function (data){
     if (data.ok){return data.json();}
 })
@@ -13,3 +14,4 @@ fetch('http://127.0.0.1:5000/productos', {method: 'GET', mode: 'no-cors'})
     })
 .catch(function (error){
     return console.log(error);})
+

@@ -7,24 +7,32 @@ let paginas = [];
 let ofertas = [];
 let mayoresPaginas = [];
 
-fetch("https://mocki.io/v1/61e0a2c5-ecd2-4916-9b5c-b49a47a4069c")
+const requestOptions = {
+  method: 'GET',
+  headers: {
+      'Content-Type': 'application/json'
+  },
+};
+
+fetch("http://127.0.0.1:5000/productos", requestOptions)
   .then(data => data.json())
   .then(function (datos){
-    for(let i = 0; i < datos.result.length; i++){
-        precios.push(datos.result[i].precio);
-        paginas.push(datos.result[i].paginas)
+    console.log(datos)
+    for(let i = 0; i < datos.length; i++){
+        precios.push(datos[i].precio);
+        paginas.push(datos[i].paginas)
       }      
     precios.sort((a,b) => a - b);
     paginas.sort((a,b) => b - a);   
 
 
     for(let i = 0; i < 8; i++){
-        for(let z = 0; z < datos.result.length; z++){
-          if(precios[i] == datos.result[z].precio){
-            ofertas.push(datos.result[z]);
+        for(let z = 0; z < datos.length; z++){
+          if(precios[i] == datos[z].precio){
+            ofertas.push(datos[z]);
           }    
-          if(paginas[i] == datos.result[z].paginas){
-            mayoresPaginas.push(datos.result[z]);
+          if(paginas[i] == datos[z].paginas){
+            mayoresPaginas.push(datos[z]);
           }
           }
         }

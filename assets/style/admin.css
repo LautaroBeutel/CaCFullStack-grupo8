@@ -11,10 +11,6 @@
     align-items: center;
 }
 
-.compras {
-    background-color: rgba(57, 151, 14, 0.5);
-}
-
 .botones_admin {
     font-size: 1.5rem;
     padding: 10px;
@@ -32,6 +28,16 @@
     border-color: #fff;
     color: var(--rosa);
     box-shadow: 0px 0px 10px 5px var(--rosa);
+}
+
+.tabla{
+    margin: 0 auto;
+    border: 1px solid black;
+    width: 90%;
+}
+
+.tabla th{
+    padding: 0.2rem;
 }
 
 
