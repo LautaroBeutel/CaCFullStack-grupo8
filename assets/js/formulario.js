@@ -88,17 +88,20 @@ function boxCheck(e){
 function cargaFormulario(e){
   if (verificador == 4){
     e.preventDefault()
-    let formData = new FormData();
-    formData.append('nombre', document.querySelector('#nombre').value.toUpperCase());
-    formData.append('apellido', document.querySelector('#apellido').value.toUpperCase());
-    formData.append('nacimiento', fecha.value);
-    formData.append('email', mail.value);
-    formData.append('sexo', sexoElegido.toUpperCase());
-    formData.append('preferencias', preferencias.toString());
-    formData.append('comentario', comentario.value);
 
+    const datos = {
+      nombre: document.querySelector('#nombre').value.toUpperCase(),
+      apellido: document.querySelector('#apellido').value.toUpperCase(),
+      nacimiento: fecha.value,
+      email: mail.value,
+      sexo: sexoElegido.toUpperCase(),
+      preferencias: preferencias.toString(),
+      comentario: comentario.value,
+    }
 
-    fetch(URL + 'lectores', {method: 'POST', body: formData, mode: 'no-cors'})
+    console.log(datos)
+
+    fetch(URL + 'lectores', {method: 'POST', body: JSON.stringify(datos), headers: {'Content-Type': 'application/json'}})
     .then(data => data.json())
     .then(function (datos){
       console.log('Agregado correctamente')
@@ -109,6 +112,8 @@ function cargaFormulario(e){
       mail.value= "";
       preferencias =[];
       comentario.value = "";
+
+      
     })
     .catch(function(error){
       console.log(`Error al intentar agregar al lector: ${error}`)
