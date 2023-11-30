@@ -98,7 +98,7 @@ function cargaFormulario(e){
     formData.append('comentario', comentario.value);
 
 
-    fetch(URL + 'lectores', {method: 'POST', body: formData, mode: 'no-cors'})
+    fetch(URL + 'lectores', {method: 'POST', body: JSON.stringify(datos), headers: {'Content-Type': 'application/json'}})
     .then(data => data.json())
     .then(function (datos){
       console.log('Agregado correctamente')

@@ -33,11 +33,22 @@
 .tabla{
     margin: 0 auto;
     border: 1px solid black;
-    width: 90%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    text-align: center;
 }
 
 .tabla th{
-    padding: 0.2rem;
+    padding: 0.4rem;
+    border: 1px solid black;
+}
+
+.tabla td{
+    border: 1px solid black;
+}
+
+.tabla_descripcion{
+    overflow: hidden;
 }
 
 

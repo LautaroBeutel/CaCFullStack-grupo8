@@ -41,19 +41,20 @@ function eliminar(){
 };
 
 function buscarCliente(id){
-    fetch(URL + 'lectores/' + id, {method: 'GET', mode: 'no-cors'})
+    fetch(URL + 'lectores/' + id, {method: 'GET', headers: {'Content-Type': 'application/json'}})
     .then(function (data){
-        if (data.ok){return data.json();}
+        if (data.ok){return data.json()}
     })
     .then(function (clientes){
             let fila = document.createElement('tr');
             fila.innerHTML = `<td>${clientes.id}</td><td>${clientes.nombre}</td><td>${clientes.apellido}</td><td>${clientes.nacimiento}</td><td>${clientes.email}</td><td>${clientes.sexo}</td><td>${clientes.preferencias}</td><td>${clientes.comentario}</td>`;
-           tabla.appendChild(fila)})
-           .catch(function (error){
+           tabla.appendChild(fila);
+        })
+    .catch(function (error){
         return console.log(error);})
 }
 
 function modificarCliente(id){
-    fetch(URL + 'lectores/' + id, {method: 'PUT', mode: 'no-cors'})
+    fetch(URL + 'lectores/' + id, {method: 'PUT', headers: {'Content-Type': 'application/json'}})
     /* FUNCION EN CONSTRUCCION*/
 }
