@@ -27,7 +27,7 @@
 }
 .contenedor_carrito{
 
-    border: 1px solid rgb(199, 199, 199);
+    /* border: 1px solid rgb(199, 199, 199); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,6 +36,7 @@
     width: 90%;
     margin: 2rem auto;
     border-radius: 6px;
+    background-color: #cfa9908c;
 }
 .contenedor_carrito img{
     width: 80%;
@@ -43,6 +44,15 @@
 .total_cantidad_libro_carrito{
     color: red;
     font-weight: bold;
+}
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btns i{
+    color: black;
+    padding: 0;
 }
 .btn_cantidad_carrito{
     border: 1px solid rgb(216, 216, 216);
@@ -62,7 +72,7 @@
     align-items: center;
 }
 .contenedor_cupon_carrito, .total_carrito{
-    border: 1px solid rgb(199, 199, 199);
+    /* border: 1px solid rgb(199, 199, 199); */
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -71,6 +81,7 @@
     margin: 2rem auto;
     padding: 2rem 2rem;
     border-radius: 6px;
+    background-color: #cfa9908c;
 }
 .contenedor_cupon_carrito input{
     height: 3rem;
@@ -83,7 +94,7 @@
     width: 9rem;
     height: 3rem;
     border: none;
-    background-color: rgb(235 45 45);
+    background-color: #de695b;
     font-weight: bold;
     color: white;
     border-radius: 6px;

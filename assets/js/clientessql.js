@@ -9,10 +9,12 @@ const requestOptions = {
   };
 
 fetch(URL + 'lectores', requestOptions)
+
 .then(function (data){
     if (data.ok){return data.json()}
 })
 .then(function (datos){
+    console.log(datos)
     for(let clientes of datos){
         let fila = document.createElement('tr');
         fila.innerHTML = `<td>${clientes.id}</td><td>${clientes.nombre}</td><td>${clientes.apellido}</td><td>${clientes.nacimiento}</td><td>${clientes.email}</td><td>${clientes.sexo}</td><td>${clientes.preferencias}</td><td>${clientes.comentario}</td>`;

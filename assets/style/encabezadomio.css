@@ -24,14 +24,7 @@
     display: none;
   }
   
-  /* body {
-    background: #dad299;
-    background: linear-gradient(
-      to right,
-      #b0dab9,
-      #dad299
-    );
-  } */
+  
   
   .logo-img-desktop{
     display: none;
@@ -96,11 +89,6 @@ color: var(--rosa);
 padding-left: 67px;
 }
 
-/* .Logo{
-  width: 5rem;
-  position: relative;
-} */
-
 .logo-img img{
   width: 3rem;
 }
@@ -116,6 +104,7 @@ padding-left: 67px;
   border-radius: 10px;
   background-color: #b31c40a8;
   color: white;
+  cursor: pointer;
 }
 
 .contenedor-categorias{
@@ -282,14 +271,6 @@ display: none;
 
 /* MEDIA QUERY */
 
-/* @media (max-width: 1024px) {
-.container {
-  display: grid;
-  grid-template: auto auto / 20% auto 20%;
-  grid-template-areas: "encabezado encabezado"
-                        "menu-bar menu-bar menu-bar";
-}
-} */
 
 @media (max-width: 992px) { 
 .navbar ul li a {
