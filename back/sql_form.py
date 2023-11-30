@@ -8,7 +8,7 @@ import time
 # URL = 'http://127.0.0.1:5000/'
 
 app = Flask(__name__)
-CORS(app= app, origins='*')
+CORS(app= app, origins= '*')
 
 @app.route('/')
 def saludar():
@@ -23,7 +23,9 @@ class TapaDura():
 
     #Crear tablas
     def crear_tablas(self):
-        self.cursor.execute('SHOW TABLES')
+        self.cursor.execute('CREATE DATABASE IF NOT EXISTS grupo8;')
+        self.cursor.execute('USE grupo8;')
+        self.cursor.execute('SHOW TABLES;')
         control = self.cursor.fetchall() 
         self.cursor.execute('CREATE TABLE IF NOT EXISTS lectores (id int(4) AUTO_INCREMENT, nombre varchar(20) NOT NULL, apellido varchar(20) NOT NULL, nacimiento varchar(10) NOT NULL, email varchar(50) NOT NULL, sexo varchar(15) NOT NULL,  preferencias varchar(200) NOT NULL, comentario varchar(140), PRIMARY KEY (id));')
         self.cursor.execute('CREATE TABLE IF NOT EXISTS productos ( id int(3) AUTO_INCREMENT, titulo varchar(70) DEFAULT NULL, precio float(10) NOT NULL, portada varchar(100) NOT NULL, categoria varchar(20) NOT NULL, autor varchar(20) NOT NULL, paginas int(4) NOT NULL, idioma varchar(20) NOT NULL, publicacion int(4) NOT NULL, descripcion varchar(2000) NOT NULL, stock int(3) NOT NULL, PRIMARY KEY (id));')
@@ -193,8 +195,7 @@ def agregar_lector_formulario():
         return jsonify({"mensaje": "Lector agregado correctamente"}), 201
     else:
         return jsonify({"mensaje": f"{email} ya se encuentra registrado"}), 201
-    
-
+      
 #Muestra todos los productos
 
 @app.route('/productos', methods=['GET'])
