@@ -214,14 +214,23 @@ def buscar_cliente(id):
     return jsonify(lector)
 
 #Borrar cliente
-@app.route('/lectores', methods=['DELETE'])
+@app.route('/lectores/<int:id>', methods=['DELETE'])
 def eliminar_cliente(id):
     if grupo8cac.borrar_lector(id):
         return print(f'Cliente eliminado. ID: {id}')
 
+#Borrar producto
+@app.route('/productos/<int:id>', methods=['DELETE'])
+def eliminar_producto(id):
+    if grupo8cac.borrar_articulo(id):
+        return print(f'Cliente eliminado. ID: {id}')
+
 #Modificar cliente
 @app.route('/lectores', methods= ['PUT'])
-def modificar_cliente(id, columna, modificacion):
+def modificar_cliente():
+    id = request.args.get('id')
+    columna = request.args.get('columna')
+    modificacion = request.args.get('modificacion')
     if grupo8cac.modificar_lector(id, columna, modificacion):
         return print(f'En el cliente con ID {id} se ha modificado el dato de {columna} por {modificacion}')
 
