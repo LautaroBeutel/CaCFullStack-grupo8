@@ -1,6 +1,5 @@
-//alert(sessionStorage.getItem('idSeleccionado'));
-let tabla = document.querySelector('.tabla');
-const URL = 'http://127.0.0.1:5000/';
+let tabla = document.querySelector('.tabla')
+const URL = 'http://127.0.0.1:5000/'
 const requestOptions = {
     method: 'GET',
     headers: {
@@ -21,8 +20,8 @@ fetch(URL + 'productos', requestOptions)
 .catch(function (error){
     return console.log(error);})
 
-    function eliminar_productos(id){
-        if(confirm(`Confirme si desea elimiar al producto con ID ${id}`)){
-            fetch(URL + 'productos/' + id, {method: 'DELETE'})
-        }
+function eliminar_productos(id){
+    if(confirm(`Confirme si desea elimiar al producto con ID ${id}`)){
+    fetch(URL + 'productos/' + id, {method: 'DELETE'})
     }
+}

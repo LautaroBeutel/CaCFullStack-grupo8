@@ -82,11 +82,11 @@ class TapaDura():
 
     # Modificar un cliente de la tabla lectores
 
-    def modificar_lector(self, id, columna, modificacion):
+    def modificar_lector(self, id, categoria, cambio):
         self.cursor.execute(f'SELECT * FROM lectores WHERE id = {id}')
         respuesta = self.cursor.fetchone()
         if respuesta:
-            self.cursor.execute(f'UPDATE lesctores SET {columna} = "{modificacion}" WHERE id = {id}')
+            self.cursor.execute(f'UPDATE lectores SET {categoria} = "{cambio}" WHERE id = {id}')
             self.conn.commit()
             return self.cursor.rowcount > 0
         else:
@@ -160,11 +160,11 @@ class TapaDura():
 
     # Modificar un articulo de la tabla productos
 
-    def modificar_articulo(self, id, columna, modificacion):
+    def modificar_articulo(self, id, categoria, cambio):
         self.cursor.execute(f'SELECT * FROM productos WHERE id = {id}')
         respuesta = self.cursor.fetchone()
         if respuesta:
-            self.cursor.execute(f'UPDATE productos SET {columna} = "{modificacion}" WHERE id = {id}')
+            self.cursor.execute(f'UPDATE productos SET {categoria} = "{cambio}" WHERE id = {id}')
             self.conn.commit()
             return self.cursor.rowcount > 0
         else:
@@ -174,6 +174,20 @@ class TapaDura():
 
 grupo8cac = TapaDura(host='localhost', user='root', password='', database='grupo8', port='3306')
 
+#Muestra todos los productos
+
+@app.route('/productos', methods=['GET'])
+def listar_productos():
+    productos  = grupo8cac.ver_productos()
+    return jsonify(productos)
+
+# Muestra todos los clientes
+@app.route('/lectores', methods=['GET'])
+def listar_clientes():
+    lectores  = grupo8cac.ver_lectores()
+    return jsonify(lectores)
+
+#Agregar clientes
 
 @app.route("/lectores", methods=["POST"])
 def agregar_lector_formulario():
@@ -188,24 +202,35 @@ def agregar_lector_formulario():
     comentario = data.get('comentario')
 
     nuevo_lector = grupo8cac.agregar_lector(nombre, apellido, nacimiento, email, sexo, preferencias, comentario)
-
+    
     if nuevo_lector:
         return jsonify({"mensaje": "Lector agregado correctamente"}), 201
     else:
-        return jsonify({"mensaje": f"{email} ya se encuentra registrado"}), 201
+        return jsonify({"mensaje": f"{nombre} {apellido} ya se encontraba registrado"}), 201
       
-#Muestra todos los productos
+#Agregar productos
 
-@app.route('/productos', methods=['GET'])
-def listar_productos():
-    productos  = grupo8cac.ver_productos()
-    return jsonify(productos)
+@app.route("/productos", methods=["POST"])
+def agregar_productos_formulario():
+    data = request.get_json()
 
-# Muestra todos los clientes
-@app.route('/lectores', methods=['GET'])
-def listar_clientes():
-    lectores  = grupo8cac.ver_lectores()
-    return jsonify(lectores)
+    titulo = data.get('titulo')
+    precio= data.get('precio')
+    portada = data.get('portada')
+    categoria = data.get('categoria')
+    autor = data.get('autor')
+    paginas = data.get('paginas')
+    idioma = data.get('idioma')
+    publicacion = data.get('publicacion')
+    descripcion = data.get('descripcion')
+    stock = data.get('stock')
+
+    nuevo_articulo = grupo8cac.agregar_articulo(titulo, precio, portada, categoria, autor, paginas, idioma, publicacion, descripcion, stock)
+
+    if nuevo_articulo:
+        return jsonify({"mensaje": "Articulo agregado correctamente"}), 201
+    else:
+        return jsonify({"mensaje": f"{titulo} ya se encuentra registrado"}), 201
 
 #Buscar clientes
 @app.route('/lectores/<int:id>', methods=['GET'])
@@ -228,11 +253,22 @@ def eliminar_producto(id):
 #Modificar cliente
 @app.route('/lectores', methods= ['PUT'])
 def modificar_cliente():
-    id = request.args.get('id')
-    columna = request.args.get('columna')
-    modificacion = request.args.get('modificacion')
-    if grupo8cac.modificar_lector(id, columna, modificacion):
-        return print(f'En el cliente con ID {id} se ha modificado el dato de {columna} por {modificacion}')
+    data = request.get_json()
+    id = data.get('id')
+    categoria = data.get('categoria')
+    cambio = data.get('cambio')
+    if grupo8cac.modificar_lector(id, categoria, cambio):
+        return print(f'En el cliente con ID {id} se ha modificado el dato de {categoria} por {cambio}')
+
+#Modificar producto
+@app.route('/productos', methods= ['PUT'])
+def modificar_producto():
+    data = request.get_json()
+    id = data.get('id')
+    categoria = data.get('categoria')
+    cambio = data.get('cambio')
+    if grupo8cac.modificar_articulo(id, categoria, cambio):
+        return print(f'En el producto con ID {id} se ha modificado el dato de {categoria} por {cambio}')
 
 #Crear tablas
 #grupo8cac.crear_tablas()

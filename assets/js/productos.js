@@ -3,6 +3,14 @@ let productos = document.querySelector("#articles");
 let more = document.querySelector(".more");
 let botonCategoria = document.querySelectorAll(".boton_cat");
 
+const URL_productos = 'http://127.0.0.1:5000/';
+const requestOptions_productos = {
+  method: 'GET',
+  headers: {
+      'Content-Type': 'application/json'
+  },
+};
+
 eleccion();
 
 function terror(){
@@ -43,26 +51,17 @@ async function eleccion(){
     let eleccion_usuario = sessionStorage.getItem("eleccion_user");
 tituloCategoria.textContent = sessionStorage.getItem("eleccion_cat")
 
-fetch("https://mocki.io/v1/61e0a2c5-ecd2-4916-9b5c-b49a47a4069c")
+fetch(URL_productos + "productos", requestOptions_productos)
   .then(data => data.json())
   .then(function (datos){
-  for(let i = 0; i < datos.result.length; i++){
-    if(datos.result[i].categoria == eleccion_usuario){
-     productos.insertAdjacentHTML("beforeend",`<a href="./articulo.html" class="articulo" onclick="eleccionArticulo(${i})"><article><img src="${datos.result[i].portada}" alt="foto_producto"><h3 class="prod_name">${datos.result[i].titulo}</h3><p class="prod_price">${datos.result[i].precio}</p></article></a>`);}
+  for(let i = 0; i < datos.length; i++){
+    if(datos[i].categoria == eleccion_usuario){
+     productos.insertAdjacentHTML("beforeend",`<a href="./articulo.html" class="articulo" onclick="eleccionIndex('${datos[i].titulo}')"><article><img src="${datos[i].portada}" alt="foto_producto"><h3 class="prod_name">${datos[i].titulo}</h3><p class="prod_price">${datos[i].precio}</p></article></a>`);}
     }
 })
   .catch(error => console.error(error))
 }
 
-async function eleccionArticulo(index){
- fetch("https://mocki.io/v1/61e0a2c5-ecd2-4916-9b5c-b49a47a4069c")
-  .then(data => data.json())
-  .then(function (datos){  
-  for(let i = 0; i < datos.result.length; i++){
-    if(i == index){
-      sessionStorage.setItem("articuloElegido", `${(datos.result[i].titulo)}`)
-    }
-    }
-})
-  .catch(error => console.error(error))
+function eleccionIndex(text){
+  sessionStorage.setItem("articuloElegido", text)
 }
