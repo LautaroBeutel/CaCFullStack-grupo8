@@ -172,7 +172,7 @@ class TapaDura():
             return False
 
 
-grupo8cac = TapaDura(host='localhost', user='root', password='root', database='grupo8', port='3305')
+grupo8cac = TapaDura(host='localhost', user='root', password='', database='grupo8', port='3306')
 # grupo8cac.crear_tablas()
 # grupo8cac.agregar_lector()
 #Agrega lector desde formulario
@@ -216,15 +216,14 @@ def buscar_cliente(id):
     return jsonify(lector)
 
 #Borrar cliente
-@app.route('/lectores/<int:id>', methods=['DELETE'])
+@app.route('/lectores', methods=['DELETE'])
 def eliminar_cliente(id):
     if grupo8cac.borrar_lector(id):
         return print(f'Cliente eliminado. ID: {id}')
 
-@app.route('/lectores/<int:id>', methods= ['PUT'])
-def modificar_cliente(id):
-    columna = input('Escribe que es lo que deseas modificar')
-    modificacion = input('Escribe el nuevo valor')
+#Modificar cliente
+@app.route('/lectores', methods= ['PUT'])
+def modificar_cliente(id, columna, modificacion):
     if grupo8cac.modificar_lector(id, columna, modificacion):
         return print(f'En el cliente con ID {id} se ha modificado el dato de {columna} por {modificacion}')
 

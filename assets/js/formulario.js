@@ -117,13 +117,6 @@ function cargaFormulario(e){
     })
     .catch(function(error){
       console.log(`Error al intentar agregar al lector: ${error}`)
-      //Limpieza del formulario
-      document.querySelector('#nombre').value = "";
-      document.querySelector('#apellido').value= "";
-      fecha.value= "";
-      mail.value= "";
-      preferencias = [];
-      comentario.value = "";
     })
     }
   }

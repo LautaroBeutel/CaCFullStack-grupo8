@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+.titulo_main:hover{
+    color: red;
+}
+
 .contenedor_admin {
     display: flex;
     flex-direction: column;
