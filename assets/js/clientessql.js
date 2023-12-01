@@ -73,6 +73,6 @@ function cancelarEdicion() {
 
 function eliminar_clientes(id){
     if(confirm(`Confirme si desea elimiar al contacto con ID ${id}`)){
-        fetch(URL + 'lectores', {method: 'DELETE'})
+        fetch(URL + 'lectores/' + id, {method: 'DELETE'})
     }
 }
