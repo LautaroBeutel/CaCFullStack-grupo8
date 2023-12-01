@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/style/Style-Grid.css">
     <link rel="stylesheet" href="./assets/style/encabezadomio.css">
     <link rel="stylesheet" href="./assets/style/general.css">
+    <link rel="stylesheet" href="./assets/style/formulario.css">
     <link rel="shortcut icon" href="img/libro-icono-fav-2.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/style/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,6 +84,7 @@
     <!-- CUERPO -->
 
     <a href="./admin.html"><h3 class="titulo_main">Volver</h3></a>
+
     <div class="contenedor">
         <table class="tabla">
             <tr class="tabla-productos">
@@ -97,6 +99,53 @@
                 <th>EDITAR</th>
             </tr>
         </table>
+    </div>
+
+    <div id="formularioEdicion" class="formularioEdicion"  style="display: none;">
+        <div class="edicionContenedor">
+            <div class="label">
+                <label for="nombreEditar">NOMBRE</label>
+                <input type="text" id="nombreEditar">
+            </div>
+            
+            <div class="label">
+                <label for="apellidoEditar">APELLIDO</label>
+                <input type="text" id="apellidoEditar">
+            </div>
+    
+            <div class="label">
+                <label for="nacimientoEditar">NACIMIENTO</label>
+                <input type="date" id="nacimientoEditar">
+            </div class="label">
+    
+            <div class="label">
+                <label for="emailEditar">EMAIL</label>
+                <input type="email" id="emailEditar">
+            </div>
+    
+            <div class="label">
+                <label for="sexoEditar">SEXO</label>
+                <select id="sexoEditar" name="sexo">
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+    
+            <div class="label">
+                <label for="preferenciasEditar">PREFERENCIAS</label>
+                <input type="text" id="preferenciasEditar">
+            </div>
+    
+            <div class="label">
+                <label for="comentarioEditar">COMENTARIO</label>
+                <input type="text" id="comentarioEditar">
+            </div>
+            
+            <div>
+                <button class="btn-buscar btn-editor" onclick="guardarEdicion()">Guardar cambios</button>
+                <button class="btn-buscar btn-editor" onclick="cancelarEdicion()">Cancelar</button>
+            </div>
+        </div>
     </div>
 
     <footer id="contact" style="margin-top:100px ;">

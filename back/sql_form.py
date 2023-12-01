@@ -172,7 +172,7 @@ class TapaDura():
             return False
 
 
-grupo8cac = TapaDura(host='localhost', user='root', password='', database='grupo8', port='3306')
+grupo8cac = TapaDura(host='localhost', user='root', password='root', database='grupo8', port='3305')
 
 
 @app.route("/lectores", methods=["POST"])
