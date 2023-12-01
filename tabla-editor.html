@@ -35,9 +35,9 @@
 
                         <li><a class="active" href="./index.html">Inicio</a></li>
                         <li><a href="./productos.html">Categorias</a></li>
-                        <li><a href="#ofertasImperdibles">Ofertas</a></li>
+                        <li><a href="./index.html#ofertasImperdibles">Ofertas</a></li>
                         <li><a href="#contact">Contacto</a></li>
-                        <li><a href="AboutUs.html">Sobre Nosotros</a></li>
+                        <li><a href="./AboutUs.html">Sobre Nosotros</a></li>
 
                     </ul>
                     <!-- <span><a href="carrito.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span> -->
@@ -95,11 +95,83 @@
             <input type="button" value="Buscar" class="botones_admin" id="eleccion_buscar" onclick='buscarCliente(idBusqueda.value)'>
         </div>
         <div class="modif" style='display:none'>
-            <label for="id-modif">Introduzca un número ID</label><input type="number" class="editor" name="id-modif" id="id-modif"><input type="button" value="Modificar" class="botones_admin" id="eleccion_modificar" onclick='modificarCliente(idModif.value)'>
+            <label for="id-modif">Introduzca un número ID</label><input type="number" class="editor" name="id-modif" id="id-modif">
+
+            <select id="seleccionador_modif">
+                <option value="nombre">NOMBRE</option>
+                <option value="apellido">APELLIDO</option>
+                <option value="nacimiento">FECHA DE NACIMIENTO</option>
+                <option value="email">CORREO ELECTRONICO</option>
+                <option value="sexo">SEXO</option>
+                <option value="preferencias">PREFERENCIAS</option>
+                <option value="comentario">COMENTARIO</option>
+            </select>
+
+            <div class="boton" style="width:2rem; height: 2rem; border-radius: 45%; background-color:green; margin: 0 2rem; display: inline-flex; box-shadow: 2px 2px 2px 1px black" onclick="seleccionadorSwitch()"></div>
+
+            <div id="nombre_modif" style="display:none">
+                <form action="" id="formulario_nuevo_nombre" enctype="multipart/form-data">
+                    <label for="nuevo_nombre">Ingrese nuevo valor</label><input type="text" id="nuevo_nombre">
+                </form>                
+            </div>
+
+            <div id="nacimiento_modif" style="display:none">
+                <form action="" id="formulario_nuevo_nacimiento" enctype="multipart/form-data">
+                    <label for="nuevo_nacimiento">Ingrese nueva fecha de nacimiento</label><input type="date" name="nuevo_nacimiento" id="nuevo_nacimiento">
+                </form>
+            </div>
+
+            <div id="email_modif" style="display:none">
+                <form action="" id="formulario_nuevo_email" enctype="multipart/form-data">
+                    <label for="nuevo_email">Ingrese nuevo correo electrónico</label><input type="email" name="nuevo_email" id="nuevo_email">
+                </form>
+            </div>
+
+            <div id="sexo_modif" style="display:none">
+                <form action="" id="formulario_nuevo_sexo" enctype="multipart/form-data">
+                    <fieldset class="sexo-tabla" >
+                        <div class="sexo-radio">
+                            <input type="radio" name="sexo" id="masculino" checked><label for="masculino">Masculino</label>
+                            <input type="radio" name="sexo" id="femenino"><label for="femenino">Femenino</label>
+                            <input type="radio" name="sexo" id="sexo-otros"><label for="sexo-otros">Otro</label>
+                        </div>
+                    </fieldset>
+                </form>                
+            </div>
+
+            <div id="preferencias_modif" style="display:none">
+                <form action="" id="formulario_nueva_preferencia" enctype="multipart/form-data">
+                    <fieldset class="categoria-tabla">
+                        <legend>Categorías favoritas</legend>
+                        <div class="check-box">
+                            <input type="checkbox" name="categoria" id="cat-terror"><label for="cat-terror">Terror</label>
+                            <input type="checkbox" name="categoria" id="cat-ficcion"><label for="cat-ficcion">Ciencia
+                                Ficción</label>
+                            <input type="checkbox" name="categoria" id="cat-aventura"><label
+                                for="cat-aventura">Aventura</label>
+                            <input type="checkbox" name="categoria" id="cat-policial"><label
+                                for="cat-policial">Policial</label>
+                            <input type="checkbox" name="categoria" id="cat-fantasia"><label
+                                for="cat-fantasia">Fantasía</label>
+                            <input type="checkbox" name="categoria" id="cat-otros"><label for="cat-otros">Otros</label>
+                        </div>
+                    </fieldset>
+                </form>                
+            </div>
+
+            <div id="comentarios_modif" style="display:none">
+                <form action="" id="formulario_nuevo_comentario" enctype="multipart/form-data">
+                    <fieldset>
+                        <textarea name="nuevo_comentario" id="nuevo_comentario" cols="30" rows="10"
+                            placeholder="Escribe aquí tu comentario (máximo: 140 caracteres)" maxlength="140"></textarea>
+                    </fieldset>
+                </form>
+            </div>
+            <input type="button" value="Modificar" class="botones_admin" id="eleccion_modificar" onclick='modificarCliente(seleccionador.value)'>
         </div>
         <div class="eliminar" style='display:none'>
             <label for="id-eliminar">Introduzca un número ID</label><input type="number" class="editor" name="id-eliminar" id="id-eliminar">
-            <input type="button" value="Eliminar" class="botones_admin" id="eleccion_eliminar">
+            <input type="button" value="Eliminar" class="botones_admin" id="eleccion_eliminar" onclick="eliminar_clientes(idEliminar.value)">
         </div>
     </div>
 
