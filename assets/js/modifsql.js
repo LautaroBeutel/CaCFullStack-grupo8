@@ -138,7 +138,8 @@ function modificarCliente(eleccion){
 
 //HAY QUE MODIFICARLA - NO ANDA
 function modif_eleccion(id, categoria, cambio){
-    fetch(URL + 'lectores', {method: 'PUT', body: JSON.stringify(id, categoria, cambio), headers: {'Content-Type': 'application/json'}})
+    fetch(URL + 'lectores', {method: 'PUT', body: JSON.stringify({id: id, categoria: categoria, cambio: cambio}), headers: {'Content-Type': 'application/json'}})
+    .then(datos => datos.json())
     .catch(function(error){
             console.log(`Error al intentar modificar al lector: ${error}`)})
 }
