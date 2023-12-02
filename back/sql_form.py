@@ -12,7 +12,7 @@ CORS(app= app, origins= '*')
 
 @app.route('/')
 def saludar():
-    return '<h1>Prueba exitosa - Grupo 8</h1>'
+    return 'index.html'
 
 #Base de datos de Lectores
 
