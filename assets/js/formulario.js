@@ -99,13 +99,11 @@ function cargaFormulario(e){
       comentario: comentario.value,
     }
 
-    console.log(datos)
-
     fetch(URL + 'lectores', {method: 'POST', body: JSON.stringify(datos), headers: {'Content-Type': 'application/json'}})
     .then(data => data.json())
     .then(function (datos){
-      console.log('Agregado correctamente')
     //Limpieza del formulario
+      console.log(datos)
       document.querySelector('#nombre').value = "";
       document.querySelector('#apellido').value= "";
       fecha.value= "";
@@ -113,6 +111,8 @@ function cargaFormulario(e){
       preferencias =[];
       comentario.value = "";
 
+      alert(`Gracias por registrarte ${datos.nuevo_lector}!`);
+      window.location.href = 'http://127.0.0.1:5501/index.html';
       
     })
     .catch(function(error){

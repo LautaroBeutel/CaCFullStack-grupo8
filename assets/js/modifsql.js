@@ -100,49 +100,48 @@ function buscarCliente(id){
 
 
 
-function modificarCliente(eleccion){
-    let sexoElegido = "";
-    let preferencias = [];
+// function modificarCliente(eleccion){
+//     let sexoElegido = "";
+//     let preferencias = [];
 
-    if(eleccion == 'sexo'){
-        for(i in nuevo_sexo){
-            if(nuevo_sexo[i].checked){
-                sexoElegido = nuevo_sexo[i].id
-            }
-          }
-    }
-    if(eleccion == 'preferencias'){
-        for(let i in nueva_preferencia){
-            if (nueva_preferencia[i].checked){
-              preferencias.push(nueva_preferencia[i].id);
-            }
-          }
-    }
-    switch(eleccion){
-        case 'nombre': modif_eleccion(idModif.value, eleccion, nuevo_nombre.value.toUpperCase())
-            break
-        case 'apellido': modif_eleccion(idModif.value, eleccion, nuevo_nombre.value.toUpperCase())
-            break
-        case 'nacimiento': modif_eleccion(idModif.value, eleccion, nueva_fecha.value)
-            break
-        case 'email': modif_eleccion(idModif.value, eleccion, nuevo_email.value)
-            break
-        case 'sexo': modif_eleccion(idModif.value, eleccion, sexoElegido.toUpperCase())
-            break
-        case 'preferencias': modif_eleccion(idModif.value, eleccion, preferencias.toString())
-            break
-        case 'comentario': modif_eleccion(idModif.value, eleccion, nuevo_comentario.value)
-            break
-    }
-}
+//     if(eleccion == 'sexo'){
+//         for(i in nuevo_sexo){
+//             if(nuevo_sexo[i].checked){
+//                 sexoElegido = nuevo_sexo[i].id
+//             }
+//           }
+//     }
+//     if(eleccion == 'preferencias'){
+//         for(let i in nueva_preferencia){
+//             if (nueva_preferencia[i].checked){
+//               preferencias.push(nueva_preferencia[i].id);
+//             }
+//           }
+//     }
+//     switch(eleccion){
+//         case 'nombre': modif_eleccion(idModif.value, eleccion, nuevo_nombre.value.toUpperCase())
+//             break
+//         case 'apellido': modif_eleccion(idModif.value, eleccion, nuevo_nombre.value.toUpperCase())
+//             break
+//         case 'nacimiento': modif_eleccion(idModif.value, eleccion, nueva_fecha.value)
+//             break
+//         case 'email': modif_eleccion(idModif.value, eleccion, nuevo_email.value)
+//             break
+//         case 'sexo': modif_eleccion(idModif.value, eleccion, sexoElegido.toUpperCase())
+//             break
+//         case 'preferencias': modif_eleccion(idModif.value, eleccion, preferencias.toString())
+//             break
+//         case 'comentario': modif_eleccion(idModif.value, eleccion, nuevo_comentario.value)
+//             break
+//     }
+// }
 
 //HAY QUE MODIFICARLA - NO ANDA
-function modif_eleccion(id, categoria, cambio){
-    fetch(URL + 'lectores', {method: 'PUT', body: JSON.stringify({id: id, categoria: categoria, cambio: cambio}), headers: {'Content-Type': 'application/json'}})
-    .then(datos => datos.json())
-    .catch(function(error){
-            console.log(`Error al intentar modificar al lector: ${error}`)})
-}
+// function modif_eleccion(id, categoria, cambio){
+//     fetch(URL + 'lectores', {method: 'PUT', body: JSON.stringify(id, categoria, cambio), headers: {'Content-Type': 'application/json'}})
+//     .catch(function(error){
+//             console.log(`Error al intentar modificar al lector: ${error}`)})
+// }
 
 //Eliminar clientes
 

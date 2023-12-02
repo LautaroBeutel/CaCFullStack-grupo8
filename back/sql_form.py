@@ -82,16 +82,29 @@ class TapaDura():
 
     # Modificar un cliente de la tabla lectores
 
-    def modificar_lector(self, id, categoria, cambio):
-        self.cursor.execute(f'SELECT * FROM lectores WHERE id = {id}')
-        respuesta = self.cursor.fetchone()
-        if respuesta:
-            self.cursor.execute(f'UPDATE lectores SET {categoria} = "{cambio}" WHERE id = {id}')
-            self.conn.commit()
-            return self.cursor.rowcount > 0
-        else:
-            print(f'No se realizó ninguna modificación porque no se encontró ningún lector con el id {id}')
-            return False
+    def modificar_lector(self, data):
+        print("ESTA ES LA DATA: ", data)
+        id = data['id']
+        nombre = data['nombre']
+        apellido = data['apellido']
+        nacimiento = data['nacimiento']
+        email = data['email']
+        sexo = data['sexo']
+        preferencias = data['preferencias']
+        comentario = data['comentario']
+        
+        sql = "UPDATE lectores SET nombre = %s, apellido = %s, nacimiento = %s, email = %s, sexo = %s, preferencias = %s, comentario = %s WHERE id = %s"
+        valores = (nombre, apellido, nacimiento, email, sexo, preferencias, comentario, id)
+        self.cursor.execute(sql, valores)
+        self.conn.commit()
+        return self.cursor.rowcount > 0
+        # if respuesta:
+        #     self.cursor.execute(f'UPDATE lesctores SET ')
+        #     self.conn.commit()
+        #     return self.cursor.rowcount > 0
+        # else:
+        #     print(f'No se realizó ninguna modificación porque no se encontró ningún lector con el id {id}')
+        #     return False
 
     # Ver todos los clientes
 
@@ -172,7 +185,7 @@ class TapaDura():
             return False
 
 
-grupo8cac = TapaDura(host='localhost', user='root', password='', database='grupo8', port='3306')
+grupo8cac = TapaDura(host='localhost', user='root', password='root', database='grupo8', port='3305')
 
 #Muestra todos los productos
 
@@ -204,7 +217,7 @@ def agregar_lector_formulario():
     nuevo_lector = grupo8cac.agregar_lector(nombre, apellido, nacimiento, email, sexo, preferencias, comentario)
     
     if nuevo_lector:
-        return jsonify({"mensaje": "Lector agregado correctamente"}), 201
+        return jsonify({"mensaje": "Lector agregado correctamente", "nuevo_lector" : nombre}), 201
     else:
         return jsonify({"mensaje": f"{nombre} {apellido} ya se encontraba registrado"}), 201
       
@@ -254,21 +267,12 @@ def eliminar_producto(id):
 @app.route('/lectores', methods= ['PUT'])
 def modificar_cliente():
     data = request.get_json()
-    id = data.get('id')
-    categoria = data.get('categoria')
-    cambio = data.get('cambio')
-    if grupo8cac.modificar_lector(id, categoria, cambio):
-        return print(f'En el cliente con ID {id} se ha modificado el dato de {categoria} por {cambio}')
+    exito = grupo8cac.modificar_lector(data)
 
-#Modificar producto
-@app.route('/productos', methods= ['PUT'])
-def modificar_producto():
-    data = request.get_json()
-    id = data.get('id')
-    categoria = data.get('categoria')
-    cambio = data.get('cambio')
-    if grupo8cac.modificar_articulo(id, categoria, cambio):
-        return print(f'En el producto con ID {id} se ha modificado el dato de {categoria} por {cambio}')
+    if exito:
+        return jsonify({"mensaje": "Lector modificado exitosamente"}), 200
+    else:
+        return jsonify({"error": "No se pudo modificar el lector"}), 500
 
 #Crear tablas
 #grupo8cac.crear_tablas()
