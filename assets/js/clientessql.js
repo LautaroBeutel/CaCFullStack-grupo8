@@ -1,5 +1,6 @@
 //alert(sessionStorage.getItem('idSeleccionado'));
 let tabla = document.querySelector('.tabla');
+let idClient;
 const URL = 'http://127.0.0.1:5000/';
 const requestOptions = {
     method: 'GET',
@@ -31,6 +32,7 @@ fetch(URL + 'lectores', requestOptions)
             <input type='button' value='Eliminar' class='boton_tabla' onclick='eliminar_clientes(${clientes.id})'>
         </td>`;
         tabla.appendChild(fila);
+       
     }   
     })
 .catch(function (error){
@@ -39,6 +41,7 @@ fetch(URL + 'lectores', requestOptions)
 function modificar_cliente(id, datos) {
 
     console.log("ID DEL CLIENTE: ", id)
+    idClient = id;
     let cliente = datos.find(cliente => cliente.id === id);
 
 
@@ -54,16 +57,38 @@ function modificar_cliente(id, datos) {
 }
 
 function guardarEdicion() {
-    let nombre = document.getElementById('nombreEditar').value;
-    let apellido = document.getElementById('apellidoEditar').value;
-    let nacimiento = document.getElementById('nacimientoEditar').value;
-    let email = document.getElementById('emailEditar').value;
-    let preferencias = document.getElementById('preferenciasEditar').value;
-    let comentario = document.getElementById('comentarioEditar').value;
-    let sexo =document.getElementById('sexoEditar').value = cliente.sexo;
 
+    let cliente_actualizado = {
+        id: idClient,
+        nombre: document.getElementById('nombreEditar').value,
+        apellido: document.getElementById('apellidoEditar').value,
+        nacimiento: document.getElementById('nacimientoEditar').value,
+        email: document.getElementById('emailEditar').value,
+        preferencias: document.getElementById('preferenciasEditar').value,
+        comentario: document.getElementById('comentarioEditar').value,
+        sexo: document.getElementById('sexoEditar').value
+    }
 
     document.getElementById('formularioEdicion').style.display = 'none';
+
+
+    fetch(`${URL}lectores`, {
+        method: 'PUT', 
+        body: JSON.stringify(cliente_actualizado), 
+        headers: {'Content-Type': 'application/json'}
+    })
+    .then(response => {
+        if (response.ok) {
+            alert("Lector modificado correctamente!")
+            location.reload();
+        } else {
+            console.log(`Error al intentar modificar al lector. Estado: ${response.status}`);
+        }
+    })
+    .catch(function(error){
+        console.log(`Error al intentar modificar al lector: ${error}`)
+    })
+
 }
 
 function cancelarEdicion() {
@@ -72,7 +97,8 @@ function cancelarEdicion() {
 
 
 function eliminar_clientes(id){
-    if(confirm(`Confirme si desea elimiar al contacto con ID ${id}`)){
+    if(confirm(`¿Confirme si desea elimiar al cliente con ID ${id}?`)){
         fetch(URL + 'lectores/' + id, {method: 'DELETE'})
+        window.location.reload();
     }
 }
