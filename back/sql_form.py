@@ -1,5 +1,5 @@
 import mysql.connector
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, redirect, url_for
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
 import os
@@ -10,9 +10,9 @@ import time
 app = Flask(__name__)
 CORS(app= app, origins= '*')
 
-@app.route('/')
-def saludar():
-    return '<h1>Prueba exitosa - Grupo 8</h1>'
+#@app.route('/')
+#def saludar():
+#    return '<h1>Prueba exitosa - Grupo 8</h1>'
 
 #Base de datos de Lectores
 
@@ -185,7 +185,26 @@ class TapaDura():
             return False
 
 
-grupo8cac = TapaDura(host='localhost', user='root', password='root', database='grupo8', port='3305')
+grupo8cac = TapaDura(host='localhost', user='test_user', password='password123', database='grupo8', port='3306')
+
+# Rutas principales
+
+@app.route('/')
+def root():
+    return redirect('/home')
+
+@app.route('/home')
+def home():
+    return render_template('/index.html')
+
+@app.route('/show-productos')
+def products():
+    return render_template('/productos.html')
+'''
+@app.route('/home')
+def home():
+    return render_template('/index.html')
+'''
 
 #Muestra todos los productos
 
