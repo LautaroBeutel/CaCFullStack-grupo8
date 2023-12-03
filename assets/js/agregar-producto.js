@@ -29,7 +29,7 @@ function agregar_producto(e){
         fetch(URL + 'productos', {method: 'POST', body: JSON.stringify(datos), headers: {'Content-Type': 'application/json'}})
         .then(data => data.json())
         .then(function (datos){
-          console.log('Agregado correctamente')
+          alert('Producto agregado correctamente')
         //Limpieza del formulario
           add_titulo.value = '';
           add_precio.value = '';
@@ -43,7 +43,7 @@ function agregar_producto(e){
           add_stock.value = '';       
         })
         .catch(function(error){
-          console.log(`Error al intentar agregar al lector: ${error}`)
+          console.log(`Error al intentar agregar al producto: ${error}`)
         })
   }
 

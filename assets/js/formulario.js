@@ -64,7 +64,7 @@ function boxCheck(e){
   let contador = 0;
   for(let i in checkbox){
     if (checkbox[i].checked){
-      preferencias.push(checkbox[i].id);
+      preferencias.push((checkbox[i].id.match(/(?<=(cat-))\w*/g)).toString());
       contador += 1;
     }
   }
@@ -112,7 +112,7 @@ function cargaFormulario(e){
       comentario.value = "";
 
       alert(`Gracias por registrarte ${datos.nuevo_lector}!`);
-      window.location.href = 'http://127.0.0.1:5501/index.html';
+      //window.location.href = 'http://127.0.0.1:5501/index.html';
       
     })
     .catch(function(error){
