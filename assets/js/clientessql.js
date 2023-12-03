@@ -1,7 +1,10 @@
 //alert(sessionStorage.getItem('idSeleccionado'));
 let tabla = document.querySelector('.tabla');
 let idClient;
-const URL = 'http://127.0.0.1:5000/';
+
+//const URL = 'http://127.0.0.1:5000/'
+const URL = 'https://grupo8.pythonanywhere.com/'
+
 const requestOptions = {
     method: 'GET',
     headers: {

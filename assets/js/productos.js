@@ -3,7 +3,9 @@ let productos = document.querySelector("#articles");
 let more = document.querySelector(".more");
 let botonCategoria = document.querySelectorAll(".boton_cat");
 
-const URL_productos = 'http://127.0.0.1:5000/';
+//const URL_productos = 'http://127.0.0.1:5000/'
+const URL_productos = 'https://grupo8.pythonanywhere.com/'
+
 const requestOptions_productos = {
   method: 'GET',
   headers: {

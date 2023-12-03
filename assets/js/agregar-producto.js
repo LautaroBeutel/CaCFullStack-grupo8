@@ -10,7 +10,8 @@ let add_descripcion = document.querySelector('#add_descripcion')
 let add_stock = document.querySelector('#add_stock')
 let form = document.getElementById("formulario")
 
-const URL = 'http://127.0.0.1:5000/'
+//const URL = 'http://127.0.0.1:5000/'
+const URL = 'https://grupo8.pythonanywhere.com/'
 
 function agregar_producto(e){
     e.preventDefault();

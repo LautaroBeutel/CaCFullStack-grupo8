@@ -1,0 +1,28 @@
+GMAIL DEL GRUPO
+
+user: tapadura.grupo8@gmail.com
+pass: tapaDura-grupo8!
+
+----------------------
+
+Python anywhere
+https://www.pythonanywhere.com/
+
+user: grupo8
+pass: la misma que el mail
+
+---------------------------
+
+DataBase : grupo8$grupo8
+
+Database host address:grupo8.mysql.pythonanywhere-services.com
+Username:grupo8
+pass: codoacodo-grupo8
+
+----------------------------
+
+URL = grupo8.pythonanywhere.com
+
+
+
+
