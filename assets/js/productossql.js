@@ -98,7 +98,14 @@ function cancelarEdicion() {
 function eliminar_productos(id){
     if(confirm(`Confirme si desea elimiar al producto con ID ${id}`)){
     fetch(URL + 'productos/' + id, {method: 'DELETE', headers: {'Content-Type': 'application/json'}})
-    //window.location.reload();
-    alert(`Producto con ID ${id} fue eliminado.`)
+    .then(response => {
+        if (response.ok) {
+            alert(`Producto con ID ${id} fue eliminado.`)
+            location.reload()
+        }
+    })
+    .catch(function(error){
+        console.log(`Error al intentar eliminar el producto: ${error}`)
+        location.reload()})
     }
 }
