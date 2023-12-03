@@ -270,8 +270,8 @@ def modificar_producto():
     if grupo8cac.modificar_articulo(id, categoria, cambio):
         return print(f'En el producto con ID {id} se ha modificado el dato de {categoria} por {cambio}')
 
-#Crear tablas
-#grupo8cac.crear_tablas()
+# Crear tablas
+# grupo8cac.crear_tablas()
 
 # Agrego libros
 # grupo8cac.agregar_articulo('FRANKENSTEIN', 10590, 'https://www.tematika.com/media/catalog/Ilhsa/Imagenes/649567.jpg', 'terror', 'Shelley, Mary', 100, 'español', 2018, 'Publicado el 1 de enero de 1818 y enmarcado en la tradición de la novela gótica, el texto habla de temas tales como la moral científica, la creación y destrucción de vida y el atrevimiento de la humanidad en su relación con Dios. De ahí, el subtítulo de la obra: el protagonista intenta rivalizar en poder con Dios, como una suerte de Prometeo moderno que arrebata el fuego sagrado de la vida a la divinidad.', 2)

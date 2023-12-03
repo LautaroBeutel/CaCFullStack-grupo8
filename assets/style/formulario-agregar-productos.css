@@ -1,0 +1,101 @@
+@keyframes translate-button {
+    0% {
+      transform: translateX(0px);
+    }
+  
+    25% {
+      transform: translateX(5px);
+    }
+  
+    50% {
+      transform: translateX(0px);
+    }
+  
+    75% {
+      transform: translateX(-5px);
+    }
+  
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+.button-submit-pr{
+    text-align: center;
+    padding: 5px;
+    width: 30%;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-family: 'Tilt Neon', sans-serif;
+    font-size: 1rem;
+}
+
+main{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 768px){
+    /*
+    .main-agregar-pr{
+        align-content: center;
+        text-align: center;
+    }
+    
+    .contenedor-formulario-agregar-pr{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+    .grid-agregar-pr{
+        display: grid;
+        width: 80%;
+        padding: 20px;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        grid-template-areas:
+        "titulo precio"
+        "portada categoria"
+        "autor paginas"
+        "idioma publicacion"
+        "descripcion descripcion"
+        "stock stock"
+        "submit submit";
+    }
+    .titulo-pr{
+        grid-area: titulo;
+    }
+    .precio-pr{
+        grid-area: precio;
+    }
+    .portada-pr{
+        grid-area: portada;
+    }
+    .categoria-pr{
+        grid-area: categoria;
+    }
+    .autor-pr{
+        grid-area: autor;
+    }
+    .paginas-pr{
+        grid-area: paginas;
+    }
+    .paginas-pr{
+        grid-area: paginas ;
+    }
+    .publicacion-pr{
+        grid-area: publicacion;
+    }
+    .descripcion-pr{
+        grid-area: descripcion;
+    }
+    .stock-pr{
+        grid-area: stock;
+    }
+    .button-submit-pr:hover{
+        background-color: var(--amarillo);
+        animation: translate-button 0.2s linear 1;
+        z-index: 0;
+    }
+}
+
