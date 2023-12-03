@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="shortcut icon" href="img/libro-icono-fav-2.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/style/footer.css">
+    <link rel="stylesheet" href="./assets/style/admin.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,53 +87,52 @@
 
     <!--CUERPO PRINCIPAL: CONTIENE FORMULARIO-->
     <main>
-        <div>
-            <h2>Agregar Productos</h2>
-            <a href="./admin.html"><h3 class="titulo_main">Volver</h3></a>
+        <a href="./admin.html"><h3 class="titulo_main">Volver</h3></a>
+        <div id="contenedor_productos_add">
             <form action="" id="formulario" enctype="multipart/form-data">
                 <table>
                     <tr>
-                        <td>TITULO</td>
-                        <td><input type="text" id="add_titulo"></td>
+                        <td class="tabla-titulos-add">TITULO</td>
+                        <td><input type="text" id="add_titulo" class="tabla-input-add"></td>
                     </tr>
                     <tr>
-                        <td>PRECIO</td>
-                        <td><input type="number" id="add_precio"></td>
+                        <td class="tabla-titulos-add">PRECIO</td>
+                        <td><input type="number" id="add_precio" class="tabla-input-add"></td>
                     </tr>
                     <tr>
-                        <td>PORTADA</td>
-                        <td><input type="text" id="add_portada" placeholder="Ingresar URL de la imagen"></td>
+                        <td class="tabla-titulos-add">PORTADA</td>
+                        <td><input type="text" id="add_portada" placeholder="Ingresar URL de la imagen" class="tabla-input-add"></td>
                     </tr>
                     <tr>
-                        <td>CATEGORIA</td>
-                        <td><input type="text" id="add_categoria"></td>
+                        <td class="tabla-titulos-add">CATEGORIA</td>
+                        <td><input type="text" id="add_categoria" class="tabla-input-add"></td>
                     </tr>
                     <tr>
-                        <td>AUTOR</td>
-                        <td><input type="text" id="add_autor"></td>
+                        <td class="tabla-titulos-add">AUTOR</td>
+                        <td><input type="text" id="add_autor" class="tabla-input-add"></td>
                     </tr>
                     <tr>
-                        <td>PAGINAS</td>
-                        <td><input type="number" id="add_paginas"></td>
+                        <td class="tabla-titulos-add">PAGINAS</td>
+                        <td><input type="number" id="add_paginas" class="tabla-input-add"></td>
                     </tr>
                     <tr>
-                        <td>IDIOMA</td>
-                        <td><input type="text" id="add_idioma"></td>
+                        <td class="tabla-titulos-add">IDIOMA</td>
+                        <td><input type="text" id="add_idioma" class="tabla-input-add"></td>
                     </tr>
                     <tr>
-                        <td>PUBLICACION</td>
-                        <td><input type="number" id="add_publicacion"></td>
+                        <td class="tabla-titulos-add">PUBLICACION</td>
+                        <td><input type="number" id="add_publicacion" class="tabla-input-add"></td>
                     </tr>
                     <tr>
-                        <td>DESCRIPCION</td>
-                        <td><textarea name="descripcion" cols="30" rows="10" id="add_descripcion"></textarea></td>
+                        <td class="tabla-titulos-add">DESCRIPCION</td>
+                        <td><textarea name="descripcion" cols="30" rows="10" id="add_descripcion" class="tabla-input-add"></textarea></td>
                     </tr>
                     <tr>
-                        <td>STOCK</td>
-                        <td><input type="number" id="add_stock"></td>
+                        <td class="tabla-titulos-add">STOCK</td>
+                        <td><input type="number" id="add_stock" class="tabla-input-add"></td>
                     </tr>
                 </table>
-                <input type="submit" value="Enviar formulario" class="submit-tabla">
+                <input type="submit" value="Agregar Producto" class="submit-tabla-add">
             </form>
         </div>
 

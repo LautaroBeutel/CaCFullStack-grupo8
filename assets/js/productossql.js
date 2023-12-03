@@ -21,7 +21,7 @@ fetch(URL + 'productos', requestOptions)
                 <td>${libro.id}</td>
                 <td>${libro.titulo}</td>
                 <td>${libro.precio}</td>
-                <td><img src="${libro.portada}" alt="portada_libro"></td>
+                <td><img src="${libro.portada}" alt="portada_libro" class='portada_tabla_admin'></td>
                 <td>${libro.categoria}</td><td>${libro.autor}</td>
                 <td>${libro.paginas}</td><td>${libro.idioma}</td>
                 <td>${libro.publicacion}</td>
@@ -97,6 +97,8 @@ function cancelarEdicion() {
 
 function eliminar_productos(id){
     if(confirm(`Confirme si desea elimiar al producto con ID ${id}`)){
-    fetch(URL + 'productos/' + id, {method: 'DELETE'})
+    fetch(URL + 'productos/' + id, {method: 'DELETE', headers: {'Content-Type': 'application/json'}})
+    //window.location.reload();
+    alert(`Producto con ID ${id} fue eliminado.`)
     }
 }

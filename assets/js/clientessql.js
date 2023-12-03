@@ -58,13 +58,13 @@ function guardarEdicion() {
 
     let cliente_actualizado = {
         id: idClient,
-        nombre: document.getElementById('nombreEditar').value,
-        apellido: document.getElementById('apellidoEditar').value,
+        nombre: document.getElementById('nombreEditar').value.toUpperCase(),
+        apellido: document.getElementById('apellidoEditar').value.toUpperCase(),
         nacimiento: document.getElementById('nacimientoEditar').value,
         email: document.getElementById('emailEditar').value,
         preferencias: document.getElementById('preferenciasEditar').value,
         comentario: document.getElementById('comentarioEditar').value,
-        sexo: document.getElementById('sexoEditar').value
+        sexo: document.getElementById('sexoEditar').value.toUpperCase()
     }
 
     document.getElementById('formularioEdicion').style.display = 'none';
@@ -94,7 +94,8 @@ function cancelarEdicion() {
 
 function eliminar_clientes(id){
     if(confirm(`¿Confirme si desea elimiar al cliente con ID ${id}?`)){
-        fetch(URL + 'lectores/' + id, {method: 'DELETE'})
-        window.location.reload();
+        fetch(URL + 'lectores/' + id, {method: 'DELETE', headers: {'Content-Type': 'application/json'}})
+        //window.location.reload();
+        alert(`Cliente con ID ${id} fue eliminado.`)
     }
 }

@@ -32,8 +32,8 @@ fetch(URL + "productos", requestOptions)
      tabla[1].textContent = datos[i].autor;
      tabla[2].textContent = datos[i].idioma;
      tabla[3].textContent = datos[i].paginas;
-     tabla[4].textContent = datos[i].year;
-     about.textContent = datos[i].about;
+     tabla[4].textContent = datos[i].publicacion;
+     about.textContent = datos[i].descripcion;
      if(datos[i].stock == 0){
       addCarrito.value = "No hay stock";
       refCarrito.href = "#";
