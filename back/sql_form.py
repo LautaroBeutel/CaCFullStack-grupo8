@@ -8,7 +8,7 @@ import time
 # URL = 'http://127.0.0.1:5000/'
 
 app = Flask(__name__)
-CORS(app= app, origins= '*')
+CORS(app = app, origins= '*')
 
 @app.route('/')
 def saludar():
@@ -83,7 +83,6 @@ class TapaDura():
     # Modificar un cliente de la tabla lectores
 
     def modificar_lector(self, data):
-        print("ESTA ES LA DATA: ", data)
         id = data['id']
         nombre = data['nombre']
         apellido = data['apellido']
@@ -173,16 +172,24 @@ class TapaDura():
 
     # Modificar un articulo de la tabla productos
 
-    def modificar_articulo(self, id, categoria, cambio):
-        self.cursor.execute(f'SELECT * FROM productos WHERE id = {id}')
-        respuesta = self.cursor.fetchone()
-        if respuesta:
-            self.cursor.execute(f'UPDATE productos SET {categoria} = "{cambio}" WHERE id = {id}')
+    def modificar_libro(self, data):
+            print("ESTA ES LA DATA: ", data)
+            id = data['id']
+            titulo = data['titulo']
+            precio = data['precio']
+            categoria = data['categoria']
+            autor = data['autor']
+            paginas = data['paginas']
+            idioma = data['idioma']
+            publicacion = data['publicacion']
+            descripcion = data['descripcion']
+            stock = data['stock']
+            
+            sql = "UPDATE productos SET titulo = %s, precio = %s, categoria = %s, autor = %s, paginas = %s, idioma = %s, publicacion = %s, descripcion = %s, stock = %s WHERE id = %s"
+            valores = (titulo, precio, categoria, autor, paginas, idioma, publicacion, descripcion, stock, id)
+            self.cursor.execute(sql, valores)
             self.conn.commit()
             return self.cursor.rowcount > 0
-        else:
-            print(f'No se modificó el artículo porque no se encontró ningún producto con el id {id}')
-            return False
 
 
 grupo8cac = TapaDura(host='localhost', user='root', password='root', database='grupo8', port='3305')
@@ -273,6 +280,16 @@ def modificar_cliente():
         return jsonify({"mensaje": "Lector modificado exitosamente"}), 200
     else:
         return jsonify({"error": "No se pudo modificar el lector"}), 500
+
+@app.route('/productos', methods= ['PUT'])
+def modificar_articulo():
+    data = request.get_json()
+    exito = grupo8cac.modificar_libro(data)
+
+    if exito:
+        return jsonify({"mensaje": "Articulo modificado exitosamente"}), 200
+    else:
+        return jsonify({"error": "No se pudo modificar el articulo"}), 500
 
 #Crear tablas
 #grupo8cac.crear_tablas()
