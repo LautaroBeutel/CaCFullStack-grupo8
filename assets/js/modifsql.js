@@ -43,7 +43,9 @@ let formulario_nueva_preferencia = document.querySelector('#formulario_nueva_pre
 let formulario_nuevo_comentario = document.querySelector('#formulario_nuevo_comentario')
 
 let tabla = document.querySelector('.tabla')
-const URL = 'http://127.0.0.1:5000/'
+
+//const URL = 'http://127.0.0.1:5000/'
+const URL = 'https://grupo8.pythonanywhere.com/'
 
 function busqueda(){
     buscarCont.style.display= 'block';

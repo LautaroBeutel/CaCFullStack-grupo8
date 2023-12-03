@@ -7,6 +7,9 @@ let paginas = [];
 let ofertas = [];
 let mayoresPaginas = [];
 
+//const URL = 'http://127.0.0.1:5000/'
+const URL = 'https://grupo8.pythonanywhere.com/'
+
 const requestOptions = {
   method: 'GET',
   headers: {
@@ -14,7 +17,7 @@ const requestOptions = {
   },
 };
 
-fetch("http://127.0.0.1:5000/productos", requestOptions)
+fetch( URL + "productos", requestOptions)
   .then(data => data.json())
   .then(function (datos){
     console.log(datos)
