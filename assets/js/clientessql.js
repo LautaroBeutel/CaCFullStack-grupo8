@@ -95,7 +95,14 @@ function cancelarEdicion() {
 function eliminar_clientes(id){
     if(confirm(`¿Confirme si desea elimiar al cliente con ID ${id}?`)){
         fetch(URL + 'lectores/' + id, {method: 'DELETE', headers: {'Content-Type': 'application/json'}})
-        //window.location.reload();
-        alert(`Cliente con ID ${id} fue eliminado.`)
-    }
+        .then(response => {
+            if (response.ok) {
+                alert(`Producto con ID ${id} fue eliminado.`)
+                location.reload()
+            }
+        })
+        .catch(function(error){
+            console.log(`Error al intentar eliminar el producto: ${error}`)
+            location.reload()})
+        }
 }
