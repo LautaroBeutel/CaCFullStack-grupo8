@@ -305,7 +305,7 @@
       max-width: 80%;
     }
     .formularioEdicion{
-      position: absolute;
+      position: fixed;
       gap: 2rem;
       top: 50%;
       left: 50%;

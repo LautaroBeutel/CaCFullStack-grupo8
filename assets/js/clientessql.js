@@ -10,40 +10,38 @@ const requestOptions = {
   };
 
 fetch(URL + 'lectores', requestOptions)
-
-.then(function (data){
-    if (data.ok){return data.json()}
-})
-.then(function (datos){
-
-    for(let clientes of datos){
-        let fila = document.createElement('tr');
-        fila.innerHTML = `
-        <td>${clientes.id}</td>
-        <td>${clientes.nombre}</td>
-        <td>${clientes.apellido}</td>
-        <td>${clientes.nacimiento}</td>
-        <td>${clientes.email}</td>
-        <td>${clientes.sexo}</td>
-        <td>${clientes.preferencias}</td>
-        <td>${clientes.comentario}</td>
-        <td>
-            <input type='button' value='Modificar' class='boton_tabla' onclick='modificar_cliente(${clientes.id}, ${JSON.stringify(datos)})'>
-            <input type='button' value='Eliminar' class='boton_tabla' onclick='eliminar_clientes(${clientes.id})'>
-        </td>`;
-        tabla.appendChild(fila);
-       
-    }   
+    .then(function (data){
+        if (data.ok){return data.json()}
     })
-.catch(function (error){
-    return console.log(error);})
+    .then(function (datos){
+        for(let clientes of datos){
+            let fila = document.createElement('tr');
+            fila.innerHTML = `
+            <td>${clientes.id}</td>
+            <td>${clientes.nombre}</td>
+            <td>${clientes.apellido}</td>
+            <td>${clientes.nacimiento}</td>
+            <td>${clientes.email}</td>
+            <td>${clientes.sexo}</td>
+            <td>${clientes.preferencias}</td>
+            <td>${clientes.comentario}</td>
+            <td>
+                <input type='button' value='Modificar' class='boton_tabla' onclick='modificar_cliente(${clientes.id}, ${JSON.stringify(datos)})'>
+                <input type='button' value='Eliminar' class='boton_tabla' onclick='eliminar_clientes(${clientes.id})'>
+            </td>`;
+            tabla.appendChild(fila);
+        
+        }   
+        })
+    .catch(function (error){
+        return console.log(error);
+    })
 
 function modificar_cliente(id, datos) {
 
     console.log("ID DEL CLIENTE: ", id)
     idClient = id;
     let cliente = datos.find(cliente => cliente.id === id);
-
 
     document.getElementById('nombreEditar').value = cliente.nombre;
     document.getElementById('apellidoEditar').value = cliente.apellido;
@@ -81,8 +79,6 @@ function guardarEdicion() {
         if (response.ok) {
             alert("Lector modificado correctamente!")
             location.reload();
-        } else {
-            console.log(`Error al intentar modificar al lector. Estado: ${response.status}`);
         }
     })
     .catch(function(error){
