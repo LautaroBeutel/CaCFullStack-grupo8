@@ -1,0 +1,502 @@
+@keyframes translate-button {
+    0% {
+      transform: translateX(0px);
+    }
+  
+    25% {
+      transform: translateX(5px);
+    }
+  
+    50% {
+      transform: translateX(0px);
+    }
+  
+    75% {
+      transform: translateX(-5px);
+    }
+  
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+
+
+.button-submit-pr:hover{
+    background-color: var(--amarillo);
+    animation: translate-button 0.2s linear 1;
+    z-index: 0;
+}
+
+main{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 485px){
+    
+    .main-agregar-pr{
+        align-content: center;
+        text-align: center;
+    }
+ 
+    .contenedor-formulario-agregar-pr{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .grid-agregar-pr{
+        display: grid;
+        width: 100%;
+        padding: 20px;
+        grid-template-columns: 1fr 1fr ;
+        gap: 20px;
+        grid-template-areas:
+        "titulo precio"
+        "portada categoria"
+        "autor paginas"
+        "idioma publicacion"
+        "stock descripcion"
+        "submit submit"
+        ;
+    }
+    .standard-input{
+        float: right;
+        background-color: antiquewhite;
+        width: 180px;
+        height: 20px;
+        font-family: 'Tilt Neon', sans-serif;
+        font-size: 18px;
+    }
+    .titulo-pr{
+        grid-area: titulo;
+    }
+    .precio-pr{
+        grid-area: precio;
+    }
+    .portada-pr{
+        grid-area: portada;
+    }
+    .categoria-pr{
+        grid-area: categoria;
+    }
+    .autor-pr{
+        grid-area: autor;
+    }
+    .paginas-pr{
+        grid-area: paginas;
+    }
+    .idioma-pr{
+        grid-area: idioma ;
+    }
+    .publicacion-pr{
+        grid-area: publicacion;
+    }
+    .descripcion-pr{
+        grid-area: descripcion;
+    }
+    .stock-pr{
+        grid-area: stock;
+    }
+    
+
+}
+
+@media only screen and (min-width: 486px) and (max-width: 600px){
+    
+    .main-agregar-pr{
+        align-content: center;
+        text-align: center;
+    }
+ 
+    .contenedor-formulario-agregar-pr{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .grid-agregar-pr{
+        display: grid;
+        width: 80%;
+        padding: 20px;
+        grid-template-columns: 1fr 1fr ;
+        gap: 20px;
+        grid-template-areas:
+        "titulo precio"
+        "portada categoria"
+        "autor paginas"
+        "idioma publicacion"
+        "stock descripcion"
+        "submit submit"
+        ;
+    }
+    .standard-input{
+        float: right;
+        background-color: antiquewhite;
+        width: 180px;
+        height: 20px;
+        font-family: 'Tilt Neon', sans-serif;
+        font-size: 18px;
+    }
+    .titulo-pr{
+        grid-area: titulo;
+        
+    }
+    .precio-pr{
+        grid-area: precio;
+    }
+    .portada-pr{
+        grid-area: portada;
+    }
+    .categoria-pr{
+        grid-area: categoria;
+    }
+    .autor-pr{
+        grid-area: autor;
+    }
+    .paginas-pr{
+        grid-area: paginas;
+    }
+    .idioma-pr{
+        grid-area: idioma ;
+    }
+    .publicacion-pr{
+        grid-area: publicacion;
+    }
+    .descripcion-pr{
+        grid-area: descripcion;
+    }
+    .stock-pr{
+        grid-area: stock;
+    }
+    
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px){
+    
+    .main-agregar-pr{
+        align-content: center;
+        text-align: center;
+    }
+    .contenedor-formulario-agregar-pr{
+        display: flex;
+        justify-content: center;
+    }
+    .main-agregar-pr h2{
+        margin: 10px;
+        font-size: 28px;
+    }
+    .main-agregar-pr h3{
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .grid-agregar-pr{
+        display: grid;
+        width: 100%;
+        padding: 20px;
+        grid-template-columns: 1fr 1fr ;
+        gap: 30px;
+        grid-template-areas:
+        "titulo precio"
+        "portada categoria"
+        "autor paginas"
+        "idioma publicacion"
+        "stock descripcion"
+        "submit submit"
+        ;
+    }
+    .grid-agregar-pr label{
+        float: left;
+        font-size: 16px;
+    }
+    .standard-input{
+        float: right;
+        background-color: antiquewhite;
+        width: 170px;
+        height: 20px;
+        font-family: 'Tilt Neon', sans-serif;
+        font-size: 18px;
+    }
+    .titulo-pr{
+        grid-area: titulo;
+    }
+    .precio-pr{
+        grid-area: precio;
+    }
+    .portada-pr{
+        grid-area: portada;
+    }
+    .categoria-pr{
+        grid-area: categoria;
+    }
+    .autor-pr{
+        grid-area: autor;
+    }
+    .paginas-pr{
+        grid-area: paginas;
+    }
+    .idioma-pr{
+        grid-area: idioma ;
+    }
+    .publicacion-pr{
+        grid-area: publicacion;
+    }
+    .descripcion-pr{
+        grid-area: descripcion;
+    }
+    .stock-pr{
+        grid-area: stock;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    
+    .main-agregar-pr{
+        align-content: center;
+        text-align: center;
+    }
+    .main-agregar-pr h2{
+        margin: 10px;
+        font-size: 36px;
+    }
+    .main-agregar-pr h3{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .contenedor-formulario-agregar-pr{
+        display: flex;
+        justify-content: center;
+    }
+    .grid-agregar-pr{
+        display: grid;
+        width: 100%;
+        padding: 20px;
+        grid-template-columns: 1fr 1fr ;
+        gap: 30px;
+        grid-template-areas:
+        "titulo precio"
+        "portada categoria"
+        "autor paginas"
+        "idioma publicacion"
+        "stock descripcion"
+        "submit submit"
+        ;
+    }
+    .grid-agregar-pr label{
+        float: left;
+        font-size: 22px;
+    }
+    .standard-input{
+        float: right;
+        background-color: antiquewhite;
+        width: 180px;
+        height: 22px;
+        font-family: 'Tilt Neon', sans-serif;
+        font-size: 18px;
+    }
+    .titulo-pr{
+        grid-area: titulo;
+    }
+    .precio-pr{
+        grid-area: precio;
+    }
+    .portada-pr{
+        grid-area: portada;
+    }
+    .categoria-pr{
+        grid-area: categoria;
+    }
+    .autor-pr{
+        grid-area: autor;
+    }
+    .paginas-pr{
+        grid-area: paginas;
+    }
+    .idioma-pr{
+        grid-area: idioma ;
+    }
+    .publicacion-pr{
+        grid-area: publicacion;
+    }
+    .descripcion-pr{
+        grid-area: descripcion;
+    }
+    .stock-pr{
+        grid-area: stock;
+    }
+    
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1300px){
+    
+    .main-agregar-pr{
+        align-content: center;
+        text-align: center;
+    }
+    .main-agregar-pr h2{
+        margin: 10px;
+        font-size: 42px;
+    }
+    .main-agregar-pr h3{
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .contenedor-formulario-agregar-pr{
+        display: flex;
+        justify-content: center;
+    }
+    .grid-agregar-pr{
+        display: grid;
+        width: 100%;
+        padding: 20px;
+        grid-template-columns: 1fr 1fr ;
+        gap: 30px;
+        grid-template-areas:
+        "titulo precio"
+        "portada categoria"
+        "autor paginas"
+        "idioma publicacion"
+        "stock descripcion"
+        "submit submit"
+        ;
+    }
+    .grid-agregar-pr label{
+        float: left;
+        font-size: 26px;
+    }
+    .standard-input{
+        float: right;
+        font-family: 'Tilt Neon', sans-serif;
+        background-color: antiquewhite;
+        width: 250px;
+        height: 26px;
+        font-size: 24px;
+    }
+    .titulo-pr{
+        grid-area: titulo;
+    }
+    .precio-pr{
+        grid-area: precio;
+    }
+    .portada-pr{
+        grid-area: portada;
+    }
+    .categoria-pr{
+        grid-area: categoria;
+    }
+    .autor-pr{
+        grid-area: autor;
+    }
+    .paginas-pr{
+        grid-area: paginas;
+    }
+    .idioma-pr{
+        grid-area: idioma ;
+    }
+    .publicacion-pr{
+        grid-area: publicacion;
+    }
+    .descripcion-pr{
+        grid-area: descripcion;
+    }
+    .stock-pr{
+        grid-area: stock;
+    }
+    
+    .button-submit-pr{
+        padding: 5px;
+        width: auto;
+        margin: 10px auto;
+        border-radius: 5px;
+        font-family: 'Tilt Neon', sans-serif;
+        font-size: 1rem;
+        grid-area: submit;
+    }
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 2000px){
+    
+    .main-agregar-pr{
+        align-content: center;
+        text-align: center;
+    }
+    .main-agregar-pr h2{
+        margin: 10px;
+        font-size: 42px;
+        text-align: center;
+    }
+    .main-agregar-pr h3{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .contenedor-formulario-agregar-pr{
+        display: flex;
+        justify-content: center;
+    }
+    .grid-agregar-pr{
+        display: grid;
+        width: 100%;
+        padding: 20px;
+        grid-template-columns: 1fr 1fr ;
+        gap: 30px;
+        grid-template-areas:
+        "titulo precio"
+        "portada categoria"
+        "autor paginas"
+        "idioma publicacion"
+        "stock descripcion"
+        "submit submit"
+        ;
+    }
+    .grid-agregar-pr label{
+        float: left;
+        font-size: 24px;
+    }
+    .standard-input{
+        float: right;
+        font-family: 'Tilt Neon', sans-serif;
+        font-size: 22px;
+        background-color: antiquewhite;
+        width: 300px;
+        height: 24px;
+        margin-right: 100px;
+    }
+    .titulo-pr{
+        grid-area: titulo;
+    }
+    .precio-pr{
+        grid-area: precio;
+    }
+    .portada-pr{
+        grid-area: portada;
+    }
+    .categoria-pr{
+        grid-area: categoria;
+    }
+    .autor-pr{
+        grid-area: autor;
+    }
+    .paginas-pr{
+        grid-area: paginas;
+    }
+    .idioma-pr{
+        grid-area: idioma ;
+    }
+    .publicacion-pr{
+        grid-area: publicacion;
+    }
+    .descripcion-pr{
+        grid-area: descripcion;
+    }
+    .stock-pr{
+        grid-area: stock;
+    }
+}
+.button-submit-pr{
+    padding: 5px;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-family: 'Tilt Neon', sans-serif;
+    font-size: 1.5rem;
+    grid-area: submit;
+}

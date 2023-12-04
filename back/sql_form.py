@@ -12,7 +12,7 @@ CORS(app = app, origins= '*')
 
 @app.route('/')
 def saludar():
-    return '<h1>Prueba exitosa - Grupo 8</h1>'
+    return 'index.html'
 
 #Base de datos de Lectores
 
@@ -293,7 +293,6 @@ def modificar_articulo():
     else:
         return jsonify({"error": "No se pudo modificar el articulo"}), 500
 
-#Crear tablas
 # grupo8cac.crear_tablas()
 
 #Agrego libros
