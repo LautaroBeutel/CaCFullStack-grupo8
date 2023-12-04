@@ -10,7 +10,8 @@ let sexoElegido = "";
 let preferencias = [];
 let verificador = 0;
 
-const URL = 'http://127.0.0.1:5000/';
+//const URL = 'http://127.0.0.1:5000/'
+const URL = 'https://grupo8.pythonanywhere.com/'
 
 function nombreCompletoCheck(e){
   let check = true;
@@ -64,7 +65,7 @@ function boxCheck(e){
   let contador = 0;
   for(let i in checkbox){
     if (checkbox[i].checked){
-      preferencias.push(checkbox[i].id);
+      preferencias.push((checkbox[i].id.match(/(?<=(cat-))\w*/g)).toString());
       contador += 1;
     }
   }
@@ -99,13 +100,11 @@ function cargaFormulario(e){
       comentario: comentario.value,
     }
 
-    console.log(datos)
-
     fetch(URL + 'lectores', {method: 'POST', body: JSON.stringify(datos), headers: {'Content-Type': 'application/json'}})
     .then(data => data.json())
     .then(function (datos){
-      console.log('Agregado correctamente')
     //Limpieza del formulario
+      console.log(datos)
       document.querySelector('#nombre').value = "";
       document.querySelector('#apellido').value= "";
       fecha.value= "";
@@ -113,6 +112,8 @@ function cargaFormulario(e){
       preferencias =[];
       comentario.value = "";
 
+      alert(`Gracias por registrarte ${datos.nuevo_lector}!`);
+      //window.location.href = 'http://127.0.0.1:5501/index.html';
       
     })
     .catch(function(error){

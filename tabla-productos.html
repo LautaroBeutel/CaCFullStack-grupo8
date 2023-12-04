@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/style/Style-Grid.css">
     <link rel="stylesheet" href="./assets/style/encabezadomio.css">
     <link rel="stylesheet" href="./assets/style/general.css">
+    <link rel="stylesheet" href="./assets/style/formulario.css">
     <link rel="shortcut icon" href="img/libro-icono-fav-2.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/style/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -101,6 +102,65 @@
                 <th>EDITAR</th>
             </tr>
         </table>
+    </div>
+
+    <div id="formularioEdicion" class="formularioEdicion"  style="display: none;">
+        <div class="edicionContenedor">
+            <div class="label">
+                <label for="tituloEditar">TITULO</label>
+                <input type="text" id="tituloEditar">
+            </div>
+            
+            <div class="label">
+                <label for="precioEditar">PRECIO</label>
+                <input type="number" id="precioEditar">
+            </div>
+
+            <label for="categoriasEditar">Selecciona una categoría:</label>
+            <select id="categoriasEditar" name="categoriasEditar">
+                <option value="terror">Terror</option>
+                <option value="ciencia_ficcion">Ciencia Ficción</option>
+                <option value="aventura">Aventura</option>
+                <option value="policial">Policial</option>
+                <option value="autoayuda">Autoayuda</option>
+                <option value="otros">Otros</option>
+            </select>
+            
+            <div class="label">
+                <label for="autorEditar">AUTOR</label>
+                <input type="text" id="autorEditar">
+            </div>
+    
+            <div class="label">
+                <label for="paginasEditar">PAGINAS</label>
+                <input type="number" id="paginasEditar">
+            </div>
+    
+            <div class="label">
+                <label for="idiomaEditar">IDIOMA</label>
+                <input type="text" id="idiomaEditar">
+            </div>
+
+            <div class="label">
+                <label for="publicacionEditar">PUBLICACION</label>
+                <input type="text" id="publicacionEditar">
+            </div>
+
+            <div class="label">
+                <label for="descripcionEditar">DESCRIPCION</label>
+                <input type="text" id="descripcionEditar">
+            </div>
+            
+            <div class="label">
+                <label for="stockEditar">STOCK</label>
+                <input type="text" id="stockEditar">
+            </div>
+            
+            <div>
+                <button class="btn-buscar btn-editor" onclick="guardarEdicion()">Guardar cambios</button>
+                <button class="btn-buscar btn-editor" onclick="cancelarEdicion()">Cancelar</button>
+            </div>
+        </div>
     </div>
 
     <footer id="contact" style="margin-top:100px ;">

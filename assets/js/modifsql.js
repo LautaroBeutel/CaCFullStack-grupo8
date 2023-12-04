@@ -43,7 +43,9 @@ let formulario_nueva_preferencia = document.querySelector('#formulario_nueva_pre
 let formulario_nuevo_comentario = document.querySelector('#formulario_nuevo_comentario')
 
 let tabla = document.querySelector('.tabla')
-const URL = 'http://127.0.0.1:5000/'
+
+//const URL = 'http://127.0.0.1:5000/'
+const URL = 'https://grupo8.pythonanywhere.com/'
 
 function busqueda(){
     buscarCont.style.display= 'block';
@@ -96,52 +98,6 @@ function buscarCliente(id){
         })
     .catch(function (error){
         return console.log(error);})
-}
-
-
-
-function modificarCliente(eleccion){
-    let sexoElegido = "";
-    let preferencias = [];
-
-    if(eleccion == 'sexo'){
-        for(i in nuevo_sexo){
-            if(nuevo_sexo[i].checked){
-                sexoElegido = nuevo_sexo[i].id
-            }
-          }
-    }
-    if(eleccion == 'preferencias'){
-        for(let i in nueva_preferencia){
-            if (nueva_preferencia[i].checked){
-              preferencias.push(nueva_preferencia[i].id);
-            }
-          }
-    }
-    switch(eleccion){
-        case 'nombre': modif_eleccion(idModif.value, eleccion, nuevo_nombre.value.toUpperCase())
-            break
-        case 'apellido': modif_eleccion(idModif.value, eleccion, nuevo_nombre.value.toUpperCase())
-            break
-        case 'nacimiento': modif_eleccion(idModif.value, eleccion, nueva_fecha.value)
-            break
-        case 'email': modif_eleccion(idModif.value, eleccion, nuevo_email.value)
-            break
-        case 'sexo': modif_eleccion(idModif.value, eleccion, sexoElegido.toUpperCase())
-            break
-        case 'preferencias': modif_eleccion(idModif.value, eleccion, preferencias.toString())
-            break
-        case 'comentario': modif_eleccion(idModif.value, eleccion, nuevo_comentario.value)
-            break
-    }
-}
-
-//HAY QUE MODIFICARLA - NO ANDA
-function modif_eleccion(id, categoria, cambio){
-    fetch(URL + 'lectores', {method: 'PUT', body: JSON.stringify({id: id, categoria: categoria, cambio: cambio}), headers: {'Content-Type': 'application/json'}})
-    .then(datos => datos.json())
-    .catch(function(error){
-            console.log(`Error al intentar modificar al lector: ${error}`)})
 }
 
 //Eliminar clientes

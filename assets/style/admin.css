@@ -8,7 +8,7 @@
     color: red;
 }
 
-.contenedor_admin {
+.contenedor_admin, #contenedor_productos_add {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,7 +73,37 @@
     box-shadow: 0px 0px 10px 5px var(--rosa);
 }
 
+.submit-tabla-add{
+    display: block;
+    margin: 1rem auto;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+}
 
+.submit-tabla-add:hover {
+    background-color: var(--amarillo);
+    animation: dance-button 0.5s linear 1;
+}
+
+.submit-tabla-add:active {
+    border-color: #fff;
+    color: var(--rosa);
+    box-shadow: 0px 0px 10px 5px var(--rosa);
+}
+
+.tabla-titulos-add{
+    padding-right: 2rem;
+    text-align: right;
+}
+
+.tabla-input-add{
+    width: 15rem;
+}
+
+.portada_tabla_admin{
+    width: 8rem;
+}
 
 /*ANIMACION*/
 @keyframes dance-button {

@@ -8,7 +8,7 @@ import time
 # URL = 'http://127.0.0.1:5000/'
 
 app = Flask(__name__)
-CORS(app= app, origins= '*')
+CORS(app = app, origins= '*')
 
 @app.route('/')
 def saludar():
@@ -82,16 +82,28 @@ class TapaDura():
 
     # Modificar un cliente de la tabla lectores
 
-    def modificar_lector(self, id, categoria, cambio):
-        self.cursor.execute(f'SELECT * FROM lectores WHERE id = {id}')
-        respuesta = self.cursor.fetchone()
-        if respuesta:
-            self.cursor.execute(f'UPDATE lectores SET {categoria} = "{cambio}" WHERE id = {id}')
-            self.conn.commit()
-            return self.cursor.rowcount > 0
-        else:
-            print(f'No se realizó ninguna modificación porque no se encontró ningún lector con el id {id}')
-            return False
+    def modificar_lector(self, data):
+        id = data['id']
+        nombre = data['nombre']
+        apellido = data['apellido']
+        nacimiento = data['nacimiento']
+        email = data['email']
+        sexo = data['sexo']
+        preferencias = data['preferencias']
+        comentario = data['comentario']
+        
+        sql = "UPDATE lectores SET nombre = %s, apellido = %s, nacimiento = %s, email = %s, sexo = %s, preferencias = %s, comentario = %s WHERE id = %s"
+        valores = (nombre, apellido, nacimiento, email, sexo, preferencias, comentario, id)
+        self.cursor.execute(sql, valores)
+        self.conn.commit()
+        return self.cursor.rowcount > 0
+        # if respuesta:
+        #     self.cursor.execute(f'UPDATE lesctores SET ')
+        #     self.conn.commit()
+        #     return self.cursor.rowcount > 0
+        # else:
+        #     print(f'No se realizó ninguna modificación porque no se encontró ningún lector con el id {id}')
+        #     return False
 
     # Ver todos los clientes
 
@@ -160,16 +172,24 @@ class TapaDura():
 
     # Modificar un articulo de la tabla productos
 
-    def modificar_articulo(self, id, categoria, cambio):
-        self.cursor.execute(f'SELECT * FROM productos WHERE id = {id}')
-        respuesta = self.cursor.fetchone()
-        if respuesta:
-            self.cursor.execute(f'UPDATE productos SET {categoria} = "{cambio}" WHERE id = {id}')
+    def modificar_libro(self, data):
+            print("ESTA ES LA DATA: ", data)
+            id = data['id']
+            titulo = data['titulo']
+            precio = data['precio']
+            categoria = data['categoria']
+            autor = data['autor']
+            paginas = data['paginas']
+            idioma = data['idioma']
+            publicacion = data['publicacion']
+            descripcion = data['descripcion']
+            stock = data['stock']
+            
+            sql = "UPDATE productos SET titulo = %s, precio = %s, categoria = %s, autor = %s, paginas = %s, idioma = %s, publicacion = %s, descripcion = %s, stock = %s WHERE id = %s"
+            valores = (titulo, precio, categoria, autor, paginas, idioma, publicacion, descripcion, stock, id)
+            self.cursor.execute(sql, valores)
             self.conn.commit()
             return self.cursor.rowcount > 0
-        else:
-            print(f'No se modificó el artículo porque no se encontró ningún producto con el id {id}')
-            return False
 
 
 grupo8cac = TapaDura(host='localhost', user='root', password='', database='grupo8', port='3306')
@@ -204,7 +224,7 @@ def agregar_lector_formulario():
     nuevo_lector = grupo8cac.agregar_lector(nombre, apellido, nacimiento, email, sexo, preferencias, comentario)
     
     if nuevo_lector:
-        return jsonify({"mensaje": "Lector agregado correctamente"}), 201
+        return jsonify({"mensaje": "Lector agregado correctamente", "nuevo_lector" : nombre}), 201
     else:
         return jsonify({"mensaje": f"{nombre} {apellido} ya se encontraba registrado"}), 201
       
@@ -241,39 +261,41 @@ def buscar_cliente(id):
 #Borrar cliente
 @app.route('/lectores/<int:id>', methods=['DELETE'])
 def eliminar_cliente(id):
-    if grupo8cac.borrar_lector(id):
+    eliminar = grupo8cac.borrar_lector(id)
+    if eliminar:
         return print(f'Cliente eliminado. ID: {id}')
 
 #Borrar producto
 @app.route('/productos/<int:id>', methods=['DELETE'])
 def eliminar_producto(id):
-    if grupo8cac.borrar_articulo(id):
-        return print(f'Cliente eliminado. ID: {id}')
+    eliminar = grupo8cac.borrar_articulo(id)
+    if eliminar:
+        return print(f'Producto eliminado. ID: {id}')
 
 #Modificar cliente
 @app.route('/lectores', methods= ['PUT'])
 def modificar_cliente():
     data = request.get_json()
-    id = data.get('id')
-    categoria = data.get('categoria')
-    cambio = data.get('cambio')
-    if grupo8cac.modificar_lector(id, categoria, cambio):
-        return print(f'En el cliente con ID {id} se ha modificado el dato de {categoria} por {cambio}')
+    exito = grupo8cac.modificar_lector(data)
 
-#Modificar producto
+    if exito:
+        return jsonify({"mensaje": "Lector modificado exitosamente"}), 200
+    else:
+        return jsonify({"error": "No se pudo modificar el lector"}), 500
+
 @app.route('/productos', methods= ['PUT'])
-def modificar_producto():
+def modificar_articulo():
     data = request.get_json()
-    id = data.get('id')
-    categoria = data.get('categoria')
-    cambio = data.get('cambio')
-    if grupo8cac.modificar_articulo(id, categoria, cambio):
-        return print(f'En el producto con ID {id} se ha modificado el dato de {categoria} por {cambio}')
+    exito = grupo8cac.modificar_libro(data)
 
-# Crear tablas
+    if exito:
+        return jsonify({"mensaje": "Articulo modificado exitosamente"}), 200
+    else:
+        return jsonify({"error": "No se pudo modificar el articulo"}), 500
+
 # grupo8cac.crear_tablas()
 
-# Agrego libros
+#Agrego libros
 # grupo8cac.agregar_articulo('FRANKENSTEIN', 10590, 'https://www.tematika.com/media/catalog/Ilhsa/Imagenes/649567.jpg', 'terror', 'Shelley, Mary', 100, 'español', 2018, 'Publicado el 1 de enero de 1818 y enmarcado en la tradición de la novela gótica, el texto habla de temas tales como la moral científica, la creación y destrucción de vida y el atrevimiento de la humanidad en su relación con Dios. De ahí, el subtítulo de la obra: el protagonista intenta rivalizar en poder con Dios, como una suerte de Prometeo moderno que arrebata el fuego sagrado de la vida a la divinidad.', 2)
 # grupo8cac.agregar_articulo('CUENTO DE HADAS', 20199, 'https://www.tematika.com/media/catalog/Ilhsa/Imagenes/698715.jpg', 'terror', 'King, Stephen', 856, 'español', 2022, 'Estoy seguro de que puedo contar esta historia. También estoy seguro de que nadie se la creerá. Eso me da igual. Me basta con contarla. Para mí -y está claro que para muchos escritores; no solo los novatos como yo-; el problema es decidir por dónde empezar. (...) Y ahora; mientras pienso en esas cosas; veo un claro hilo que conduce a lo largo de los años hasta el señor Bowditch y el cobertizo cerrado con candado detrás de su vieja y ruinosa casa victoriana. Aunque un hilo puede romperse fácilmente. Por tanto; no un hilo; sino una cadena. Una cadena sólida. Y yo era el chico con el grillete en torno a la muñeca.', 3)
 # grupo8cac.agregar_articulo('HOLLY', 15999, 'https://www.tematika.com/media/catalog/Ilhsa/Imagenes/710073.jpg', 'terror', 'King, Stephen', 624, 'español', 2023, 'Holly Gibney; uno de los personajes más cautivadores e ingeniosos de Stephen King; regresa en esta trepidante novela para descubrir la verdad que se esconde tras múltiples desapariciones en una ciudad del Medio Oeste. Cuando Penny Dahl contacta con Finders Keepers para que la ayuden a encontrar a su hija; algo en la voz desesperada de la mujer hace que Holly Gibney se vea obligada a aceptar el trabajo. A poca distancia del lugar en el que Bonnie Dahl desapareció; viven los profesores Rodney y Emily Harris. Son la quintaesencia de la respetabilidad burguesa: un matrimonio octogenario y dedicado de académicos semirretirados. Nadie diría que; en el sótano de su impecable casa forrada de libros; esconden un secreto directamente relacionado con la desaparición de Bonnie. Sin embargo; los Harris son astutos; pacientes y despiadados; y obligarán a Holly a emplear sus habilidades al máximo y a arriesgarlo todo si quiere cerrar el caso más oscuro al que se ha enfrentado jamás. «No podía olvidarme de Holly Gibney. Se suponía que solo iba a ser un personaje secundario en Mr. Mercedes; pero se llevó toda la atención y mi corazón. Holly es ella en estado puro». Stephen King', 5)
@@ -303,7 +325,6 @@ def modificar_producto():
 # grupo8cac.agregar_articulo('ROMPER EL CICLO', 9580, 'https://www.tematika.com/media/catalog/Ilhsa/Imagenes/702716.jpg', 'autoayuda', 'GOMEZ BADIA, MARIANA', 256, 'español', 2022, 'Siempre tropiezas con la misma piedra en las relaciones de pareja; en el manejo del dinero; con ese miedo que te controla; con esa adicción; con el vacío existencial que te sobrepasa... lo que necesitas es romper el ciclo. Mariana Gómez Badía; coach sistémica y consteladora familiar; con más de 160.000 seguidores su Instagram @ecosdelalmaok; te guiará a través de las constelaciones familiares para que desates los nudos invisibles que boicotean tu vida. Darte permiso para soltar aquello que no te pertenece. Prólogo de Gabriela Arias Uriburu', 2)
 # grupo8cac.agregar_articulo('ESTAS PARA MAS', 9940, 'https://www.tematika.com/media/catalog/Ilhsa/Imagenes/691781.jpg', 'autoayuda', 'De Lucia, Daniela', 376, 'español', 2022, 'Te conformas con poco tiempo y dinero; con una amistad que no va más; con un trabajo que no te apasiona; con una pareja sin amor¿ ¿Por qué seguir viviendo a media máquina? ¡ESTÁS PARA MÁS! Daniela De Lucía; coach certificada con Tony Robbins y Cloé Madanes; con más de 120.000 seguidores en Instagram; te desafía a salir del piloto automático y a encontrar el poder para crear la vida que mereces. SI NO ES AHORA; ¿CUÁNDO?', 2)
 # grupo8cac.agregar_articulo('EL PODER DEL AHORA', 7199, 'https://www.tematika.com/media/catalog/Ilhsa/Imagenes/595822.jpg', 'autoayuda', 'Tolle, Eckhart', 266, 'español', 2015, 'El poder del ahora es un libro único. Tiene la capacidad de crear una experiencia en los lectores y de cambiar su vida. Hoy ya es considerado una obra maestra. Su autor; Eckhart Tolle; se convirtió en un maestro universal; un gran espíritu con un mensaje revelador: se puede alcanzar un estado de iluminación aquí y ahora. Es posible vivir libre del sufrimiento; la ansiedad y la neurosis. Para lograrlo sólo tenemos que comprender nuestro papel de creadores del propio dolor. Es la mente la que nos causa los problemas con su corriente de pensamientos constante sobre el pasado; preocupándose por el futuro. Cometemos el error de identificarnos con ella; de pensar que eso es lo que somos; cuando de hecho somos seres mucho más grandes. Escrito en un formato de preguntas y respuestas que lo hace muy accesible; este libro es una invitación a la reflexión; que abrirá las puertas a la plenitud espiritual y permitirá ver la vida con nuevos ojos y empezar a disfrutar del verdadero poder del ahora.', 0)
-
 
 if __name__ == "__main__":
     app.run(debug=True)

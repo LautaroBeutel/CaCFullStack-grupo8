@@ -10,7 +10,8 @@ let add_descripcion = document.querySelector('#add_descripcion')
 let add_stock = document.querySelector('#add_stock')
 let form = document.getElementById("formulario")
 
-const URL = 'http://127.0.0.1:5000/'
+//const URL = 'http://127.0.0.1:5000/'
+const URL = 'https://grupo8.pythonanywhere.com/'
 
 function agregar_producto(e){
     e.preventDefault();
@@ -29,7 +30,7 @@ function agregar_producto(e){
         fetch(URL + 'productos', {method: 'POST', body: JSON.stringify(datos), headers: {'Content-Type': 'application/json'}})
         .then(data => data.json())
         .then(function (datos){
-          console.log('Agregado correctamente')
+          alert('Producto agregado correctamente')
         //Limpieza del formulario
           add_titulo.value = '';
           add_precio.value = '';
@@ -43,7 +44,7 @@ function agregar_producto(e){
           add_stock.value = '';       
         })
         .catch(function(error){
-          console.log(`Error al intentar agregar al lector: ${error}`)
+          console.log(`Error al intentar agregar al producto: ${error}`)
         })
   }
 
